@@ -1,0 +1,25 @@
+languageCode = "en-US"
+defaultContentLanguage = "en"
+
+title = "Hugo Learn Documentation"
+theme = "hugo-theme-learn"
+metaDataFormat = "yaml"
+defaultContentLanguageInSubdir= true
+
+[params]
+  editURL = ""
+  description = "AWS Tips and Tricks for the DevOps master"
+  author = "Warrick FitzGerald"
+  showVisitedLinks = true
+  disableLanguageSwitchingButton = true
+  themeVariant = "mine"
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+[Languages]
+[Languages.en]
+title = "Documentation for Hugo Learn Theme"
+weight = 1
+languageName = "English"
+

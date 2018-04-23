@@ -1,0 +1,22 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+  pre_build:
+    commands:
+      - echo hugo shold be installed 
+      - wget https://github.com/gohugoio/hugo/releases/download/v0.39/hugo_0.39_Linux-64bit.deb
+      - sudo dpkg -i hugo_0.39_Linux-64bit.deb
+  build:
+    commands:
+      - echo Create static site
+      - hugo -s PublicWebsite/
+  post_build:
+    commands:
+      - echo about to sync to S3 
+      - aws s3 sync ./PublicWebsite/public "s3://${BUCKET_NAME}" --delete
+      - echo after sync to S3 
+artifacts:
+  files:
+    - '**/*'

@@ -1,0 +1,36 @@
+[
+{
+	"uri": "/staticwebsites/",
+	"title": "Static Websites",
+	"tags": [],
+	"description": "",
+	"content": " Static Websites This section will walk you through hosting a static website on AWS.\nWe\u0026rsquo;ve tried not to make an assumtions so we\u0026rsquo;ll start with how to how a simple site in an S3 bucket and then walk you through to a more advanced CI/CD pipeline.\n"
+},
+{
+	"uri": "/staticwebsites/s3hosting/",
+	"title": "S3 Hosting",
+	"tags": [],
+	"description": "",
+	"content": " S3 Hosting Put your files into an S3 bucket named Domain.com and off you go.\n  "
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/",
+	"title": "Home",
+	"tags": [],
+	"description": "",
+	"content": " AWS POWER TOOLS A home for DevOps professionals trying to make their life easier.\nGoals  Provide simple examples to every day problems. Explain common problems so that you don\u0026rsquo;t have to learn the hard way Create structured learning paths Create a community of AWS experts  "
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
