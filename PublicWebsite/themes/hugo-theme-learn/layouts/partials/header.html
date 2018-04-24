@@ -43,7 +43,7 @@
               {{if not .IsHome}}
               <div>
                 <div id="top-bar">
-                {{ if and (or .IsPage .IsSection) .Site.Params.editURL }}
+                
                   {{ $File := .File }}
                   {{ $Site := .Site }}
                   {{with $File.Path }}
@@ -54,7 +54,7 @@
                     </a>
                   </div>
                   {{ end }}
-                {{ end }}
+                
                 {{$toc := (and (not .Params.disableToc) (not .Params.chapter))}}
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -66,7 +66,7 @@
                   <span id="toc-menu"><i class="fa fa-list-alt"></i></span>
                   {{ end }}
                   <span class="links">
-                    {{ template "breadcrumb" dict "page" . "value" .Title }}   
+                    {{ template "breadcrumb" dict "page" . "value" .Title }}  
                   </span>
                 </div>
                 {{ if $toc }}
