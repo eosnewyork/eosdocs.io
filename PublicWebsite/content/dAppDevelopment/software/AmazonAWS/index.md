@@ -2,7 +2,7 @@
 title: "Amazon AWS"
 date: 2018-04-26T16:18:07-04:00
 weight: 2
-draft: true
+draft: false
 ---
 
 ### Summary
