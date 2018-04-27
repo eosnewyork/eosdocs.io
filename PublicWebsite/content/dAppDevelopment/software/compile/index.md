@@ -1,18 +1,16 @@
 ---
-title: "Dev environment"
-date: 2018-04-24T09:21:04-04:00
-weight: 2
+title: "Compile"
+date: 2018-04-26T16:17:47-04:00
+weight: 3
 draft: false
 ---
+
 
 ### Introduction
 
 It's possible to compile the EOS software on almost every platform. We're going to be using an AWS instance as most people will have the ability to create an AWS account and follow along. 
 
 The official page has a lot more detail. If you'd like to compile it on your own machine, follow the instructions [HERE](https://github.com/EOSIO/eos/wiki/Local-Environment#2-building-eosio)
-
-
-#### Use a pre-configured AWS instance
 
 #### Compiling the EOS software
 
@@ -95,5 +93,4 @@ cleos -H ${nodeos_host} -p ${nodeos_port} get info
 ```
 ./cleos -H 127.0.0.1 -p 8888 get info
 ```
-
 
