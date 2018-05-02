@@ -6,6 +6,9 @@ theme = "hugo-theme-learn"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
+[blackfriday]
+  hrefTargetBlank = false
+
 [params]
   editURL = "https://github.com/BinaryFocus/eosdocs.io/tree/master/PublicWebsite/content/"
   description = "EOSDocs.io - EOS developer documentation"
@@ -13,6 +16,7 @@ defaultContentLanguageInSubdir= true
   showVisitedLinks = true
   disableLanguageSwitchingButton = true
   themeVariant = "mine"
+
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]

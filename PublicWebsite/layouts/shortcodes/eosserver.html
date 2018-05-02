@@ -1,0 +1,58 @@
+
+<br />
+<b>Sever Logs:</b><br>
+<button id="pauseButton" onclick="pauseLog();">pause</button>
+<pre id="log">loading ...</pre>
+<script>
+
+  var pause = false;
+  var maxlines = 20;
+
+  function pauseLog() {
+    if(!pause) {
+      pause = true;
+      document.getElementById('pauseButton').textContent = "play";
+    }
+    else {
+      pause = false;
+      document.getElementById('pauseButton').textContent = "pause";
+    }
+  }
+
+  // helper function: log message to screen
+  function log(msg) {
+
+    // break the textblock into an array of lines
+    var lines = document.getElementById('log').textContent.split('\n');
+    
+
+    if(!pause) {
+      if(lines.length < maxlines) {
+        document.getElementById('log').textContent += msg + '\n';
+      } else {
+        // remove one line, starting at the first position
+        lines.splice(0,1);
+        // join the array back into a single string
+        var newtext = lines.join('\n');
+        document.getElementById('log').textContent = newtext+msg + '\n';
+      }
+    }
+    
+  }
+
+  // setup websocket with callbacks
+  var ws = new WebSocket('ws://test1.eosdocs.io:8080/');
+  ws.onopen = function() {
+  	var temp = "";
+  	for (var i = maxlines - 1; i >= 0; i--) {
+  		temp += ""+"\n";
+  	}
+    document.getElementById('log').textContent = temp;
+  };
+  ws.onclose = function() {
+    document.getElementById('log').textContent = " Ba ... something went wrong connecting to the server ... refresh your browser. If you continue to see this error the server may be down at this time.";
+  };
+  ws.onmessage = function(event) {
+    log(event.data);
+  };
+</script>

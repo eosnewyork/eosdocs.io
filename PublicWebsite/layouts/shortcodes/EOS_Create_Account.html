@@ -1,0 +1,165 @@
+  <script src="/js/eosjs-ecc.js"></script>
+  <script src="/js/eos.js"></script>  
+  <script type="text/javascript">
+  	var ecc = eosjs_ecc
+  	var httpEndpoint = "https://test1.eosdocs.io:8888";
+
+
+	function createKeyPair() {
+
+		var promise = new Promise(function(resolve, reject) {
+	  
+			ecc.randomKey().then(privateWif =>  {
+				var pubkey = ecc.privateToPublic(privateWif)
+				//console.log(pubkey);
+				//console.log(privateWif);
+				var obj = {
+					private:  privateWif,
+					public: pubkey
+				};
+				resolve(obj);
+			})			  
+
+		});
+		
+		return promise;
+	}
+
+
+	function createAccount(accountName, ownerPublicKey, activePublicKey) {
+
+		var promise = new Promise(function(resolve, reject) {
+
+			var eos = Eos.Testnet()
+
+			initaPrivate = '5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3'
+			initaPublic = 'EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV'
+			keyProvider = initaPrivate
+
+			config = {
+			  keyProvider: [initaPrivate], // WIF string or array of keys..
+			  httpEndpoint: httpEndpoint,
+			  debug: false,
+			  sign: true
+			}
+
+			eos = Eos.Localnet(config)
+
+			eos.newaccount({
+			  creator: 'eosio',
+			  name: accountName,
+			  owner: ownerPublicKey,
+			  active: activePublicKey,
+			  recovery: 'eosio'
+			}).then(result => {
+				resolve(result);
+			}).catch((err) => {
+				console.log("In Error");
+			  	reject(err);
+			});
+			
+		})
+
+		return promise;
+
+	}
+
+	function checkValidAccountName(name) {
+		// checks if value contains any invalid character
+		if(/[^.12345abcdefghijklmnopqrstuvwxyz]/.test(name)) {
+		   return false;
+		} else {
+			if(name.length<13) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+	}
+
+	function createKeysAndAccount() {
+
+		var nm = document.getElementById('accountNameInput').value;
+		if(!checkValidAccountName(nm)) {
+			document.getElementById('createAccountOutput').innerHTML = "<font color='red'><b>Invalid account name :</b><br>" +
+			"<font color='red'>Make sure the numbers you're using are only 1,2,3,4 or 5 (6, 7, 8, 9 and 0 are not allowed)<br>" +
+			"<font color='red'>Make sure you're using <b>lower case</b><br>" +
+			"<font color='red'>Make sure the length is <b>12 character or less</b><br>" +
+			"<font color='red'>Make sure you're not using any symbols other than .<br>";
+			return;
+		}
+
+		document.getElementById('createAccountOutput').innerHTML = "Creating Account ...";
+
+		var ownerPublicKey = "";
+		var ownerPrivateKey = "";
+
+		var activePublicKey = "";
+		var activePrivateKey = "";		
+
+		//Create the owner key pair.  
+		createKeyPair().then(function(result) {
+			ownerPublicKey = result.public;
+			ownerPrivateKey = result.private;
+
+			//Create the active key pair
+			createKeyPair().then(function(result) {
+				activePublicKey = result.public;
+				activePrivateKey = result.private;
+
+				var accountNameInput = document.getElementById('accountNameInput').value;
+
+				//Create the account itself
+				createAccount(accountNameInput,ownerPublicKey,activePublicKey).then(function(result) {
+
+					document.getElementById('createAccountOutput').innerHTML = 
+						"<b>Endpoint :</b> " + httpEndpoint + "<br><br>" + 
+						"<b>Account :</b> " + accountNameInput + "<br><br>" + 
+						"<b>owner Public Key :</b> " + ownerPublicKey + "<br>" + 
+						"<b>owner Private Key :</b> " + ownerPrivateKey + "<br><br>" + 
+						"<b>active Public Key :</b> " + activePublicKey + "<br>" + 
+						"<b>active Private Key :</b> " + activePrivateKey + " <font color='red'>(use this key to upload contracts)</a><br>"; 
+						//"Account <b>"+accountNameInput+"</b> has been created.(block number: "+result.transaction.transaction.ref_block_num+", transaction_id: "+result.transaction_id+")<br><br>" + 
+; 	
+
+					updateUserName();				
+
+				}).catch((err) => {
+					//debugger;
+					var errObj = JSON.parse(err);
+				  	document.getElementById('createAccountOutput').innerHTML = "<font color='red'><b>Error Code : </b>" + errObj.error.code + " <br><b>Message: </b>" +errObj.error.details[0].message + "</font>";
+				});
+
+
+			});
+
+		});
+	}
+
+
+	// yes, yes, I know this code is HORRIBLE
+	function updateUserName() {
+		var timeStampInMs = window.performance && window.performance.now && window.performance.timing && window.performance.timing.navigationStart ? window.performance.now() + window.performance.timing.navigationStart : Date.now();
+
+		var randomUserExtension = Math.floor( timeStampInMs )+"";
+		var shortrandomUserExtension = randomUserExtension.replace(/[6-9]/g, '');
+		var shortrandomUserExtensionNoZero = shortrandomUserExtension.replace(/[0]/g, '');
+
+		var prefix = "testuser";
+		var tmpUsername = prefix+shortrandomUserExtensionNoZero;
+		var diff = tmpUsername.length - 12;
+		var trimExtension = shortrandomUserExtensionNoZero.substr(diff);
+
+		document.getElementById('accountNameInput').value = prefix+trimExtension;
+	}
+
+	window.onload = function () { 
+		updateUserName();
+	}
+  </script>
+
+Account Name (Account names must be lower case and should be 12 or less characters. [Only contains the following symbol .12345abcdefghijklmnopqrstuvwxyz]): <input id="accountNameInput" type="text" name="accountName"> 
+<input type="button" name="btnCreateAccount" value="Create Account" onclick="createKeysAndAccount();">
+<br>
+<div id="createAccountOutput"></div>
+
