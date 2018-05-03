@@ -41,7 +41,7 @@
   }
 
   // setup websocket with callbacks
-  var ws = new WebSocket('wss://test1.eosdocs.io:8080/');
+  var ws = new WebSocket('wss://test1.eosdocs.io:443/');
   ws.onopen = function() {
   	var temp = "";
   	for (var i = maxlines - 1; i >= 0; i--) {
