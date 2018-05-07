@@ -41,7 +41,7 @@ Creating contracts is covered in detail [here](../smartcontractbasics). But if y
 Once you've created an account using the tool above. You can then use <a href="https://tbfleming.github.io/cib/eos.html" target="_blank">THIS</a><br>tool to compile a contract and uplod it to your new account. 
 
 Here are some contract examples:<br>
-Example 1: <a href="https://tbfleming.github.io/cib/eos.html#gist=253e84d14e13e713917aac68e737d48f" target="_blank">Click Here</a><br> 
+Example 1: <a href="https://tbfleming.github.io/cib/eos-slim.html#gist=8b2b9a60cf51afcfaeb80e88c74d66ae" target="_blank">Click Here</a><br> 
 {{% /expand%}}
 
 <hr>
