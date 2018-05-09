@@ -10,7 +10,7 @@ EOSDocs.io is a collaborative effort between [EOS New York](https://www.eosnewyo
 
 This is an Open Source project which encourages the community to contribute to exceptional EOS documentation. 
 
-It's easy to contribute / edit the documentation - [lean how](/edit)
+It's easy to contribute / edit the documentation - [lean how](/howtoedit)
 
 
 ## Support the cause
