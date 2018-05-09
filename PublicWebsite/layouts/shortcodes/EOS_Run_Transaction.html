@@ -1,0 +1,86 @@
+  <script src="/js/eosjs-ecc.js"></script>
+  <script src="/js/eos.js"></script>  
+  <script type="text/javascript">
+  	var ecc = eosjs_ecc
+  	var httpEndpoint = "https://test1.eosdocs.io:443";
+  	//var httpEndpoint = "http://test1.eosdocs.io:80";
+
+	function syntaxHighlight(json) {
+	    if (typeof json != 'string') {
+	         json = JSON.stringify(json, undefined, 2);
+	    }
+	    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+	    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+	        var cls = 'number';
+	        if (/^"/.test(match)) {
+	            if (/:$/.test(match)) {
+	                cls = 'key';
+	            } else {
+	                cls = 'string';
+	            }
+	        } else if (/true|false/.test(match)) {
+	            cls = 'boolean';
+	        } else if (/null/.test(match)) {
+	            cls = 'null';
+	        }
+	        return '<span class="' + cls + '">' + match + '</span>';
+	    });
+	}
+
+	function runEOSTransaction() {
+
+		var eos = Eos.Testnet()
+
+		initaPrivate = '5JCwCbqES6bTHVttwzpMmHBkV8oPj3wS1X52RnsxzDo8caueHqh'
+		initaPublic = 'EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV'
+		keyProvider = initaPrivate
+
+		config = {
+		  keyProvider: [initaPrivate], // WIF string or array of keys..
+		  httpEndpoint: httpEndpoint,
+		  debug: false,
+		  sign: true
+		}
+
+		eos = Eos.Localnet(config)
+
+		var txn = document.getElementById('transactionJSON').value;
+
+		var ob = JSON.parse(txn);
+
+		//var txn2 = "{actions: [{account: 'testuser2444',name: 'hi',authorization: [{actor: 'testuser2444',permission: 'active'}]}]}"; 
+		eos.transaction(ob).then(result => {
+			console.log(result);
+			//document.getElementById('respone').innerHTML = syntaxHighlight(result);
+			document.getElementById('respone').appendChild(document.createElement('pre')).innerHTML = syntaxHighlight(result);
+
+		}).catch((err) => {
+		});
+
+
+	}	
+
+  </script>
+
+
+<textarea id="transactionJSON" rows="15">
+{
+  "actions": [
+    {
+      "account": "testuser2444",
+      "name": "hi",
+      "authorization": [{
+        "actor": "testuser2444",
+        "permission": "active"
+      }],
+      "data": {
+        "user": "testuser2444"
+      }
+    }
+  ]
+}
+</textarea>
+
+Result:
+<div id="respone"></div>
+<input type="button" name="btnCreateAccount" value="Run Transaction" onclick="runEOSTransaction();">

@@ -7413,14 +7413,25 @@ var defaultSignProvider = function defaultSignProvider(eos, config) {
       keys = [keys];
     }
 
+    keys = keys.map(function (key) {
+      try {
+        // normalize format (WIF => PVT_K1_base58privateKey)
+        return { private: ecc.PrivateKey(key).toString() };
+      } catch (e) {
+        // normalize format (EOSKey => PUB_K1_base58publicKey)
+        return { public: ecc.PublicKey(key).toString() };
+      }
+      assert(false, 'expecting public or private keys from keyProvider');
+    });
+
     if (!keys.length) {
       throw new Error('missing key, check your keyProvider');
     }
 
     // simplify default signing #17
-    if (keys.length === 1 && ecc.isValidPrivate(keys[0])) {
-      var wif = keys[0];
-      return sign(buf, wif);
+    if (keys.length === 1 && keys[0].private) {
+      var pvt = keys[0].private;
+      return sign(buf, pvt);
     }
 
     var keyMap = new Map();
@@ -7434,15 +7445,13 @@ var defaultSignProvider = function defaultSignProvider(eos, config) {
       for (var _iterator = keys[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
         var key = _step.value;
 
-        var isPrivate = ecc.isValidPrivate(key);
-        var isPublic = ecc.isValidPublic(key);
-
-        assert(isPrivate || isPublic, 'expecting public or private keys from keyProvider');
+        var isPrivate = key.private != null;
+        var isPublic = key.public != null;
 
         if (isPrivate) {
-          keyMap.set(ecc.privateToPublic(key), key);
+          keyMap.set(ecc.privateToPublic(key.private), key.private);
         } else {
-          keyMap.set(key, null);
+          keyMap.set(key.public, null);
         }
       }
     } catch (err) {
@@ -7469,7 +7478,7 @@ var defaultSignProvider = function defaultSignProvider(eos, config) {
         throw new Error('missing required keys for ' + JSON.stringify(transaction));
       }
 
-      var wifs = [],
+      var pvts = [],
           missingKeys = [];
 
       var _iteratorNormalCompletion2 = true;
@@ -7480,9 +7489,12 @@ var defaultSignProvider = function defaultSignProvider(eos, config) {
         for (var _iterator2 = required_keys[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
           var requiredKey = _step2.value;
 
-          var _wif = keyMap.get(requiredKey);
-          if (_wif) {
-            wifs.push(_wif);
+          // normalize (EOSKey.. => PUB_K1_Key..)
+          requiredKey = ecc.PublicKey(requiredKey).toString();
+
+          var wif = keyMap.get(requiredKey);
+          if (wif) {
+            pvts.push(wif);
           } else {
             missingKeys.push(requiredKey);
           }
@@ -7505,8 +7517,9 @@ var defaultSignProvider = function defaultSignProvider(eos, config) {
       if (missingKeys.length !== 0) {
         assert(typeof keyProvider === 'function', 'keyProvider function is needed for private key lookup');
 
-        keyProvider({ pubkeys: missingKeys }).forEach(function (wif) {
-          wifs.push(wif);
+        // const pubkeys = missingKeys.map(key => ecc.PublicKey(key).toStringLegacy())
+        keyProvider({ pubkeys: missingKeys }).forEach(function (pvt) {
+          pvts.push(pvt);
         });
       }
 
@@ -7516,10 +7529,10 @@ var defaultSignProvider = function defaultSignProvider(eos, config) {
       var _iteratorError3 = undefined;
 
       try {
-        for (var _iterator3 = wifs[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-          var _wif2 = _step3.value;
+        for (var _iterator3 = pvts[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+          var _pvt = _step3.value;
 
-          sigs.push(sign(buf, _wif2));
+          sigs.push(sign(buf, _pvt));
         }
       } catch (err) {
         _didIteratorError3 = true;
@@ -7876,51 +7889,7 @@ module.exports={
       "balance": "uint64"
     }
   },
-  "claimrewards": {
-    "base": "",
-    "type": "action",
-    "fields": {
-      "owner": "account_name"
-    }
-  },
-  "currency_stats": {
-    "base": "",
-    "fields": {
-      "currency": "uint64",
-      "supply": "uint64"
-    }
-  },
-  "delegatebw": {
-    "base": "",
-    "type": "action",
-    "fields": {
-      "from": "account_name",
-      "receiver": "account_name",
-      "stake_net": "asset",
-      "stake_cpu": "asset",
-      "stake_storage": "asset"
-    }
-  },
-  "delegated_bandwidth": {
-    "base": "",
-    "fields": {
-      "from": "account_name",
-      "to": "account_name",
-      "net_weight": "asset",
-      "cpu_weight": "asset",
-      "storage_stake": "asset",
-      "storage_bytes": "uint64"
-    }
-  },
-  "eosio_global_state": {
-    "base": "eosio_parameters",
-    "fields": {
-      "total_storage_bytes_reserved": "uint64",
-      "total_storage_stake": "uint64",
-      "payment_per_block": "uint64"
-    }
-  },
-  "eosio_parameters": {
+  "blockchain_parameters": {
     "base": "",
     "fields": {
       "base_per_transaction_net_usage": "uint32",
@@ -7943,7 +7912,56 @@ module.exports={
       "max_inline_depth": "uint16",
       "max_inline_action_size": "uint32",
       "max_generated_transaction_count": "uint32",
-      "max_transaction_delay": "uint32",
+      "max_transaction_delay": "uint32"
+    }
+  },
+  "claimrewards": {
+    "base": "",
+    "type": "action",
+    "fields": {
+      "owner": "account_name"
+    }
+  },
+  "currency_stats": {
+    "base": "",
+    "fields": {
+      "currency": "uint64",
+      "supply": "uint64"
+    }
+  },
+  "delegatebw": {
+    "base": "",
+    "type": "action",
+    "fields": {
+      "from": "account_name",
+      "receiver": "account_name",
+      "stake_net_quantity": "asset",
+      "stake_cpu_quantity": "asset",
+      "stake_storage_quantity": "asset"
+    }
+  },
+  "delegated_bandwidth": {
+    "base": "",
+    "fields": {
+      "from": "account_name",
+      "to": "account_name",
+      "net_weight": "uint64",
+      "cpu_weight": "uint64",
+      "storage_stake": "uint64",
+      "storage_bytes": "uint64"
+    }
+  },
+  "eosio_global_state": {
+    "base": "eosio_parameters",
+    "fields": {
+      "total_storage_bytes_reserved": "uint64",
+      "total_storage_stake": "uint64",
+      "payment_per_block": "uint64"
+    }
+  },
+  "eosio_parameters": {
+    "base": "blockchain_parameters",
+    "fields": {
       "max_storage_size": "uint64",
       "percent_of_max_inflation_rate": "uint32",
       "storage_reserve_ratio": "uint32"
@@ -7980,6 +7998,14 @@ module.exports={
     "type": "action",
     "fields": {
       "owner": "account_name"
+    }
+  },
+  "refund_request": {
+    "base": "",
+    "fields": {
+      "owner": "account_name",
+      "request_time": "time",
+      "amount": "uint64"
     }
   },
   "regproducer": {
@@ -8024,9 +8050,9 @@ module.exports={
     "fields": {
       "from": "account_name",
       "receiver": "account_name",
-      "unstake_net": "asset",
-      "unstake_cpu": "asset",
-      "unstake_bytes": "uint64"
+      "unstake_net_quantity": "asset",
+      "unstake_cpu_quantity": "asset",
+      "unstake_storage_bytes": "uint64"
     }
   },
   "unregprod": {
@@ -8085,6 +8111,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 var _slicedToArray = function () { function sliceIterator(arr, i) { var _arr = []; var _n = true; var _d = false; var _e = undefined; try { for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"]) _i["return"](); } finally { if (_d) throw _e; } } return _arr; } return function (arr, i) { if (Array.isArray(arr)) { return arr; } else if (Symbol.iterator in Object(arr)) { return sliceIterator(arr, i); } else { throw new TypeError("Invalid attempt to destructure non-iterable instance"); } }; }();
 
 var _require = require('eosjs-ecc'),
+    Signature = _require.Signature,
     PublicKey = _require.PublicKey;
 
 var Fcbuffer = require('fcbuffer');
@@ -8180,7 +8207,7 @@ module.exports = function () {
       return [ExtendedAsset];
     }, // after Asset
     signature: function signature() {
-      return [variant(Signature)];
+      return [variant(SignatureType)];
     }
   };
 
@@ -8489,27 +8516,27 @@ var ExtendedAsset = function ExtendedAsset(validation, baseTypes, customTypes) {
   };
 };
 
-var Signature = function Signature(validation, baseTypes) {
+var SignatureType = function SignatureType(validation, baseTypes) {
   var signatureType = baseTypes.fixed_bytes65(validation);
   return {
     fromByteBuffer: function fromByteBuffer(b) {
       var signatureBuffer = signatureType.fromByteBuffer(b);
-      var signature = ecc.Signature.from(signatureBuffer);
+      var signature = Signature.from(signatureBuffer);
       return signature.toString();
     },
     appendByteBuffer: function appendByteBuffer(b, value) {
-      var signature = ecc.Signature.from(value);
+      var signature = Signature.from(value);
       signatureType.appendByteBuffer(b, signature.toBuffer());
     },
     fromObject: function fromObject(value) {
-      var signature = ecc.Signature.from(value);
+      var signature = Signature.from(value);
       return signature.toString();
     },
     toObject: function toObject(value) {
       if (validation.defaults && value == null) {
-        return 'SIGnature..';
+        return 'SIG_K1_bas58signature..';
       }
-      var signature = ecc.Signature.from(value);
+      var signature = Signature.from(value);
       return signature.toString();
     }
   };
@@ -28919,7 +28946,8 @@ var ecc = {
          @return {Promise<wif>}
          @example
     ecc.randomKey().then(privateKey => {
-    console.log(privateKey.toString())
+    console.log('Private Key:\t', privateKey) // wif
+    console.log('Public Key:\t', ecc.privateToPublic(privateKey)) // EOSkey...
     })
     */
     randomKey: function randomKey(cpuEntropyBits) {
@@ -28970,13 +28998,33 @@ var ecc = {
         Create a signature using data or a hash.
          @arg {string|Buffer} data
         @arg {wif|PrivateKey} privateKey
-        @arg {boolean} [hashData = true] - sha256 hash data before signing
-        @return {string} hex signature
+        @arg {String} [encoding = 'utf8'] - data encoding (if string)
+         @return {string} string signature
          @example ecc.sign('I am alive', wif)
     */
     sign: function sign(data, privateKey) {
-        var hashData = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
-        return Signature[hashData ? 'sign' : 'signHash'](data, privateKey).toHex();
+        var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'utf8';
+
+        if (encoding === true) {
+            throw new TypeError('API changed, use signHash(..) instead');
+        } else {
+            if (encoding === false) {
+                console.log('Warning: ecc.sign hashData parameter was removed');
+            }
+        }
+        return Signature.sign(data, privateKey, encoding).toString();
+    },
+
+    /**
+        @arg {String|Buffer} dataSha256 - sha256 hash 32 byte buffer or string
+        @arg {wif|PrivateKey} privateKey
+        @arg {String} [encoding = 'hex'] - dataSha256 encoding (if string)
+         @return {string} string signature
+    */
+    signHash: function signHash(dataSha256, privateKey) {
+        var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'hex';
+
+        return Signature.signHash(dataSha256, privateKey, encoding).toString();
     },
 
     /**
@@ -28989,27 +29037,60 @@ var ecc = {
          @example ecc.verify(signature, 'I am alive', pubkey) === true
     */
     verify: function verify(signature, data, pubkey) {
-        var hashData = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : true;
+        var encoding = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'utf8';
+
+        if (encoding === true) {
+            throw new TypeError('API changed, use verifyHash(..) instead');
+        } else {
+            if (encoding === false) {
+                console.log('Warning: ecc.verify hashData parameter was removed');
+            }
+        }
+        signature = Signature.from(signature);
+        return signature.verify(data, pubkey, encoding);
+    },
+
+    verifyHash: function verifyHash(signature, dataSha256, pubkey) {
+        var encoding = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 'hex';
 
         signature = Signature.from(signature);
-        var verify = signature[hashData ? 'verify' : 'verifyHash'];
-        return verify(data, pubkey);
+        return signature.verifyHash(dataSha256, pubkey, encoding);
     },
+
 
     /**
         Recover the public key used to create the signature.
-         @arg {String} signature (hex, etc..)
-        @arg {String|Buffer} data
-        @arg {boolean} [hashData = true] - sha256 hash data before recover
-        @return {pubkey}
+         @arg {String|Buffer} signature (EOSbase58sig.., Hex, Buffer)
+        @arg {String|Buffer} data - full data
+        @arg {String} [encoding = 'utf8'] - data encoding (if data is a string)
+         @return {pubkey}
          @example ecc.recover(signature, 'I am alive') === pubkey
     */
     recover: function recover(signature, data) {
-        var hashData = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+        var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'utf8';
+
+        if (encoding === true) {
+            throw new TypeError('API changed, use recoverHash(signature, data) instead');
+        } else {
+            if (encoding === false) {
+                console.log('Warning: ecc.recover hashData parameter was removed');
+            }
+        }
+        signature = Signature.from(signature);
+        return signature.recover(data, encoding).toString();
+    },
+
+    /**
+        @arg {String|Buffer} signature (EOSbase58sig.., Hex, Buffer)
+        @arg {String|Buffer} dataSha256 - sha256 hash 32 byte buffer or hex string
+        @arg {String} [encoding = 'hex'] - dataSha256 encoding (if dataSha256 is a string)
+         @return {PublicKey}
+    */
+    recoverHash: function recoverHash(signature, dataSha256) {
+        var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'hex';
 
         signature = Signature.from(signature);
-        var recover = signature[hashData ? 'recover' : 'recoverHash'];
-        return recover(data).toString();
+        return signature.recoverHash(dataSha256, encoding).toString();
     },
 
     /** @arg {string|Buffer} data
@@ -30243,7 +30324,6 @@ var assert = require('assert');
 var BigInteger = require('bigi');
 var PublicKey = require('./key_public');
 var PrivateKey = require('./key_private');
-var config = require('./config');
 
 module.exports = Signature;
 
@@ -30254,13 +30334,16 @@ function Signature(r, s, i) {
 
     /**
         Verify signed data.
-         @arg {String|Buffer} data - full data (non-hex)
+         @arg {String|Buffer} data - full data
         @arg {pubkey|PublicKey} pubkey - EOSKey..
+        @arg {String} [encoding = 'utf8'] - data encoding (if data is a string)
          @return {boolean}
     */
     function verify(data, pubkey) {
+        var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'utf8';
+
         if (typeof data === 'string') {
-            data = Buffer.from(data);
+            data = Buffer.from(data, encoding);
         }
         assert(Buffer.isBuffer(data), 'data is a required String or Buffer');
         data = hash.sha256(data);
@@ -30269,15 +30352,18 @@ function Signature(r, s, i) {
 
     /**
         Verify a buffer of exactally 32 bytes in size (sha256(text))
-         @arg {Buffer|hex} dataSha256 - 32 byte buffer or hex string
-        @arg {String|PublicKey} pubkey
-         @return {Signature}
+         @arg {String|Buffer} dataSha256 - 32 byte buffer or string
+        @arg {String|PublicKey} pubkey - EOSKey..
+        @arg {String} [encoding = 'hex'] - dataSha256 encoding (if string)
+         @return {boolean}
     */
     function verifyHash(dataSha256, pubkey) {
+        var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'hex';
+
         if (typeof dataSha256 === 'string') {
-            dataSha256 = Buffer.from(dataSha256, 'hex');
+            dataSha256 = Buffer.from(dataSha256, encoding);
         }
-        if (dataSha256.length !== 32 || !Buffer.isBuffer(dataSha256)) throw new Error("dataSha256: 32 byte buffer requred");
+        if (dataSha256.length !== 32 || !Buffer.isBuffer(dataSha256)) throw new Error("dataSha256: 32 bytes required");
 
         var publicKey = PublicKey(pubkey);
         assert(publicKey, 'pubkey required');
@@ -30285,23 +30371,28 @@ function Signature(r, s, i) {
         return ecdsa.verify(curve, dataSha256, { r: r, s: s }, publicKey.Q);
     };
 
-    /** Verify hex data by converting to a buffer then hashing.
-        @return {boolean}
+    /** @deprecated
+         Verify hex data by converting to a buffer then hashing.
+         @return {boolean}
     */
     function verifyHex(hex, pubkey) {
+        console.log('Deprecated: use verify(data, pubkey, "hex")');
+
         var buf = Buffer.from(hex, 'hex');
         return verify(buf, pubkey);
     };
 
     /**
         Recover the public key used to create this signature using full data.
-        
-        @arg {String|Buffer} data - full data (non-hex)
+         @arg {String|Buffer} data - full data
+        @arg {String} [encoding = 'utf8'] - data encoding (if string)
          @return {PublicKey}
     */
     function recover(data) {
+        var encoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'utf8';
+
         if (typeof data === 'string') {
-            data = Buffer.from(data);
+            data = Buffer.from(data, encoding);
         }
         assert(Buffer.isBuffer(data), 'data is a required String or Buffer');
         data = hash.sha256(data);
@@ -30310,12 +30401,15 @@ function Signature(r, s, i) {
     };
 
     /**
-        @arg {Buffer|hex} dataSha256 - 32 byte buffer or hex string
-        @return {PublicKey}
+        @arg {String|Buffer} dataSha256 - sha256 hash 32 byte buffer or hex string
+        @arg {String} [encoding = 'hex'] - dataSha256 encoding (if string)
+         @return {PublicKey}
     */
     function recoverHash(dataSha256) {
+        var encoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'hex';
+
         if (typeof dataSha256 === 'string') {
-            dataSha256 = Buffer.from(dataSha256, 'hex');
+            dataSha256 = Buffer.from(dataSha256, encoding);
         }
         if (dataSha256.length !== 32 || !Buffer.isBuffer(dataSha256)) {
             throw new Error("dataSha256: 32 byte String or buffer requred");
@@ -30342,19 +30436,16 @@ function Signature(r, s, i) {
         return toBuffer().toString("hex");
     };
 
-    var signatureCache = void 0; // cache
+    var signatureCache = void 0;
 
     function toString() {
-        var prefix = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : config.address_prefix;
-
         if (signatureCache) {
-            return prefix + signatureCache;
+            return signatureCache;
         }
         var pub_buf = toBuffer();
-        var checksum = hash.ripemd160(pub_buf);
+        var checksum = hash.ripemd160(Buffer.concat([pub_buf, Buffer.from('K1')]));
         var signatureString = Buffer.concat([pub_buf, checksum.slice(0, 4)]);
-        signatureCache = base58.encode(signatureString);
-        return prefix + signatureCache;
+        return signatureCache = 'SIG_K1_' + base58.encode(signatureString);
     }
 
     return {
@@ -30362,35 +30453,46 @@ function Signature(r, s, i) {
         toBuffer: toBuffer,
         verify: verify,
         verifyHash: verifyHash,
-        verifyHex: verifyHex,
+        verifyHex: verifyHex, // deprecated
         recover: recover,
         recoverHash: recoverHash,
         toHex: toHex,
         toString: toString,
 
         /** @deprecated use verify (same arguments and return) */
-        verifyBuffer: verify,
+        verifyBuffer: function verifyBuffer() {
+            console.log('Deprecated: use signature.verify instead (same arguments)');
+            return verify.apply(undefined, arguments);
+        },
 
         /** @deprecated use recover (same arguments and return) */
-        recoverPublicKey: recover,
+        recoverPublicKey: function recoverPublicKey() {
+            console.log('Deprecated: use signature.recover instead (same arguments)');
+            return recover.apply(undefined, arguments);
+        },
 
         /** @deprecated use recoverHash (same arguments and return) */
-        recoverPublicKeyFromBuffer: recoverHash
-
+        recoverPublicKeyFromBuffer: function recoverPublicKeyFromBuffer() {
+            console.log('Deprecated: use signature.recoverHash instead (same arguments)');
+            return recoverHash.apply(undefined, arguments);
+        }
     };
 }
 
 /**
     Hash and sign arbitrary data.
 
-    @arg {string|Buffer} data - non-hex data
+    @arg {string|Buffer} data - full data
     @arg {wif|PrivateKey} privateKey
+    @arg {String} [encoding = 'utf8'] - data encoding (if string)
 
     @return {Signature}
 */
 Signature.sign = function (data, privateKey) {
+    var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'utf8';
+
     if (typeof data === 'string') {
-        data = Buffer.from(data);
+        data = Buffer.from(data, encoding);
     }
     assert(Buffer.isBuffer(data), 'data is a required String or Buffer');
     data = hash.sha256(data);
@@ -30400,14 +30502,17 @@ Signature.sign = function (data, privateKey) {
 /**
     Sign a buffer of exactally 32 bytes in size (sha256(text))
 
-    @arg {Buffer|hex} buf - 32 byte buffer or hex string
+    @arg {string|Buffer} dataSha256 - 32 byte buffer or string
     @arg {wif|PrivateKey} privateKey
+    @arg {String} [encoding = 'hex'] - dataSha256 encoding (if string)
 
     @return {Signature}
 */
 Signature.signHash = function (dataSha256, privateKey) {
+    var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 'hex';
+
     if (typeof dataSha256 === 'string') {
-        dataSha256 = Buffer.from(dataSha256, 'hex');
+        dataSha256 = Buffer.from(dataSha256, encoding);
     }
     if (dataSha256.length !== 32 || !Buffer.isBuffer(dataSha256)) throw new Error("dataSha256: 32 byte buffer requred");
 
@@ -30457,7 +30562,7 @@ Signature.fromHex = function (hex) {
     @return Signature or `null` (if the signature string is invalid)
 */
 Signature.fromString = function (signature) {
-    var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : config.address_prefix;
+    var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'SIG_K1_';
 
     try {
         return Signature.fromStringOrThrow(signature, prefix);
@@ -30473,26 +30578,27 @@ Signature.fromString = function (signature) {
     @return Signature
 */
 Signature.fromStringOrThrow = function (signature) {
-    var prefix = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : config.address_prefix;
-
+    var prefix = 'SIG_K1_';
     var actualPrefix = signature.slice(0, prefix.length);
-    assert.equal(actualPrefix, prefix, 'Expecting key to begin with ' + prefix + ', instead got ' + prefix);
+    assert.equal(actualPrefix, prefix, 'Expecting key to begin with ' + prefix);
     signature = signature.slice(prefix.length);
     signature = new Buffer(base58.decode(signature), 'binary');
     var checksum = signature.slice(-4).toString('hex');
     signature = signature.slice(0, -4);
-    var new_checksum = hash.ripemd160(signature);
-    new_checksum = new_checksum.slice(0, 4).toString('hex');
+
+    var prefixTrim = prefix.replace(/^SIG_/, '').replace(/_$/, '');
+    var new_checksum = hash.ripemd160(Buffer.concat([signature, Buffer.from(prefixTrim)])).slice(0, 4).toString('hex');
+
     assert.equal(checksum, new_checksum, 'Checksum did not match, ' + (checksum + ' != ' + new_checksum));
+
     return Signature.fromBuffer(signature);
 };
-
 /**
     @arg {String|Signature} o - hex string
     @return {Signature}
 */
 Signature.from = function (o) {
-    var signature = o ? o.r && o.s && o.i ? o : typeof o === 'string' && o.length === 130 ? Signature.fromHex(o) : typeof o === 'string' && o.length !== 130 ? Signature.fromString(o) : Buffer.isBuffer(o) ? Signature.fromBuffer(o) : null : o; /*null or undefined*/
+    var signature = o ? o.r && o.s && o.i ? o : typeof o === 'string' && o.length === 130 ? Signature.fromHex(o) : typeof o === 'string' && o.length !== 130 ? Signature.fromStringOrThrow(o) : Buffer.isBuffer(o) ? Signature.fromBuffer(o) : null : o; /*null or undefined*/
 
     if (!signature) {
         throw new TypeError('signature should be a hex string or buffer');
@@ -30500,7 +30606,7 @@ Signature.from = function (o) {
     return signature;
 };
 }).call(this,require("buffer").Buffer)
-},{"./config":416,"./ecdsa":417,"./hash":420,"./key_private":422,"./key_public":423,"assert":1,"bigi":46,"bs58":65,"buffer":4,"ecurve":400}],427:[function(require,module,exports){
+},{"./ecdsa":417,"./hash":420,"./key_private":422,"./key_public":423,"assert":1,"bigi":46,"bs58":65,"buffer":4,"ecurve":400}],427:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var MD5 = require('md5.js')
 
@@ -35772,7 +35878,7 @@ module.exports = function (str, locale) {
 },{}],458:[function(require,module,exports){
 module.exports={
   "name": "eosjs",
-  "version": "9.0.1",
+  "version": "10.0.0",
   "description": "General purpose library for the EOS blockchain.",
   "main": "lib/index.js",
   "scripts": {
@@ -35808,7 +35914,7 @@ module.exports={
     "babel-preset-es2015": "^6.24.1",
     "browserify": "^14.4.0",
     "camel-case": "^3.0.0",
-    "coveralls": "^2.13.1",
+    "coveralls": "^3.0.0",
     "eosjs-keygen": "^1.2.0",
     "jsdoc-to-markdown": "^3.0.4",
     "mocha": "^3.4.2",
@@ -35819,7 +35925,7 @@ module.exports={
     "binaryen": "^37.0.0",
     "create-hash": "^1.1.3",
     "eosjs-api": "^5.0.0",
-    "eosjs-ecc": "^3.0.2",
+    "eosjs-ecc": "^4.0.0",
     "fcbuffer": "^2.1.5"
   },
   "babel": {
