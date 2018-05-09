@@ -5,6 +5,8 @@ weight: 1
 draft: false
 ---
 
+<img src="images/EditThisPage.jpg" align="center"><br>
+
 ### Find something wrong, update it!
 
 https://github.com/BinaryFocus/eosdocs.io
