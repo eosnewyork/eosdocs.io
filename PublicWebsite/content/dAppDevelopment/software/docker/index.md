@@ -25,13 +25,13 @@ If you don't alredy have docker installed, you can download it here: https://www
 The below statement will download an Ubuntu image which contains the compiled software. 
 
 ```
-docker pull binaryfocus/eosdawn-2018-04-27-alpha
+docker pull binaryfocus/eosdawn-2018-04-27-alpha-dev
 ```
 
 As a quick test, run the image and gain access to a bash shell, do the following: 
 
 ```
-docker run --rm -it binaryfocus/eosdawn-2018-04-27-alpha bash
+docker run --rm -it binaryfocus/eosdawn-2018-04-27-alpha-dev bash
 ```
 
 If that works you should get to a prompt that looks as following and typing "cleos" should return the help for the cleos tool:

@@ -40,7 +40,7 @@ The image below illustrates that the keosd daemon can have multiple wallets and 
 
 The wallet we'll be discussing is a daemon called keosd
 
-To run the wallet daemon do simply run the executable.
+To run the wallet daemon do simply run the executable. Note that if you're using docker images and following the [docker instructions](../software/docker/#Running) ... then you already have a docker container running the wallet daemon. 
 
 ```
 cd eos/build/programs/keosd/

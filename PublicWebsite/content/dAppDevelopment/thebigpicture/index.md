@@ -23,22 +23,3 @@ As you step through the rest of this site, we assume that you are running **node
 ![big Picture](images/BigPicture.jpeg)
 
 
-Machine B is running 
-```
-$./nodeos -e -p eosio --plugin eosio::chain_api_plugin --plugin eosio::account_history_api_plugin
-```
-
-Machine A is where you will run keosd. 
-```
-$./keosd
-```
-
-Machine A is also the machine that you'll use to compile your smart contracts and upload to the blockachain.
-
- 
-#### The process we'll follow (Work in progress)
-
-1. Create wallet 
-2. Create keys (owner and active)
-3. Add keys to wallet
-4. Create Account and indicate which keys can access it.  

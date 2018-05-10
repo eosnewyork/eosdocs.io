@@ -7,6 +7,10 @@ draft: false
 
 <img src="images/EditThisPage.jpg" align="center"><br>
 
+### Telegram
+
+If you're not sure about an edit and want to talk about the change 1st : [EOSDocs.io Telegram Channel](https://t.me/joinchat/HaoqEBChynkA77ZMfL6h8g) 
+
 ### Find something wrong, update it!
 
 https://github.com/BinaryFocus/eosdocs.io

@@ -2,6 +2,7 @@
 title: "Playground"
 date: 2018-04-30T15:53:46-04:00
 draft: false
+weight: 15
 ---
 
 {{< EOS_Create_Account >}}
