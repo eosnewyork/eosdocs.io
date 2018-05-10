@@ -108,6 +108,9 @@ Now let's make sure ther server is working:
 cleos -u http://server:7777 get info
 ```
 
+```
+cleos --wallet-url http://wallet:5555 wallet list keys
+```
 
 
 
