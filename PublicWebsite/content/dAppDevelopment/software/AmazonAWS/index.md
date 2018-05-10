@@ -11,7 +11,7 @@ EOSDocs.io has created a public AMI which you can use when creating AWS instance
 
 The AMI ID is: ami-f840cd87
 
-Or you can can simply search for DAWN in the Community AMIs.
+Or you can can simply search for DAWN in the Community AMIs in the N. Virginia region.
 
 ![AMI](images/Launch.png)
 
