@@ -58,7 +58,7 @@ Running the server for the 1st time auto generate an INI file in the default con
 Let's create a default wallet. 
 
 ```
-$./cleos wallet create 
+$cleos --wallet-url http://wallet:5555 wallet create
 
 Creating wallet: default
 Save password to use in the future to unlock this wallet.
@@ -79,7 +79,7 @@ Note that the EOS master key has been added to this wallet for you. Don't be con
 Let's take a look at what's in the wallet.
 
 ```
-./cleos wallet keys
+$cleos --wallet-url http://wallet:5555 wallet keys
 [[
     "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
     "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
@@ -103,7 +103,7 @@ $ ./keosd
 We can now see that using the list command returns nothing ... where'd my wallet go?
 
 ```
-$./cleos wallet list
+$cleos --wallet-url http://wallet:5555 wallet list
 
 Wallets:
 []
@@ -112,9 +112,9 @@ Wallets:
 The catch is the wallet needs to be "opened" before it'll show up in your list of wallets (something that can be improved in my opinion)
 
 ```
-$./cleos wallet open
+$cleos --wallet-url http://wallet:5555 wallet open
 
-$./cleos wallet list
+$cleos --wallet-url http://wallet:5555 wallet list
 
 Wallets:
 [
@@ -128,7 +128,7 @@ Wallets:
 Simply having your wallet open doesn't do much for you, you now need to UNLOCK the wallet. 
    
 ```
-./cleos wallet unlock
+$cleos --wallet-url http://wallet:5555 wallet unlock
 
 #{You'll need to provide your password here}
 password: Unlocked: default
@@ -136,7 +136,7 @@ password: Unlocked: default
 
 Note how when I list the wallet now, there's a * next to the name, indicating that it's been unlocked.
 ```
-./cleos wallet list
+$cleos --wallet-url http://wallet:5555 wallet list
 Wallets:
 [
   "default *"
@@ -157,7 +157,7 @@ So in most cases you'll want to create two keys so that you can associate one ke
 The below create key command just prints a key pair to screen. It's not stored .. you'll need to import these keys into a wallet.
 
 ```
-$ ./cleos create key
+$cleos create key
 Private key: 5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf
 Public key: EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF
 
@@ -170,18 +170,18 @@ Public key: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 Now let's import the keys into our wallet. 
 
 ```
-$./cleos wallet import 5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf
+$cleos --wallet-url http://wallet:5555 wallet import 5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf
 imported private key for: EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF
 
 
-$./cleos wallet import 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ
+$cleos --wallet-url http://wallet:5555 wallet import 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ
 imported private key for: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 ```
 
 If we look at our wallet now, we can see 3 keys. The 1 master key that was added when we created the wallet and the two keys that we just imported. 
 
 ```
-./cleos wallet keys
+./cleos --wallet-url http://wallet:5555 wallet keys
 [[
     "EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN",
     "5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ"
@@ -220,8 +220,8 @@ The keosd daemon allows you to have multiple wallets.
 While not covered in detail here, most of the above commands take params allowing you to specify the name of the wallet you want to interact with. Example: 
 
 ```
-./cleos wallet create -n MyTestWallet
-./cleos wallet import 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcxxxxxxxx -n MyTestWallet
+$cleos --wallet-url http://wallet:5555 wallet create -n MyTestWallet
+$cleos --wallet-url http://wallet:5555 wallet import 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcxxxxxxxx -n MyTestWallet
 ```
 
 https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts

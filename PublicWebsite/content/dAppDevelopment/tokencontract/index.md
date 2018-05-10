@@ -1,7 +1,7 @@
 ---
-title: "Smart contract basics"
+title: "Token contract"
 date: 2018-04-24T09:23:39-04:00
-weight: 5
+weight: 6
 draft: false
 ---
 
@@ -12,17 +12,20 @@ https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts
 -p eosio tells cleos to sign this action with the **active** authority of the eosio account, i.e., to sign the action using the private key for the eosio account that we imported earlier.
 
 ```
-$./cleos set contract eosio build/contracts/eosio.bios -p eosio
-./cleos -H ec2-34-238-254-245.compute-1.amazonaws.com -p 8888 set contract eosio ~/dev/eos/build/contracts/eosio.bios -p eosio
+# If you're using he docker image this is where you'll find the compiled bios contract
+cd /tmp/build/contracts/eosio.bios/
+
+$cleos --wallet-url http://wallet:5555 -u http://server:7777 set contract eosio /tmp/build/contracts/eosio.bios/ -p eosio
+
 ```
 
 cleos calls eosio::setcode and eosio::setabi method
 
 ```
-Reading WAST/WASM from /root/dev/eos/build/contracts/eosio.bios/eosio.bios.wast...
+Reading WAST/WASM from /tmp/build/contracts/eosio.bios/eosio.bios.wast...
 Assembling WASM...
 Publishing contract...
-executed transaction: 3268ed5ba29f1b6b1d94ad4f8efaf450d3810a6d06a0a5ba3f4d4b0b3b6c492c  3288 bytes  2200576 cycles
+executed transaction: eb4593ca925673d8115f11a7c28bf106b32673a5d725259c8dd6edb533135f48  3288 bytes  2200576 cycles
 #         eosio <= eosio::setcode               {"account":"eosio","vmtype":0,"vmversion":0,"code":"0061736d0100000001581060037f7e7f0060057f7e7e7e7e...
 #         eosio <= eosio::setabi                {"account":"eosio","abi":{"types":[],"structs":[{"name":"set_account_limits","base":"","fields":[{"n...
 ```
