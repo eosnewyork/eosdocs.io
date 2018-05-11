@@ -13,7 +13,8 @@ draft: false
 #### Tutorials
 
 * https://youtu.be/E3Tx2DseLGE - <b><font color=red>Object Computing dapp tutorial</font></b>
-
+        
+	* Note (optional): checkout the `april-26-workshop` branch if you want to follow the example from the video on your local machine.
 	* [Contract basics (hello contact example)](https://youtu.be/E3Tx2DseLGE?t=29m) (29 minutes - 44 minutes)
 	* [Contract deeper dive (Addressbook contract example)](https://youtu.be/E3Tx2DseLGE?t=44m13s)  (44 minutes - 50 minutes)
 	* [Writing to tables (storage)](https://youtu.be/E3Tx2DseLGE?t=50m27s)  (50 minutes - 1 hr)
@@ -26,7 +27,7 @@ draft: false
 * https://github.com/jafri/eos-debug
 
 #### Benchmarks / Performance
-* https://vimeo.com/266585781
+* https://vimeo.com/266585781 - Matt (block.one) demonstrates using the "txn_test_gen_plugin" plugin to generate 1000 transactions per seconds.
 
 #### Libraries
 * [EOSjs](https://github.com/EOSIO/eosjs) - Javascript
@@ -51,7 +52,7 @@ draft: false
 * http://jungle.cryptolions.io:9898/monitor/
 
 #### Launch 
-* https://eoscountdown.com/ - Check that your ETH address is registored
+* https://eoscountdown.com/ - Check that your ETH address is registered
 * [EOS Authority](https://eosauthority.com) - Another key registration checker
 
 #### Security
