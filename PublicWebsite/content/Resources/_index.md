@@ -13,7 +13,8 @@ draft: false
 #### Tutorials
 
 * https://youtu.be/E3Tx2DseLGE - <b><font color=red>Object Computing dapp tutorial</font></b>
-
+        
+	* Note (optional): checkout the `april-26-workshop` branch if you want to follow the example from the video on your local machine.
 	* [Contract basics (hello contact example)](https://youtu.be/E3Tx2DseLGE?t=29m) (29 minutes - 44 minutes)
 	* [Contract deeper dive (Addressbook contract example)](https://youtu.be/E3Tx2DseLGE?t=44m13s)  (44 minutes - 50 minutes)
 	* [Writing to tables (storage)](https://youtu.be/E3Tx2DseLGE?t=50m27s)  (50 minutes - 1 hr)
