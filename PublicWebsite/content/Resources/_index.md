@@ -29,8 +29,22 @@ draft: false
 #### Benchmarks / Performance
 * https://vimeo.com/266585781 - Matt (block.one) demonstrates using the "txn_test_gen_plugin" plugin to generate 1000 transactions per seconds.
 
-#### Tools
+#### Libraries
+* [EOSjs](https://github.com/EOSIO/eosjs) - Javascript
+* [eos-go](https://github.com/eoscanada/eos-go) - Go
+* [SwiftyEOS](https://github.com/ProChain/SwiftyEOS) - Swift
+* [eosrpc](https://hex.pm/packages/eosrpc) - Elixir lang
+
+#### Block Producer Tools
+* [bp-playbook](https://github.com/eosdetroit/bp-playbook) - Ansible playbook to dynamically deploy Dockerized nodeos
+* [EOS BIOS](https://github.com/eoscanada/eos-bios) - EOS.IO mainnet launch orchestration tool
+* [EOS Helm](https://github.com/activeeos/eos-helm) - Kubernetes Helm charts for EOS
+
+#### Developer Tools
 * https://tbfleming.github.io/cib/eos.html  - C++ -> WASM compiler
+* [EOS Dev Helper](https://github.com/OracleChain/EOSDevHelper) - Conveniently test EOS interfaces using a desktop wallet tool. (Windows and Mac)
+
+#### User Tools
 * https://nadejde.github.io/eos-token-sale/ - Key Gen
 
 #### Testnet
@@ -39,6 +53,8 @@ draft: false
 
 #### Launch 
 * https://eoscountdown.com/ - Check that your ETH address is registered
+* [EOS Authority](https://eosauthority.com) - Another key registration checker
 
 #### Security
 * https://medium.com/@bytemaster/debunking-claimed-vulnerability-in-eosio-smart-contract-system-9fa1ca2a6428
+* [Mitigate DDOS on AWS](https://steemit.com/eos/@eosnodeone/prevent-ddos-with-aws-network-load-balancer)
