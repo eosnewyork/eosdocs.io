@@ -8,6 +8,7 @@ draft: false
 #### Official
 * https://github.com/EOSIO/eos/wiki
 * https://medium.com/eosio - EOS Blog
+* https://t.me/eosdocs - Telegram Channel
 
 #### Tutorials
 
