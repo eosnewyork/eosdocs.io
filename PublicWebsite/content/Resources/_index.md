@@ -26,7 +26,7 @@ draft: false
 * https://github.com/jafri/eos-debug
 
 #### Benchmarks / Performance
-* https://vimeo.com/266585781
+* https://vimeo.com/266585781 - Matt (block.one) demonstrates using the "txn_test_gen_plugin" plugin to generate 1000 transactions per seconds.
 
 #### Tools
 * https://tbfleming.github.io/cib/eos.html  - C++ -> WASM compiler
@@ -37,7 +37,7 @@ draft: false
 * http://jungle.cryptolions.io:9898/monitor/
 
 #### Launch 
-* https://eoscountdown.com/ - Check that your ETH address is registored
+* https://eoscountdown.com/ - Check that your ETH address is registered
 
 #### Security
 * https://medium.com/@bytemaster/debunking-claimed-vulnerability-in-eosio-smart-contract-system-9fa1ca2a6428
