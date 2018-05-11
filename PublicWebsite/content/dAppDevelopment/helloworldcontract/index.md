@@ -13,9 +13,7 @@ https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts
 
 ```
 # If you're using he docker image this is where you'll find the source code for the example contracts. We're going to add another here. 
-$cd /eos/contracts/
-
-$mkdir hello
+$cd /eos/contracts/hello
 
 ```
 
