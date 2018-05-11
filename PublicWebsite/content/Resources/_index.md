@@ -19,12 +19,12 @@ draft: false
 	* [Deleting from a table (storage)](https://youtu.be/E3Tx2DseLGE?t=1h00m00s)  (1 hr - 1h 3 minutes)
 	* [Using an alternate table index (storage)](https://youtu.be/E3Tx2DseLGE?t=1h03m00s)  (1h 3 minutes - 1h 4 minutes)
 	* [Calling another contract from within your contract](https://youtu.be/E3Tx2DseLGE?t=1h03m50s)  (1h 4 minutes - 1h 6 minutes)
-	* [Defining who pays for he storage](https://youtu.be/E3Tx2DseLGE?t=56m36s)  (56 minutes - 58 minutes)
+	* [Defining who pays for storage](https://youtu.be/E3Tx2DseLGE?t=56m36s)  (56 minutes - 58 minutes)
 
 * https://steemit.com/devs/@eos-asia/eos-smart-contracts-part-1-getting-started-ping-equivalent-in-eos - Ping Example
 * https://github.com/jafri/eos-debug
 
-#### Benchmars / Performance
+#### Benchmarks / Performance
 * https://vimeo.com/266585781
 
 #### Tools
