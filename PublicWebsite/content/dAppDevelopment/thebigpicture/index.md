@@ -13,7 +13,7 @@ The below image shows how these tools are normally distributed. The tools names 
 
 * **eosiocpp** - A compiler which allows you to compile your C++ into a format that can be uploaded to the blockchain. 
 * **cleos** - A commandline tool used to upload your contracts to the blockchain and query the blockchain. 
-* **keosd** - A wallet manger which runs as a daemon. The cleos tool interacts with this to sign riquests (needed so that your requests to the blockchain can be trusted). 
+* **keosd** - A wallet manger which runs as a daemon. The cleos tool interacts with this to sign requests (needed so that your requests to the blockchain can be trusted). 
 * **nodeos** - The server software that runs the blockchain itself.
 
 {{% notice warning %}}
