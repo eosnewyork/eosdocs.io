@@ -70,7 +70,7 @@ Without password imported keys will not be retrievable.
 Save this password somewhere safe and label it DEFAULT WALLET PASSWORD 
 {{% /notice %}}
 
-By default wallets are stored in ~/eosio-wallet/default.wallet
+By default wallets are stored in ~/eosio-wallet/default.wallet. If you're following the docker instructions and you'd like to SSH into your wallet docker container to explore the file system and see this file, you can run the following from a new command prompt: "docker exec -it wallet bash"
 
 {{% notice note %}}
 Note that the EOS master key has been added to this wallet for you. Don't be confused by this, all you have done to this point is created a wallet - and you now have a password to unlock that wallet. 
