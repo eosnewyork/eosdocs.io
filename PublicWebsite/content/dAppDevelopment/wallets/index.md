@@ -40,7 +40,7 @@ The image below illustrates that the keosd daemon can have multiple wallets and 
 
 The wallet we'll be discussing is a daemon called keosd
 
-To run the wallet daemon do simply run the executable. Note that if you're using docker images and following the [docker instructions](../software/docker/#Running) ... then you already have a docker container running the wallet daemon.
+To run the wallet daemon simply run the executable. Note that if you're using docker images and are following the [docker instructions](../software/docker/#Running), then you already have a docker container running the wallet daemon. 
 
 ```
 cd eos/build/programs/keosd/
@@ -48,14 +48,14 @@ cd eos/build/programs/keosd/
 ```
 
 {{% notice warning %}}
-By default keosd runs on port 8888 .. this is the same port the nodeos applicantion uses by default .. so if you're running this on the same machine you'll need to supply the something like this to run on port 8899  "./keosd --http-server-address=localhost:8899"
+By default keosd runs on port 8888. This is the same port the nodeos application uses by default, so if you're running this on the same machine you'll need to supply the something like this to run on port 8899  "./keosd --http-server-address=localhost:8899"
 {{% /notice %}}
 
-Running the server for the 1st time auto generate an INI file in the default config folder  ~/eosio-wallet/config.ini
+If you are running the server for the 1st time, you need to auto generate an INI file in the default "config" folder  ~/eosio-wallet/config.ini
 
 ### 2. Create a wallet {#create}
 
-Let's create a default wallet.
+Let's create a default wallet: 
 
 ```
 $cleos --wallet-url http://wallet:5555 wallet create
@@ -67,13 +67,13 @@ Without password imported keys will not be retrievable.
 ```
 
 {{% notice tip %}}
-Save this password somewhere safe and label it DEFAULT WALLET PASSWORD
+Save this password somewhere safe and label it as: DEFAULT WALLET PASSWORD 
 {{% /notice %}}
 
 By default wallets are stored in ~/eosio-wallet/default.wallet. If you're following the docker instructions and you'd like to SSH into your wallet docker container to explore the file system and see this file, you can run the following from a new command prompt: "docker exec -it wallet bash"
 
 {{% notice note %}}
-Note that the EOS master key has been added to this wallet for you. Don't be confused by this, all you have done to this point is created a wallet - and you now have a password to unlock that wallet.
+Note that the EOS master key has been added to this wallet for you. Don't be confused by this, all you have done to this point is create a wallet - and you now have a password to unlock that wallet. 
 {{% /notice %}}
 
 Let's take a look at what's in the wallet.
@@ -87,13 +87,13 @@ $cleos --wallet-url http://wallet:5555 wallet keys
 ]
 ```
 
-As you can see, there is one key pair in your newly created wallet ... this is the master keypair for the sole initial account, **eosio**
+As you can see, there is one key pair in your newly created wallet. This is the master keypair for the sole initial account, **eosio**
 
 **Don't confuse the above master key with keys that you'll be adding in future**
 
 ### 3. Wallets need to be opened {#open}
 
-Something that can be a little confusing is that wallets that are not "open" are not listed when using the list command. Here's an example:
+Something that can be a little confusing is that wallets that are not "open" are not listed when using the "list" command. Here's an example:
 
 Let's start by killing and restarting the keosd process.
 ```
@@ -109,7 +109,7 @@ Wallets:
 []
 ```
 
-The catch is the wallet needs to be "opened" before it'll show up in your list of wallets (something that can be improved in my opinion)
+The catch is, the wallet needs to be "opened" before it'll show up in your list of wallets (something that can be improved in my opinion)
 
 ```
 $cleos --wallet-url http://wallet:5555 wallet open
@@ -154,7 +154,7 @@ As detailed in the Accounts section, each account has two permissions the **owne
 
 So in most cases you'll want to create two keys so that you can associate one key with each permission (more on this later).
 
-The below create key command just prints a key pair to screen. It's not stored .. you'll need to import these keys into a wallet.
+The "create key" command below just prints a key pair to screen. It's not stored, so you'll need to import these keys into a wallet.
 
 ```
 $cleos create key
@@ -178,7 +178,7 @@ $cleos --wallet-url http://wallet:5555 wallet import 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZ
 imported private key for: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 ```
 
-If we look at our wallet now, we can see 3 keys. The 1 master key that was added when we created the wallet and the two keys that we just imported.
+If we look at our wallet now, we can see 3 keys. The single master key that was added when we created the wallet and the two keys that we just imported. 
 
 ```
 ./cleos --wallet-url http://wallet:5555 wallet keys
@@ -196,7 +196,7 @@ If we look at our wallet now, we can see 3 keys. The 1 master key that was added
 ```
 
 {{% notice warning %}}
-As we stated above, it's important to keep track of which key your planning on using for what. When you store your Keys, clearly label the keys as per the example below
+As we stated above, it's important to keep track of which key your planning on using for what purpose. When you store your keys, clearly label the keys as per the example below
 {{% /notice %}}
 
 **By labeling our new keys as follows, you'll be a lot less likely to get the keys mixed up as you develop.**
