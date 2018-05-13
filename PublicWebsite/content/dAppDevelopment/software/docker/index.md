@@ -34,7 +34,7 @@ As a quick test, run the image and gain access to a bash shell, do the following
 docker run --rm -it binaryfocus/eosdawn-2018-04-27-alpha-dev bash
 ```
 
-If that works you should get to a prompt that looks as following and typing "cleos" should return the help for the cleos tool:
+If that works, you should get to a prompt that looks like the following, and typing "cleos" should return the help for the cleos tool:
 
 ```
 root@a5f9eafaab74:/#cleos
@@ -70,7 +70,7 @@ exit the image by typing "exit"
 
 #### 2. Create a docker network {#Network}
 
-Create a docker network that will allow the container to communicate with one another
+Create a docker network which will allow the containers to communicate with one another
 
 ```
 docker network create eosnetwork
@@ -99,7 +99,7 @@ docker run --name tools --network=eosnetwork --rm -it binaryfocus/eosdawn-2018-0
 
 #### 4. Testing to see if it's all working {#Testing}
 
-Now let's make sure ther server is working:
+Now let's make sure the server is working:
 
 1. [http://localhost:7777/v1/chain/get_info](http://localhost:7777/v1/chain/get_info) should work in a local web browser
 2. Running this command from the tools docker instance should work:
