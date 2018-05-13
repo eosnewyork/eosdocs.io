@@ -55,7 +55,7 @@ In another terminal window check that you can get the server info
 curl http://127.0.0.1:8888/v1/chain/get_info
 ```
 
-In most cases we'll can to be able to connect to that URL remotly so we'll need to update the .INI (config file)
+In most cases we'll want to be able to connect to that URL remotly so we'll need to update the .INI (config file)
 {{% notice warning %}}
 If you have not run the above ./nodeos ... statement the below ~/.local folder will not yet exist
 {{% /notice %}}
