@@ -5,12 +5,12 @@ weight: 3
 draft: false
 ---
 
-* [Start the keosd background process]({{<ref "#keosd" >}}) 
-* [Create a wallet]({{<ref "#create" >}}) 
-* [Wallets need to be opened]({{<ref "#open" >}}) 
-* [Unlocking your wallet]({{<ref "#unlock" >}}) 
-* [Adding keys]({{<ref "#AddingKeys" >}}) 
-* [Working with multiple wallets]({{<ref "#MultipleWallets" >}}) 
+* [Start the keosd background process]({{<ref "#keosd" >}})
+* [Create a wallet]({{<ref "#create" >}})
+* [Wallets need to be opened]({{<ref "#open" >}})
+* [Unlocking your wallet]({{<ref "#unlock" >}})
+* [Adding keys]({{<ref "#AddingKeys" >}})
+* [Working with multiple wallets]({{<ref "#MultipleWallets" >}})
 
 
 
@@ -19,18 +19,18 @@ draft: false
 
 There are currently two wallet options available:
 
-* A plugin that you're able to start with the nodeos server. 
+* A plugin that you're able to start with the nodeos server.
 * A standalone daemon that can be run on a seperate server, independent from the nodeos server. **<< We're going to be using this option**
 
 > **DO NOT SUPPLY THE FOLLOWING WHEN STARTING THE nodeos server:** --plugin eosio::wallet_api_plugin
 
-### Important concept 
+### Important concept
 
-Many people involved in Crypto think about a wallet as something that stores "Tokens". This is not the correct way of thinking about the wallet. 
+Many people involved in Crypto think about a wallet as something that stores "Tokens". This is not the correct way of thinking about the wallet.
 
 ![Coins are not stored it the wallet](images/NoCoins.png)
 
-The wallet is just a place where key pairs are stored. 
+The wallet is just a place where key pairs are stored.
 
 The image below illustrates that the keosd daemon can have multiple wallets and each wallet can hold multiple public+private key pairs
 
@@ -95,7 +95,7 @@ As you can see, there is one key pair in your newly created wallet. This is the 
 
 Something that can be a little confusing is that wallets that are not "open" are not listed when using the "list" command. Here's an example:
 
-Let's start by killing and restarting the keosd process. 
+Let's start by killing and restarting the keosd process.
 ```
 $ pkill keosd
 $ ./keosd
@@ -125,8 +125,8 @@ Wallets:
 
 ### 4. Unlocking your wallet {#unlock}
 
-Simply having your wallet open doesn't do much for you, you now need to UNLOCK the wallet. 
-   
+Simply having your wallet open doesn't do much for you, you now need to UNLOCK the wallet.
+
 ```
 $cleos --wallet-url http://wallet:5555 wallet unlock
 
@@ -144,15 +144,15 @@ Wallets:
 ```
 
 {{% notice note %}}
-Note that when you created your wallet using the "./cleos wallet create" in step 2 above, your wallet was left in an Open and Unlocked state. What tends to happen is that, things work as you're following a tutorial, but things don't work after a reboot. If you don't understand this, you need to open and then unlock the wallet before it can be used, you'll be confused at some point. 
+Note that when you created your wallet using the "./cleos wallet create" in step 2 above, your wallet was left in an Open and Unlocked state. What tends to happen is things work as you're following a tutorial, but things don't work after a reboot. If you don't understand this need to Open and then unlock the wallet before it can be used, you'll be confused at some point.
 {{% /notice %}}
 
 
 ### 5. Adding keys {#AddingKeys}
 
-As detailed in the Accounts section, each account has two permissions the **owner** and the **active** permission. 
+As detailed in the Accounts section, each account has two permissions the **owner** and the **active** permission.
 
-So in most cases you'll want to create two keys so that you can associate one key with each permission (more on this later). 
+So in most cases you'll want to create two keys so that you can associate one key with each permission (more on this later).
 
 The "create key" command below just prints a key pair to screen. It's not stored, so you'll need to import these keys into a wallet.
 
@@ -167,7 +167,7 @@ Private key: 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ
 Public key: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 ```
 
-Now let's import the keys into our wallet. 
+Now let's import the keys into our wallet.
 
 ```
 $cleos --wallet-url http://wallet:5555 wallet import 5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf
@@ -205,19 +205,19 @@ As we stated above, it's important to keep track of which key your planning on u
 
     eosio Public Key: "EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN",
     eosio Private Key: "5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ"
-  
+
     MyNewAccount owner Public Key: "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
     MyNewAccount owner Private Key: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
-  
+
     MyNewAccount active Public Key: "EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF",
     MyNewAccount active Public Key: "5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf"
 ```
 
-### 5. Working with multiple wallets {#MultipleWallets}
+### 6. Working with multiple wallets {#MultipleWallets}
 
-The keosd daemon allows you to have multiple wallets. 
+The keosd daemon allows you to have multiple wallets.
 
-While not covered in detail here, most of the above commands take params allowing you to specify the name of the wallet you want to interact with. Example: 
+While not covered in detail here, most of the above commands take params allowing you to specify the name of the wallet you want to interact with. Example:
 
 ```
 $cleos --wallet-url http://wallet:5555 wallet create -n MyTestWallet
