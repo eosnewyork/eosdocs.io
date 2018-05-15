@@ -43,6 +43,7 @@ draft: false
 #### Developer Tools
 * https://tbfleming.github.io/cib/eos.html  - C++ -> WASM compiler
 * [EOS Dev Helper](https://github.com/OracleChain/EOSDevHelper) - Conveniently test EOS interfaces using a desktop wallet tool. (Windows and Mac)
+* [EOS Factory](http://eosfactory.io/) - EOSFactory is a Python-based smart-contract development & testing framework (Win, Mac, Linux)
 
 #### User Tools
 * https://nadejde.github.io/eos-token-sale/ - Key Gen
