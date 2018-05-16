@@ -39,10 +39,10 @@ $./cleos -H {Server} -p {Port} create account eosio mynewaccount CCCCCCCCCC DDDD
 Creating contracts is covered in detail [here](../smartcontractbasics). But if you want to test a contract without installing all the compilers and tools, you can use a web based contract editor: 
 
 
-Once you've created an account using the tool above. You can then use <a href="https://tbfleming.github.io/cib/eos.html" target="_blank">THIS</a><br>tool to compile a contract and uplod it to your new account. 
+Once you've created an account using the tool above. You can then use <a href="https://tbfleming.github.io/cib/eos-dawn4.html" target="_blank">THIS</a><br>tool to compile a contract and uplod it to your new account. 
 
 Here are some contract examples:<br>
-Example 1: <a href="https://tbfleming.github.io/cib/eos.html#gist=8b2b9a60cf51afcfaeb80e88c74d66ae" target="_blank">Click Here</a><br> 
+Example 1: <a href="https://tbfleming.github.io/cib/eos-dawn4.html#gist=8b2b9a60cf51afcfaeb80e88c74d66ae" target="_blank">Click Here</a><br> 
 {{% /expand%}}
 
 <hr>

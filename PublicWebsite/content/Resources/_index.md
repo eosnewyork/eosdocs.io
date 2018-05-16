@@ -23,8 +23,10 @@ draft: false
 	* [Calling another contract from within your contract](https://youtu.be/E3Tx2DseLGE?t=1h03m50s)  (1h 4 minutes - 1h 6 minutes)
 	* [Defining who pays for storage](https://youtu.be/E3Tx2DseLGE?t=56m36s)  (56 minutes - 58 minutes)
 
-* https://steemit.com/devs/@eos-asia/eos-smart-contracts-part-1-getting-started-ping-equivalent-in-eos - Ping Example
+* [Ping equivalent in EOS](https://steemit.com/devs/@eos-asia/eos-smart-contracts-part-1-getting-started-ping-equivalent-in-eos)  
+* [Building a To-do list with EOS](https://steemit.com/eos/@eos-asia/)
 * https://github.com/jafri/eos-debug
+
 
 #### Benchmarks / Performance
 * https://vimeo.com/266585781 - Matt (block.one) demonstrates using the "txn_test_gen_plugin" plugin to generate 1000 transactions per seconds.
