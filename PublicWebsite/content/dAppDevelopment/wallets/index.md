@@ -150,7 +150,7 @@ Note that when you created your wallet using the "./cleos wallet create" in step
 
 ### 5. Adding keys {#AddingKeys}
 
-As detailed in the Accounts section, each account has two permissions the **owner** and the **active** permission.
+As detailed in the [Accounts](../accounts/] section, each account has two permissions the **owner** and the **active** permission.
 
 So in most cases you'll want to create two keys so that you can associate one key with each permission (more on this later).
 
