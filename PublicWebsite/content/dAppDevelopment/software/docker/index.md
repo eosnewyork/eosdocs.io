@@ -25,13 +25,13 @@ If you don't alredy have docker installed, you can download it here: https://www
 The below statement will download an Ubuntu image which contains the compiled software. 
 
 ```
-docker pull binaryfocus/eosdawn-2018-04-27-alpha-dev
+docker pull binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b
 ```
 
 As a quick test, run the image and gain access to a bash shell, do the following: 
 
 ```
-docker run --rm -it binaryfocus/eosdawn-2018-04-27-alpha-dev bash
+docker run --rm -it binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b bash
 ```
 
 If that works, you should get to a prompt that looks like the following, and typing "cleos" should return the help for the cleos tool:
@@ -82,19 +82,19 @@ docker network create eosnetwork
 To run the server software (on port 7777): 
 
 ```
-docker run --name server --network=eosnetwork --rm -p 7777:7777 -i binaryfocus/eosdawn-2018-04-27-alpha-dev /bin/bash -c "nodeos -e -p eosio --plugin eosio::producer_plugin --plugin eosio::chain_api_plugin --plugin eosio::http_plugin -d /mnt/dev/data --http-server-address=0.0.0.0:7777 --access-control-allow-origin=*"
+docker run --name server --network=eosnetwork --rm -p 7777:7777 -i binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b /bin/bash -c "nodeos -e -p eosio --plugin eosio::producer_plugin --plugin eosio::chain_api_plugin --plugin eosio::http_plugin -d /mnt/dev/data --http-server-address=0.0.0.0:7777 --access-control-allow-origin=*"
 ```
 
 To run the wallet software (on port 5555): 
 
 ```
-docker run --name wallet --network=eosnetwork --rm -p 5555:5555 -i binaryfocus/eosdawn-2018-04-27-alpha-dev /bin/bash -c "keosd --http-server-address=0.0.0.0:5555"
+docker run --name wallet --network=eosnetwork --rm -p 5555:5555 -i binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b /bin/bash -c "keosd --http-server-address=0.0.0.0:5555"
 ```
 
 Let's open a bash shell so that we can test some of the tools
 
 ```
-docker run --name tools --network=eosnetwork --rm -it binaryfocus/eosdawn-2018-04-27-alpha-dev /bin/bash 
+docker run --name tools --network=eosnetwork --rm -it binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b /bin/bash 
 ```
 
 #### 4. Testing to see if it's all working {#Testing}
@@ -109,12 +109,17 @@ $ cleos -u http://server:7777 get info
 
 # Expected response
 {
-  "server_version": "45fb9218",
-  "head_block_num": 98,
-  "last_irreversible_block_num": 97,
-  "head_block_id": "0000006227c02a11a1c4502e9291340e39bc0a22121c6d9313c83edc44f41c38",
-  "head_block_time": "2018-05-10T01:36:16",
-  "head_block_producer": "eosio"
+  "server_version": "749a6759",
+  "head_block_num": 1953,
+  "last_irreversible_block_num": 1952,
+  "last_irreversible_block_id": "000007a0c1ae4e28480dcbeef36e9d4970987969f850453dcf8e244b569d6325",
+  "head_block_id": "000007a1fc0d5b3dd16ebfe18ab9a288ac8bc7d03caee050a58a502577d25560",
+  "head_block_time": "2018-05-16T02:04:08",
+  "head_block_producer": "eosio",
+  "virtual_block_cpu_limit": 701979,
+  "virtual_block_net_limit": 7389096,
+  "block_cpu_limit": 99900,
+  "block_net_limit": 1048576
 }
 ```
 
