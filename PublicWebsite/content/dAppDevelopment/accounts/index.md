@@ -31,7 +31,7 @@ Note that account names must be lower case and should be less than 13 characters
 ### 2. Account Info {#info}
 
 ```
-$cleos -u http://server:7777 get account mynewaccount
+$cleos -u http://server:7777 get account mynewaccount -j
 
 {
   "account_name": "mynewaccount",
