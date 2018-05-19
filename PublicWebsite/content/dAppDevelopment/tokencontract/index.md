@@ -14,7 +14,7 @@ https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts
 > If you're using the docker image `/contracts` is the folder where all the contracts are located.
 
 ```
-$ cleos set contract eosio eosio.bios -p eosio
+$ cleos --wallet-url http://wallet:5555 -u http://server:7777 set contract eosio eosio.bios -p eosio
 ```
 
 `cleos` calls `eosio::setcode` and `eosio::setabi` method
