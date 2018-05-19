@@ -87,7 +87,7 @@ $ cleos create key
 ```
 
 ```
-$ cleos wallet create on bobwallet
+$ cleos wallet create -n bobwallet
 $ cleos wallet import 5HuaTWKeGzZhqyzuzFAjjFjPnnnjdgcp562oBSS8Wv1qgDSkR2W -n bobwallet
 $ cleos wallet import 5JbnQ1WpnSECgJWkDtN7vCReayA9yRZ1pBeYBmcUHxC3AAaNkoP -n bobwallet
 ```
