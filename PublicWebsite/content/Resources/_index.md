@@ -27,6 +27,9 @@ draft: false
 * [Building a To-do list with EOS](https://steemit.com/eos/@eos-asia/)
 * https://github.com/jafri/eos-debug
 
+#### Ricardian Contracts
+
+* [Introduction to Ricardian Contracts](https://www.eoscanada.com/en/introduction-to-ricardian-contracts)
 
 #### Benchmarks / Performance
 * https://vimeo.com/266585781 - Matt (block.one) demonstrates using the "txn_test_gen_plugin" plugin to generate 1000 transactions per seconds.
