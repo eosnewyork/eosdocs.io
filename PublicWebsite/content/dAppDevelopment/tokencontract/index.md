@@ -141,8 +141,14 @@ executed transaction: 6b2fb84d9e5c9dd13b576ea24ae8d4a244a60a889e601e540369ec179d
 
 ```
 
+### 3. View account balances
+```
+$ cleos get currency balance eosio.token mary
+25.0000 EOS
+```
 
-### 3. Errors
+
+### 4. Errors
 
 ```
 $ cleos push action eosio.token transfer '[ "bob", "mary", "25.0000 EOS", "m" ]' -p bob
