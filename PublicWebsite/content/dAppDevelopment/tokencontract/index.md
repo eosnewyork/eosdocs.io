@@ -42,7 +42,7 @@ $ cleos create key
 ```
 
 ```
-$ cleos wallet create eosio.token
+$ cleos wallet create -n eosio.token
 $ cleos wallet import 5JiYtMBX4PEHyN22kj1v3nxTV8LvchhLXpiorRvWGo7BCd4pLzF -n eosio.token
 $ cleos wallet import 5HyXKjB2sVXqahyLnndRdSL7cpBH32P4SEdqmbCqk8QySv3XYvH -n eosio.token
 ```
@@ -121,7 +121,7 @@ $ cleos create key
 ```
 
 ```
-$ cleos wallet create on marywallet
+$ cleos wallet create -n marywallet
 $ cleos wallet import 5J3TqwGXBfTvWNfZTQ6rwgwtpCJQyU7HXJtAdY32XtQbe8T6Yfe -n marywallet
 $ cleos wallet import 5JqsxPm6FmQZ5nXHgMiN4UfWag8QoN2Vkdff8yQAcbfijR1Mexz -n marywallet
 ```
