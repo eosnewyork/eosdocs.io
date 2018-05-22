@@ -19,8 +19,11 @@ EOSDocs is actively managed by:
 </div>
 
 <div style="display: inline-block;">
+<span style="width: 50px; display: inline-block;"></span>
+</div>
+
+<div style="display: inline-block;">
 <a href="https://eosnation.io/"><img src="images/EOSNation_black.png"></a>
 </div>
 	
 </center>
-
