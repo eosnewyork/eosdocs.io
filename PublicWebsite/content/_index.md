@@ -12,7 +12,8 @@ It's easy to contribute / edit the documentation - [learn how](/howtoedit)
 
 EOSDocs is actively managed by:
 
-![big Picture](images/EOSNewYork.jpg)  ![big Picture](images/EOSNation_black.png) 
 
+<a href="https://www.eosnewyork.io/"><img src="images/EOSNewYork.jpg"></a>
 
+<a href="https://eosnation.io/"><img src="images/EOSNation_black.png"></a>
 
