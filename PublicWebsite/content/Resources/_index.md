@@ -50,6 +50,9 @@ draft: false
 * [EOS Dev Helper](https://github.com/OracleChain/EOSDevHelper) - Conveniently test EOS interfaces using a desktop wallet tool. (Windows and Mac)
 * [EOS Factory](http://eosfactory.io/) - EOSFactory is a Python-based smart-contract development & testing framework (Win, Mac, Linux)
 
+#### Alternate languages
+* [Writing Smart Contracts in Typescript](https://steemit.com/eosio/@eosargentina/developing-typescript-javascript-on-eos) 
+
 #### User Tools
 * https://nadejde.github.io/eos-token-sale/ - Key Gen
 
