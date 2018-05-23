@@ -5,6 +5,10 @@ weight: 6
 draft: false
 ---
 
+### Introduction
+The EOSIO.TOKEN contract comes with the EOSIO software, it is a token standard contract which can handle many different tokens on the one deployed contract. This is similar to Ethereum's ERC20 standard, however, unlike Ethereum where one contract typically handles one ERC20 token. 
+
+
 ### 1. Loading the Bios Contract
 
 https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts
