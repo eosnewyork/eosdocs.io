@@ -9,16 +9,6 @@ weight: 1
 #### Chain_id: aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906
 These are public API endpoints that can be used to vote / interact with the production EOS blockchain. 
 
-To quickly test one of these apis run: 
-
-`cleos -u <url> get info`
-
-for example: 
-
-`cleos -u http://api.eosnewyork.io:80 get info`
-
-You should see a response with the most recent block information, the producer's name, timestamp etc. 
-
 * `http://api.eosnewyork.io:80`
 * `https://api.eosdetroit.io:443`
 * `https://eos.greymass.com:443`
@@ -32,6 +22,18 @@ You should see a response with the most recent block information, the producer's
 * `https://eos.saltblock.io`
 * `http://eos-api.worbli.io:80`
 * `https://eos-api.worbli.io:443`
+
+#### Usage Note for cleos users
+
+To quickly test one of these apis run: 
+
+`cleos -u <url> get info`
+
+for example: 
+
+`cleos -u http://api.eosnewyork.io:80 get info`
+
+You should see a response with the most recent block information, the producer's name, timestamp etc. 
 
 Please note that to perform voting you will need to interact with the `system` subcommand on the endpoint you are accessing. Some of the endpoints above may be running behind firewalls with some functionality (namely the `system` command) disabled. 
 
