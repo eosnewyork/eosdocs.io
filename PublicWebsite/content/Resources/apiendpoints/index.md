@@ -14,8 +14,9 @@ These are public API endpoints that can be used to vote / interact with the prod
 * https://api.eosmetal.io:18890
 * http://api.hkeos.com:80
 * https://eosapi.blockmatrix.network:443
+* https://fn.eossweden.se:443
 
 
-### Testnet API Ednpoints
+### Testnet API Endpoints
 
 Comming Soon
