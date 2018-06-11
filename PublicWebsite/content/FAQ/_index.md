@@ -31,7 +31,7 @@ cleos --wallet-url <wallet url> --url <api endpoint url> set account permission 
 cleos --wallet-url <wallet url> --url <api endpoint url> set account permission <account name> owner <public key> -p <account name>@owner
 ```
 
-#### Set Active Key
+#### Vote for Producers
 
 ```
 # replace <values> with your own values
