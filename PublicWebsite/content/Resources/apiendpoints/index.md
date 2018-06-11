@@ -29,6 +29,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 * `http://api1.eosdublin.io:80`
 * `http://api.eosvibes.io:80`
 * `http://api.cypherglass.com:8888` and `https://api.cypherglass.com:443`
+* `http://bp.cryptolions.io:8888`
 
 #### Usage Note for cleos users
 
