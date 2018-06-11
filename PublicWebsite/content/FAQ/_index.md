@@ -23,3 +23,21 @@ cleos --wallet-url <wallet url> --url <api endpoint url> system newaccount <crea
 # replace <values> with your own values
 cleos --wallet-url <wallet url> --url <api endpoint url> set account permission <account name> active <public key> owner
 ```
+
+#### Set Owner Key
+
+```
+# replace <values> with your own values
+cleos --wallet-url <wallet url> --url <api endpoint url> set account permission <account name> owner <public key> -p <account name>@owner
+```
+
+#### Set Active Key
+
+```
+# replace <values> with your own values
+# vote for multiple producers
+cleos --wallet-url <wallet url> --url <api endpoint url> system voteproducer prods <account name> <producer 1> <producer 2>
+
+# append vote for producer
+cleos --wallet-url <wallet url> --url <api endpoint url> system voteproducer approve <account name> <producer>
+```
