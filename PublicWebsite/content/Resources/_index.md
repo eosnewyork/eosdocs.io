@@ -45,6 +45,8 @@ weight: 3
 * [bp-playbook](https://github.com/eosdetroit/bp-playbook) - Ansible playbook to dynamically deploy Dockerized nodeos
 * [EOS BIOS](https://github.com/eoscanada/eos-bios) - EOS.IO mainnet launch orchestration tool
 * [EOS Helm](https://github.com/activeeos/eos-helm) - Kubernetes Helm charts for EOS
+* [EOS Core](https://github.com/HKEOS/Ghostbusters-Testnet) - EOS Core: an EOS mainnet launch solution
+* [eos-ramcost](https://github.com/eoseoul/eos-ramcost) - Adjusting supply of a token and connector balance of bancor during final phase of boot
 
 #### Developer Tools
 * https://tbfleming.github.io/cib/eos.html  - C++ -> WASM compiler
