@@ -13,6 +13,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 * https://eos.greymass.com:443
 * https://api.eosmetal.io:18890
 * http://api.hkeos.com:80
+* https://eosapi.blockmatrix.network:443
 
 
 ### Testnet API Ednpoints
