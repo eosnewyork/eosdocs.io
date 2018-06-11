@@ -23,6 +23,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 * `http://eos-api.worbli.io:80`
 * `https://eos-api.worbli.io:443`
 * `https://user-api.eoseoul.io/`
+* `https://node2.liquideos.com:8883` and `http://node2.liquideos.com:8888`
 
 #### Usage Note for cleos users
 
