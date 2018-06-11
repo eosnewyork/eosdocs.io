@@ -3,6 +3,7 @@ title: "Resources"
 date: 2018-04-26T09:07:37-04:00
 pre: "<b>2. </b>"
 draft: false
+weight: 3
 ---
 
 #### Official
