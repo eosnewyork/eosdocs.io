@@ -19,4 +19,4 @@ These are public API endpoints that can be used to vote / interact with the prod
 
 ### Testnet API Endpoints
 
-Comming Soon
+Coming Soon
