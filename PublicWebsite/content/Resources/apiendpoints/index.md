@@ -22,6 +22,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 * `https://eos.saltblock.io`
 * `http://eos-api.worbli.io:80`
 * `https://eos-api.worbli.io:443`
+* `https://user-api.eoseoul.io/`
 
 #### Usage Note for cleos users
 
