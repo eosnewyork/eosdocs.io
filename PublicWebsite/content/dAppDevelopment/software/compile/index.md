@@ -8,14 +8,14 @@ draft: false
 
 ### Introduction
 
-It's possible to compile the EOS software on almost every platform. We're going to be using an AWS instance as most people will have the ability to create an AWS account and follow along. 
+It's possible to compile the EOS software on almost every platform. We're going to be using an AWS instance as most people will have the ability to create an AWS account and follow along.
 
 The official page has a lot more detail. If you'd like to compile it on your own machine, follow the instructions [HERE](https://github.com/EOSIO/eos/wiki/Local-Environment#2-building-eosio)
 
 #### Compiling the EOS software
 
 {{% notice warning %}}
-Compiling the EOS software takes about 3 hours on a AWS t2.large instance. 
+Compiling the EOS software takes about 3 hours on a AWS t2.large instance.
 {{% /notice %}}
 
 
@@ -37,7 +37,7 @@ cd eos/
 
 ```
 
-Here's what you should see when process completes about 3 hours later. 
+Here's what you should see when process completes about 3 hours later.
 ![Click Next](images/Completed Compile.png)
 
 ```
@@ -47,7 +47,7 @@ make install
 
 ```
 cd build/programs/nodeos
-./nodeos -e -p eosio --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --plugin eosio::account_history_api_plugin 
+./nodeos -e -p eosio --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --plugin eosio::account_history_api_plugin
 ```
 
 In another terminal window check that you can get the server info
@@ -61,7 +61,10 @@ If you have not run the above ./nodeos ... statement the below ~/.local folder w
 {{% /notice %}}
 
 ```
+# For Linux
 vi ~/.local/share/eosio/nodeos/config/config.ini
+# For Mac OS
+vi ~/Library/Application Support/eosio/nodeos/config/config.ini
 
 #Edit the following line:
 http-server-address = 127.0.0.1:8888
@@ -87,7 +90,7 @@ The response will be some JSON that looks something like this:
 }
 ```
 
-The same thing can be achieved using the cleos tool whcih can be found in the eos/build/programs/cleos folder. 
+The same thing can be achieved using the cleos tool whcih can be found in the eos/build/programs/cleos folder.
 
 cleos -H ${nodeos_host} -p ${nodeos_port} get info
 ```
