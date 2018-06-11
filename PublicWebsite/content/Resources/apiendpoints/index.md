@@ -11,6 +11,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 
 * http://api.eosnewyork.io:80
 * https://eos.greymass.com:443
+* http://api.hkeos.com:80
 
 
 ### Testnet API Ednpoints
