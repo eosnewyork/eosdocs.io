@@ -61,7 +61,10 @@ If you have not run the above ./nodeos ... statement the below ~/.local folder w
 {{% /notice %}}
 
 ```
+# For Linux
 vi ~/.local/share/eosio/nodeos/config/config.ini
+# For Mac OS
+vi ~/Library/Application Support/eosio/nodeos/config/config.ini
 
 #Edit the following line:
 http-server-address = 127.0.0.1:8888
