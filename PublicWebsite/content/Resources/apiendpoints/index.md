@@ -15,7 +15,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 * http://api.hkeos.com:80
 * https://eosapi.blockmatrix.network:443
 * https://fn.eossweden.se:443
-
+* http://api.blockgenicbp.com:8888
 
 ### Testnet API Endpoints
 
