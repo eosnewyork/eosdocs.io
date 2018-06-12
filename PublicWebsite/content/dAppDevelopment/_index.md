@@ -1,7 +1,7 @@
 ---
 title: "dApp Development"
 date: 2018-04-22T14:29:53-04:00
-weight: 2
+weight: 3
 pre: "<b>1. </b>"
 draft: false
 ---
