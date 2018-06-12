@@ -9,7 +9,7 @@ weight: 1
 #### Chain_id: aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906
 These are public API endpoints that can be used to vote / interact with the production EOS blockchain. 
 
-* `http://api.eosnewyork.io:80`
+* `https://api.eosnewyork.io:443`
 * `https://api.eosdetroit.io:443`
 * `https://eos.greymass.com:443`
 * `https://api.eosmetal.io:18890`
