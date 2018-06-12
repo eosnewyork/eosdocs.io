@@ -6,8 +6,6 @@ draft: false
 weight: 2
 ---
 
-<h1 align="center"><br>Understanding EOS 😎</h1>
-
 ## Contents
 
 - [Official](#official)
