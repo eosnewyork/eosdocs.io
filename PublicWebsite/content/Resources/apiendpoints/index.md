@@ -33,6 +33,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 * `http://dc1.eosemerge.io:8888` and `https://dc1.eosemerge.io:5443`
 * `https://api.eosio.cr:443`
 * `https://api.eosn.io`
+* `https://eu1.eosdac.io:443`
 
 #### Usage Note for cleos users
 
