@@ -34,6 +34,9 @@ weight: 4
 
 #### Benchmarks / Performance
 * https://vimeo.com/266585781 - Matt (block.one) demonstrates using the "txn_test_gen_plugin" plugin to generate 1000 transactions per seconds.
+* Benchmarks on Dawn 3
+  * [TPS results on testnet before Block.one demonstration](https://steemit.com/en/@eoseoul/bmt-eosio-tps-results-by-eoseoul)
+  * [TPS validation with binaryen and wavm using Block.one `txn_test_gen_plugin`](https://steemit.com/en/@eoseoul/6rgomt-bmt-2nd-result-of-eosio-tps-test-by-eoseoul-verification-of-block-one-test-guide-and-jit-test)
 
 #### Libraries
 * [EOSjs](https://github.com/EOSIO/eosjs) - Javascript
@@ -70,3 +73,4 @@ weight: 4
 #### Security
 * https://medium.com/@bytemaster/debunking-claimed-vulnerability-in-eosio-smart-contract-system-9fa1ca2a6428
 * [Mitigate DDOS on AWS](https://steemit.com/eos/@eosnodeone/prevent-ddos-with-aws-network-load-balancer)
+* [A well-organised Security Response Cooperative System can protect EOS from DDoS](https://steemit.com/en/@eoseoul/worker-proposal-a-well-organised-security-response-cooperative-system-can-protect-eos-from-ddos)
