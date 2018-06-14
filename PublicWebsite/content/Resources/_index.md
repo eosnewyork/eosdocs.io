@@ -36,7 +36,7 @@ weight: 4
 * https://vimeo.com/266585781 - Matt (block.one) demonstrates using the "txn_test_gen_plugin" plugin to generate 1000 transactions per seconds.
 * Benchmarks on Dawn 3
   * [TPS results on testnet before Block.one demonstration](https://steemit.com/en/@eoseoul/bmt-eosio-tps-results-by-eoseoul)
-  * [TPS validation using Block.one `txn_test_gen_plugin`](https://steemit.com/en/@eoseoul/6rgomt-bmt-2nd-result-of-eosio-tps-test-by-eoseoul-verification-of-block-one-test-guide-and-jit-test)
+  * [TPS validation with binaryen and wavm using Block.one `txn_test_gen_plugin`](https://steemit.com/en/@eoseoul/6rgomt-bmt-2nd-result-of-eosio-tps-test-by-eoseoul-verification-of-block-one-test-guide-and-jit-test)
 
 #### Libraries
 * [EOSjs](https://github.com/EOSIO/eosjs) - Javascript
