@@ -23,7 +23,7 @@ These are public API endpoints that can be used to vote / interact with the prod
 * `http://eos-api.worbli.io:80`
 * `https://eos-api.worbli.io:443`
 * `http://mainnet.eoscalgary.io:80`
-* `https://user-api.eoseoul.io:443`
+* `https://user-api.eoseoul.io:443` and `http://user-api.eoseoul.io:80` with CORS supported
 * `https://node2.liquideos.com:8883` and `http://node2.liquideos.com:8888`
 * `https://api.eosuk.io:443`
 * `http://api1.eosdublin.io:80`
