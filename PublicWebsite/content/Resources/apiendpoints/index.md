@@ -7,7 +7,15 @@ weight: 1
 
 ### Public API Endpoints Mainnet 
 #### Chain_id: aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906
-These are public API endpoints that can be used to vote / interact with the production EOS blockchain. 
+
+Every block producer publishes a bp.json file which among other things lists their api endpoints (if they've chosen to provide one). The steps are: 
+
+- find the producer's public url (see http://eosnetworkmonitor.io/)
+- append `/bp.json` to it
+- look for the `api_endpoint` key - the corresponding value is the API endpoint. 
+- for example for eosnewyork, you would use: http://bp.eosnewyork.io/bp.json 
+
+That said below is a quick reference to some public API endpoints that can be used to vote / interact with the production EOS blockchain. 
 
 * `https://api.eosnewyork.io:443`
 * `https://api.eosdetroit.io:443`
