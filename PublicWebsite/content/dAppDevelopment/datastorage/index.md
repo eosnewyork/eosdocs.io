@@ -14,12 +14,24 @@ Performing CRUD operations against EOS smart contracts is achieved with the eosi
 In this article we will be creating a simple To Do list smart contract which enables the user to add a todo element e.g. "feed the cat" and mark it as complete. 
 
 In the contracts directory, create a new folder "todo_contract" and a new file CPP file of the same name.
-
 ```
 mkdir todo_contract
 cd todo_contract
 touch todo_contract.cpp
 vim todo_contract.cpp
+```
+
+Alternatively you can use eosiocpp to generate a boiler plate for the project including the project folder. From your top-level project folder, execute the following:
+```
+eosiocpp -n todo_contract
+```
+This will give you the following folder structure:
+```
+.
+├── todo_contract.cpp
+└── todo_contract.hpp
+
+0 directories, 2 files
 ```
 
 We will be demonstrating Create, Update & Delete functionality with our ABI actions 
