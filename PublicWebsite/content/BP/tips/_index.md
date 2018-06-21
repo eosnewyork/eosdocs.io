@@ -19,4 +19,7 @@ cleos set account permission eosnewyorkio claim EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN
 
 # set which actions are allowed by the newly created permission
 cleos set action permission eosnewyorkio eosio claimrewards claim
+
+# claim rewards
+cleos system claimrewards eosnewyorkio -p eosnewyorkio@claim
 ```
