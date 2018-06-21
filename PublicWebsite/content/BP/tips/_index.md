@@ -15,11 +15,11 @@ DO NOT USE THE PUBLIC KEY GIVEN IT IS THE TUTORIAL KEY AND THE PRIVATE KEY IS WE
 ```
 # create new permission on an account
 # cleos set account permission <account> <new permission> <pub key> <parent>
-cleos set account permission eosnewyorkio claim EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV active
+cleos set account permission eosnewyorkio claim EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV active --permission eosnewyorkio@active
 
 # set which actions are allowed by the newly created permission
-cleos set action permission eosnewyorkio eosio claimrewards claim
+cleos set action permission eosnewyorkio eosio claimrewards claim --permission eosnewyorkio@active
 
 # claim rewards
-cleos system claimrewards eosnewyorkio -p eosnewyorkio@claim
+cleos system claimrewards eosnewyorkio --permission eosnewyorkio@claim
 ```
