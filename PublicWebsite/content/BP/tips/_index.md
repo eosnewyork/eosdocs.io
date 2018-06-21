@@ -6,7 +6,7 @@ draft: false
 weight: 0
 ---
 
-### Setting Up a Claim Key
+### Setting Up a Claim Rewards Permission
 
 {{% notice warning %}}
 DO NOT USE THE PUBLIC KEY GIVEN IT IS THE TUTORIAL KEY AND THE PRIVATE KEY IS WELL KNOWN
