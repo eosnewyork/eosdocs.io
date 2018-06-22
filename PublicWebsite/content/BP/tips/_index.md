@@ -12,14 +12,25 @@ weight: 0
 DO NOT USE THE PUBLIC KEY GIVEN IT IS THE TUTORIAL KEY AND THE PRIVATE KEY IS WELL KNOWN
 {{% /notice %}}
 
+
 ```
-# create new permission on an account
-# cleos set account permission <account> <new permission> <pub key> <parent>
-cleos set account permission eosnewyorkio claim EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV active --permission eosnewyorkio@active
+---------- Step 1. Create custom permission on an account ----------
+#cleos set account permission YOURACCOUNT claim CLAIM_PUBLIC_KEY active -p YOURACCOUNT@active
+cleos set account permission eosnewyorkio claim EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV active -p eosnewyorkio@active
 
-# set which actions are allowed by the newly created permission
-cleos set action permission eosnewyorkio eosio claimrewards claim --permission eosnewyorkio@active
+---------- Step 2. Link action to permission ----------
+#cleos set action permission YOURACCOUNT eosio claimrewards claim -p YOURACCOUNT@active
+cleos set action permission eosnewyorkio eosio claimrewards claim -p eosnewyorkio@active
 
-# claim rewards
+---------- Claiming the rewards ----------
+#cleos system claimrewards YOURACCOUNT -p YOURACCOUNT@claim
 cleos system claimrewards eosnewyorkio --permission eosnewyorkio@claim
+
+---------- Removing the permission ----------
+#cleos set account permission YOURACCOUNT claim NULL active -p YOURACCOUNT@active
+cleos set account permission eosnewyorkio claim NULL active -p eosnewyorkio@active
+
+#cleos set action permission YOURACCOUNT eosio claimrewards NULL -p YOURACCOUNT@active
+cleos set action permission eosnewyorkio eosio claimrewards NULL -p eosnewyorkio@active
 ```
+
