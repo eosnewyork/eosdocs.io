@@ -178,10 +178,22 @@ $cleos --wallet-url http://wallet:5555 wallet import 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZ
 imported private key for: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 ```
 
-If we look at our wallet now, we can see 3 keys. The single master key that was added when we created the wallet and the two keys that we just imported. 
+If we look at our wallet now, we can see 3 public keys. The single master key that was added when we created the wallet and the two keys that we just imported. 
 
 ```
 ./cleos --wallet-url http://wallet:5555 wallet keys
+[
+    "EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN",
+    "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
+    "EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF"
+]
+```
+
+We can query for the key pairs as well, this request will ask for the wallet password.
+
+```
+./cleos --wallet-url http://wallet:5555 wallet private_keys
+password:
 [[
     "EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN",
     "5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ"
