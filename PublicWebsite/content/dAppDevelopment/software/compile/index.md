@@ -92,8 +92,8 @@ The response will be some JSON that looks something like this:
 
 The same thing can be achieved using the cleos tool whcih can be found in the eos/build/programs/cleos folder.
 
-cleos -H ${nodeos_host} -p ${nodeos_port} get info
+cleos -u ${nodeos_host}:${nodeos_port} get info
 ```
-./cleos -H 127.0.0.1 -p 8888 get info
+./cleos -u 127.0.0.1:8888 get info
 ```
 
