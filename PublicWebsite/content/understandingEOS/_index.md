@@ -291,6 +291,7 @@ weight: 2
  - [Mar 2018 - ETHEOS presents EOS to University Students in Oslo](https://www.youtube.com/watch?v=1pKUjP1anjI&feature=share)
  - [Mar 2018 - Ian Grigg and Vinay Gupta (Mattereum) on dispute resolution](https://www.youtube.com/watch?v=DCBsQM7O8W0&feature=share)
  - [Mar 2018 - Article - ONO to run on EOS – The future of EOS (EOS) is bright!](https://cryptorecorder.com/2018/03/30/ono-to-run-on-eos-the-future-of-eos-eos-is-bright/)
+ - [Mar 2018 - Article - Public vs. Permissioned (Private) Blockchains](https://medium.com/iryo-network/public-vs-permissioned-private-blockchains-99c04eb722e5)
  - [Mar 2018 - ICO Alert Podcast #32: Everything EOS 1](https://www.youtube.com/watch?v=sG0KVnbMd7Y)
  - [Apr 2018 - ICO Alert Podcast #33: Everything EOS 2](https://www.youtube.com/watch?v=TAMDbN181e8&feature=share)
  - [Apr 2018 - ICO Alert Podcast: Everything EOS 3](https://www.youtube.com/watch?v=p5L_mWF9Dtk)
@@ -347,6 +348,13 @@ weight: 2
  - [May 2018 - Article - EOS Nation Roadmap on Values, Community Project Timeline, Finances & Transparency.](https://steemit.com/eos/@eosnation/eos-nation-roadmap-on-values-community-project-timeline-finances-and-transparency)
  - [May 2018 - Dan Larimer (EOS) Trolls Cardano (ADA) & Reveals A Future DAPP? ](https://www.youtube.com/watch?v=jx8SI2e06EY&t=2s)
  - [May 2018 - How To Protect Your Crypto Assets with Stephane Bisson of EOS Nation](https://steemit.com/eos/@dallasrushing/how-to-protect-your-crypto-assets-with-stephane-bisson-of-eos-nation)
+ - [June 2018 - Article - BlockSmith, a tale of no Whale love](https://steemit.com/eos/@eosblocksmith/blocksmith-a-tale-of-no-whale-love)
+ - [June 2018 - The Truth About EOS Founder Daniel Larimer!](https://www.youtube.com/watch?v=8m9nufHSFcg)
+ - [June 2018 - How Much Would It REALLY Cost To Run CryptoKitties on EOS?](https://www.youtube.com/watch?v=EBC9MBybsCI)
+ - [June 2018 - How Much Do EOS Block Producers Get Paid? ](https://www.youtube.com/watch?v=ThzYLOcTR1I)
+ - [June 2018 - Debunking 9 popular blockchain beliefs](https://medium.com/iryo-network/debunking-9-popular-blockchain-beliefs-d6edfc8f3586)
+ - [June 2018 - EOSRad.io 16 - DUCATUR (3rd place in EOShackathon.io), EOS Emerge, Thomas Cox & Moti w/ ECAF](https://www.youtube.com/watch?v=0fdrBpx36tA)
+
 
  ## Latest EOS Content
  - Look right above this title for the latest EOS content or click on the link below to go back to content table at the top of page
