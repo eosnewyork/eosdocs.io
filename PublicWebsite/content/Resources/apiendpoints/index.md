@@ -10,7 +10,7 @@ weight: 1
 
 Every block producer publishes a bp.json file which among other things lists their api endpoints (if they've chosen to provide one). The steps are: 
 
-- find the producer's public url (see http://eosnetworkmonitor.io/)
+- find the producer's public url (see http://eosnetworkmonitor.io/ or https://eostracker.io/producers)
 - append `/bp.json` to it
 - look for the `api_endpoint` key - the corresponding value is the API endpoint. 
 - for example for eosnewyork, you would use: http://bp.eosnewyork.io/bp.json 
