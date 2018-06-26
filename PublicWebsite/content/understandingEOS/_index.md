@@ -133,6 +133,8 @@ weight: 2
 - Asia
   - South Korea
     - [EOS Seoul](https://www.meetup.com/EOS-Seoul)
+  - Japan
+    - [EOS Tokyo](https://www.meetup.com/EOS-Tokyo/)
 - Europe
   - UK
     - [EOS London](https://www.meetup.com/EOSLONDON/)
