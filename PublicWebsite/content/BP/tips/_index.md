@@ -27,10 +27,12 @@ cleos set action permission eosnewyorkio eosio claimrewards claim -p eosnewyorki
 cleos system claimrewards eosnewyorkio --permission eosnewyorkio@claim
 
 ---------- Removing the permission ----------
-#cleos set account permission YOURACCOUNT claim NULL active -p YOURACCOUNT@active
-cleos set account permission eosnewyorkio claim NULL active -p eosnewyorkio@active
+# You must remove the action first before removing the permission
 
 #cleos set action permission YOURACCOUNT eosio claimrewards NULL -p YOURACCOUNT@active
 cleos set action permission eosnewyorkio eosio claimrewards NULL -p eosnewyorkio@active
+
+#cleos set account permission YOURACCOUNT claim NULL active -p YOURACCOUNT@active
+cleos set account permission eosnewyorkio claim NULL active -p eosnewyorkio@active
 ```
 
