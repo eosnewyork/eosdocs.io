@@ -20,7 +20,7 @@ weight: 2
 ##### Notes
  DAC 
  
- ### Atidium
+### Atidium
 
  * __Account Contract Address:__ eosatidiumio
  * __Symbol:__ ATD
@@ -36,7 +36,7 @@ weight: 2
  Payments and Budget App
  Official Telegram - https://t.me/Atidium
  
- ### Awoo
+### Awoo
 
  * __Account Contract Address:__ ??
  * __Symbol:__ ??
@@ -51,7 +51,7 @@ weight: 2
 ##### Notes
  DAC
  
- ### Billionaire Token 
+### Billionaire Token 
 
  * __Account Contract Address:__ ??
  * __Symbol:__ XBL
@@ -67,7 +67,7 @@ weight: 2
  Gaming/Gambling
  Official Telegram - https://t.me/BillionaireToken
  
- ### Cards & Tokens
+### Cards & Tokens
 
  * __Account Contract Address:__ ??
  * __Symbol:__ ??
@@ -82,7 +82,7 @@ weight: 2
 ##### Notes
  Gaming
  
- ### CADEOS
+### CADEOS
 
  * __Account Contract Address:__ ??
  * __Symbol:__ ??
@@ -98,7 +98,7 @@ weight: 2
  CAD tokenization platform
  Official Twitter - https://twitter.com/CadeosI
  
-  ### CETOS
+ ### CETOS
 
  * __Account Contract Address:__ gyztomjugage
  * __Symbol:__ CETOS
@@ -114,7 +114,7 @@ weight: 2
  Healthcare
  Official Twitter - https://twitter.com/cetos_io
  
- ### Chaince
+### Chaince
 
  * __Account Contract Address:__ eosiochaince
  * __Symbol:__ CET
@@ -146,7 +146,7 @@ Official Telegram - https://t.me/chaince_foreign_group
  BP Candidate
  Official Telegram - https://t.me/daoeosbp
  
- ### DEOS Games
+### DEOS Games
 
  * __Account Contract Address:__ ??
  * __Symbol:__ DEO
@@ -162,7 +162,7 @@ Official Telegram - https://t.me/chaince_foreign_group
  Gaming/Gambling
  Official Telegram - https://t.me/deosgames
 
-  ### Easy EOS
+### Easy EOS
 
  * __Account Contract Address:__ ??
  * __Symbol:__ EOST
@@ -226,7 +226,7 @@ Official Telegram - https://t.me/chaince_foreign_group
  BP Candidate - Poor Ratio
  Official Twitter - https://twitter.com/ADD49632620
  
- ### Eos Media
+### Eos Media
 
  * __Account Contract Address:__ ??
  * __Symbol:__ EMT
@@ -242,9 +242,9 @@ Official Telegram - https://t.me/chaince_foreign_group
  News App
  Official Twitter - https://twitter.com/EOSMEDIA1?lang=ko
  
-  ### Eos Sports Bet
+ ### Eos Sports Bet
 
- * __Account Contract Address:__ ??
+ * __Account Contract Address:__ esbcointoken
  * __Symbol:__ ESB
  * __Ratio:__ 1 for 1
  * __Airdrop Supply:__ 1,080,000,000
@@ -258,7 +258,7 @@ Official Telegram - https://t.me/chaince_foreign_group
  News App
  Official Telegram - https://t.me/EOSSportsBets
  
-   ### EOSBET
+ ### EOSBET
 
  * __Account Contract Address:__ ??
  * __Symbol:__ EOSBET
@@ -274,7 +274,7 @@ Official Telegram - https://t.me/chaince_foreign_group
  Gaming/Gambling
  Official Telegram - https://t.me/eosbetcasino
  
- ### EOSDAC
+### EOSDAC
 
  * __Account Contract Address:__ eosdactokens
  * __Symbol:__ EOSDAC
@@ -306,7 +306,7 @@ Official Telegram - https://t.me/chaince_foreign_group
  Bp Candidate 
  Official Telegram - https://t.me/eospace
  
-  ### EOX
+ ### EOX
 
  * __Account Contract Address:__ eoxeoxeoxeox
  * __Symbol:__ EOX
@@ -327,9 +327,9 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Account Contract Address:__ ??
  * __Symbol:__ IQ
  * __Ratio:__ 5.1 for 1
- * __Airdrop Supply:__ ??
- * __Total Supply:__ ??
- * __Snapshot:__ ??
+ * __Airdrop Supply:__ TBD
+ * __Total Supply:__ TBD
+ * __Snapshot:__ June 2018
  * __Airdrop Started:__ No
  * __Registration:__ No
  * __Website:__ https://everipedia.org
@@ -338,10 +338,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  Encyclopedia
  Official Telegram - https://t.me/everipedia
  
-   ### Givey Nation
+ ### Givey Nation
 
- * __Account Contract Address:__ 
- * __Symbol:__ 
+ * __Account Contract Address:__ ??
+ * __Symbol:__ ??
  * __Ratio:__ 1 for 1
  * __Airdrop Supply:__ 900,000,000
  * __Total Supply:__ 1,800,000,000
@@ -371,7 +371,7 @@ Official Telegram - https://t.me/hirevibes_dapp
 
 ### HorusPay 
  * __Account Contract Address:__ horustokenio
- * __Symbol:__ 
+ * __Symbol:__ ??
  * __Ratio:__ 1 for 1
  * __Airdrop Supply:__ 900,000,000
  * __Total Supply:__ 1,200,000,000
@@ -527,7 +527,7 @@ Official Telegram - https://t.me/Scatter
  * __Airdrop Supply:__ 600,000,000
  * __Total Supply:__ 1,300,000,000
  * __Snapshot:__ June 2018	
- * __Airdrop Started:__ ??
+ * __Airdrop Started:__ No
  * __Registration:__ Yes - Telegram Bot 
  * __Website:__ https://tokena.co/index.html
  
@@ -537,7 +537,7 @@ Official Telegram - https://t.me/tokenaexchange
 
 ### Trybe
  * __Account Contract Address:__ ??
- * __Symbol:__ ???
+ * __Symbol:__ TRYBE
  * __Ratio:__ 1 for 20
  * __Airdrop Supply:__ 50,000,000
  * __Total Supply:__ 1,000,000,000
@@ -547,5 +547,4 @@ Official Telegram - https://t.me/tokenaexchange
  * __Website:__ https://trybe.one
  
 ##### Notes
-Official Telegram - 
-Twitter - https://twitter.com/trybe_social
+Official Twitter - https://twitter.com/trybe_social
