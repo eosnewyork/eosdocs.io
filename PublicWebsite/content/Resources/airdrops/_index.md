@@ -18,7 +18,7 @@ weight: 2
  * __Website:__ https://github.com/angelwingsio/docs/wiki
  
 ##### Notes
- DAC 
+DAC 
  
 ### Atidium
 
@@ -33,8 +33,8 @@ weight: 2
  * __Website:__ https://www.atidium.io/
  
 ##### Notes
- Payments and Budget App
- Official Telegram - https://t.me/Atidium
+Payments and Budget App
+Official Telegram - https://t.me/Atidium
  
 ### Awoo
 
@@ -49,7 +49,7 @@ weight: 2
  * __Website:__ http://wolf.social/
  
 ##### Notes
- DAC
+DAC
  
 ### Billionaire Token 
 
@@ -64,8 +64,8 @@ weight: 2
  * __Website:__ https://billionairetoken.com/
  
 ##### Notes
- Gaming/Gambling
- Official Telegram - https://t.me/BillionaireToken
+Gaming/Gambling
+Official Telegram - https://t.me/BillionaireToken
  
 ### Cards & Tokens
 
@@ -80,7 +80,7 @@ weight: 2
  * __Website:__ http://cardsandtokens.com/en/
  
 ##### Notes
- Gaming
+Gaming
  
 ### CADEOS
 
@@ -95,10 +95,26 @@ weight: 2
  * __Website:__ https://cadeos.io/
  
 ##### Notes
- CAD tokenization platform
- Official Twitter - https://twitter.com/CadeosI
+CAD tokenization platform
+Official Twitter - https://twitter.com/CadeosI
+
+### CARMEL
+
+ * __Account Contract Address:__ ??
+ * __Symbol:__ CARMEL
+ * __Ratio:__ n/a
+ * __Airdrop Supply:__ 3,500,000
+ * __Total Supply:__ 70,000,000
+ * __Snapshot:__ n/a
+ * __Airdrop Started:__ Register
+ * __Registration:__ Yes
+ * __Website:__ https://carmel.io/
  
- ### CETOS
+##### Notes
+Tech Education
+Official Telegram - https://t.me/carmelplatform
+ 
+### CETOS
 
  * __Account Contract Address:__ gyztomjugage
  * __Symbol:__ CETOS
@@ -111,8 +127,8 @@ weight: 2
  * __Website:__ http://cetos.io/
  
 ##### Notes
- Healthcare
- Official Twitter - https://twitter.com/cetos_io
+Healthcare
+Official Twitter - https://twitter.com/cetos_io
  
 ### Chaince
 
@@ -143,8 +159,8 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ http://www.daoeos.io/
  
 ##### Notes
- BP Candidate
- Official Telegram - https://t.me/daoeosbp
+BP Candidate
+Official Telegram - https://t.me/daoeosbp
  
 ### DEOS Games
 
@@ -159,8 +175,8 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://deosgames.com/
  
 ##### Notes
- Gaming/Gambling
- Official Telegram - https://t.me/deosgames
+Gaming/Gambling
+Official Telegram - https://t.me/deosgames
 
 ### Easy EOS
 
@@ -175,10 +191,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://www.easyeos.org/
  
 ##### Notes
- BP Candidate
- Official Telegram - https://t.me/easyeos
+BP Candidate
+Official Telegram - https://t.me/easyeos
  
- ### eDNA
+### eDNA
 
  * __Account Contract Address:__ ednazztokens
  * __Symbol:__ EDNA
@@ -191,10 +207,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://www.easyeos.org/
  
 ##### Notes
- genetic data security
- Official Telegram - https://t.me/easyeos
+Genetic data security
+Official Telegram - https://t.me/easyeos
  
- ### EON
+### EON
 
  * __Account Contract Address:__ ??
  * __Symbol:__ EON
@@ -207,10 +223,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://eon.org/#/
  
 ##### Notes
- BP Candidate
- Official Telegram - https://t.me/EON_EN
+BP Candidate
+Official Telegram - https://t.me/EON_EN
  
- ### Eos Add
+### EOS Add
 
  * __Account Contract Address:__ eosadddddddd
  * __Symbol:__ ADD
@@ -223,10 +239,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ http://www.eosadd.com/#
  
 ##### Notes
- BP Candidate - Poor Ratio
- Official Twitter - https://twitter.com/ADD49632620
+BP Candidate - Poor Ratio
+Official Twitter - https://twitter.com/ADD49632620
  
-### Eos Media
+### EOS Media
 
  * __Account Contract Address:__ ??
  * __Symbol:__ EMT
@@ -239,10 +255,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ http://eosmedia.io/
  
 ##### Notes
- News App
- Official Twitter - https://twitter.com/EOSMEDIA1?lang=ko
+News App
+Official Twitter - https://twitter.com/EOSMEDIA1?lang=ko
  
- ### Eos Sports Bet
+### Eos Sports Bet
 
  * __Account Contract Address:__ esbcointoken
  * __Symbol:__ ESB
@@ -255,10 +271,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ http://eossportsbets.com/
  
 ##### Notes
- News App
- Official Telegram - https://t.me/EOSSportsBets
+News App
+Official Telegram - https://t.me/EOSSportsBets
  
- ### EOSBET
+### EOSBET
 
  * __Account Contract Address:__ ??
  * __Symbol:__ EOSBET
@@ -271,8 +287,8 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://www.eosbet.io/
  
 ##### Notes
- Gaming/Gambling
- Official Telegram - https://t.me/eosbetcasino
+Gaming/Gambling
+Official Telegram - https://t.me/eosbetcasino
  
 ### EOSDAC
 
@@ -287,10 +303,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://eosdac.io/
  
 ##### Notes
- Bp Candidate 
- Official Telegram - https://t.me/eosdacio
+Bp Candidate 
+Official Telegram - https://t.me/eosdacio
  
- ### EOSSPACE 
+### EOSSPACE 
 
  * __Account Contract Address:__ 0xb562ec0261a9cb550a5fbcb46030088f1d6a53cf
  * __Symbol:__ EOP (ERC-20)
@@ -303,10 +319,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://eospace.io/
  
 ##### Notes
- Bp Candidate 
- Official Telegram - https://t.me/eospace
+Bp Candidate 
+Official Telegram - https://t.me/eospace
  
- ### EOX
+### EOX
 
  * __Account Contract Address:__ eoxeoxeoxeox
  * __Symbol:__ EOX
@@ -319,8 +335,8 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://www.eoxlab.io/
  
 ##### Notes
- E-commerce network
- Official Twitter - https://twitter.com/eoxcommerce
+E-commerce network
+Official Twitter - https://twitter.com/eoxcommerce
 
 ### Everipedia
 
@@ -335,10 +351,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://everipedia.org
  
 ##### Notes
- Encyclopedia
- Official Telegram - https://t.me/everipedia
+Encyclopedia
+Official Telegram - https://t.me/everipedia
  
- ### Givey Nation
+### Givey Nation
 
  * __Account Contract Address:__ ??
  * __Symbol:__ ??
@@ -351,10 +367,10 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://giveynation.com/
  
 ##### Notes
- Community Fundraising
- Official Twitter - https://twitter.com/giveynation
+Community Fundraising
+Official Twitter - https://twitter.com/giveynation
  
- ### HireVibes
+### HireVibes
  * __Account Contract Address:__ ??
  * __Symbol:__ HVT
  * __Ratio:__ 1 for 4
@@ -366,7 +382,7 @@ Official Telegram - https://t.me/chaince_foreign_group
  * __Website:__ https://hirevibes.io/
  
 ##### Notes
- Job Search Referral App
+Job Search Referral App
 Official Telegram - https://t.me/hirevibes_dapp
 
 ### HorusPay 
