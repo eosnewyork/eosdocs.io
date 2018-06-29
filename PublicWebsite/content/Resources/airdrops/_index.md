@@ -387,7 +387,7 @@ Official Telegram - https://t.me/hirevibes_dapp
 
 ### HorusPay 
  * __Account Contract Address:__ horustokenio
- * __Symbol:__ ??
+ * __Symbol:__ HORUS
  * __Ratio:__ 1 for 1
  * __Airdrop Supply:__ 900,000,000
  * __Total Supply:__ 1,200,000,000
