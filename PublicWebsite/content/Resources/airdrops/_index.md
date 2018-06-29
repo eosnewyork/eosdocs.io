@@ -241,22 +241,6 @@ Official Telegram - https://t.me/EON_EN
 ##### Notes
 BP Candidate - Poor Ratio
 Official Twitter - https://twitter.com/ADD49632620
-
-### EOS Cafe
-
- * __Account Contract Address:__ ??
- * __Symbol:__ BEANS
- * __Ratio:__ ??
- * __Airdrop Supply:__ TBD
- * __Total Supply:__ TBD
- * __Snapshot:__ June 2018
- * __Airdrop Started:__ No
- * __Registration:__ No
- * __Website:__ http://eos.cafe/
- 
-##### Notes
-Community DAC
-Official Telegram - https://t.me/eoscafe
  
 ### EOS Media
 
@@ -337,6 +321,25 @@ Official Telegram - https://t.me/eosdacio
 ##### Notes
 Bp Candidate 
 Official Telegram - https://t.me/eospace
+
+### EOSVR
+
+ * __Account Contract Address:__ eosvrairdrop
+ * __Symbol:__ EVR
+ * __Ratio:__ 1 for 1 
+ * __Airdrop Supply:__ 1, 1,000,000,000
+ * __Total Supply:__ 10,000,000,000 
+ * __Snapshot:__ Register
+ * __Airdrop Started:__ Yes
+ * __Registration:__ Yes - Accounts > 100 EOS send 0.0001 EOS to eosvrairdrop to register
+ * __Website:__ https://github.com/EOSVR/EOSVR/blob/master/evr.md
+ 
+##### Notes
+WARNING!!! "START UP PLAN"
+EOSVR need some EOS to buy resources and develop in EOS mainnet. So account eosvrairdrop also can receive the donate of EOS. In return, it will return 1000 times EVR.
+The completion of start-up plan need 50K EOS, and the limitation of donation is 100K EOS. After receive 100K EOS, account eosvrairdrop will not receive more donation. And can only send 0.0001 EOS for airdrop registration.
+These are written in contract of eosvrairdrop. And can check the source code in airdrop folder of github.
+Once project start, will follow the roadmap. And if the plan do not complete, the project may defer or cancel.
  
 ### EOX
 
