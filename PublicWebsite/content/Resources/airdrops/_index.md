@@ -241,6 +241,22 @@ Official Telegram - https://t.me/EON_EN
 ##### Notes
 BP Candidate - Poor Ratio
 Official Twitter - https://twitter.com/ADD49632620
+
+### EOS Cafe
+
+ * __Account Contract Address:__ ??
+ * __Symbol:__ BEANS
+ * __Ratio:__ ??
+ * __Airdrop Supply:__ TBD
+ * __Total Supply:__ TBD
+ * __Snapshot:__ June 2018
+ * __Airdrop Started:__ No
+ * __Registration:__ No
+ * __Website:__ http://eos.cafe/
+ 
+##### Notes
+Community DAC
+Official Telegram - https://t.me/eoscafe
  
 ### EOS Media
 
