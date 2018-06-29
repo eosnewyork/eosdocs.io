@@ -91,6 +91,7 @@ weight: 2
   - [EOS Nairobi](https://t.me/eosnairobi)
   - [EOS Hong Kong](https://t.me/EOSHongKong)
   - [EOS Berlin](https://t.me/EOSBerlin)
+  - [EOS Detroit](https://t.me/eos_detroit)
     
 - **Developers**
   - [EOS Developers](https://t.me/joinchat/EgOVjkPktgfUS3kt14FStw)
@@ -129,6 +130,7 @@ weight: 2
   - United States
     - [EOS New York](https://www.meetup.com/EOS-New-York)
     - [EOS Denver](https://www.meetup.com/EOSDenver/)
+    - [EOS Detroit](https://www.meetup.com/Detroit-Blockchainers/)
 - Asia
   - South Korea
     - [EOS Seoul](https://www.meetup.com/EOS-Seoul)
@@ -149,6 +151,7 @@ weight: 2
  - [The Awakenment](https://www.youtube.com/channel/UCphVYR2CHULYHf59ZSQMEag)
  - [EOS Educational](https://www.youtube.com/channel/UClgHiX4W1yxyohrif0gEllA)
  - [Ivan on Tech](https://www.youtube.com/user/LiljeqvistIvan)
+ - [EOS Detroit](https://www.youtube.com/channel/UCnbdh6f2U54_18YEe89xpnA)
  - [Go to table of content](#contents)
 
 ## Steemit Accounts to follow
