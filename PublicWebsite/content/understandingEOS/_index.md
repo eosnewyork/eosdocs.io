@@ -69,7 +69,6 @@ weight: 2
 - [EOS Talk](https://eostalk.io)
 - [EOS Forum](https://eosforum.org/)
 - [Reddit](https://www.reddit.com/r/eos/)
-- [EOS Talk](https://eostalk.io)
 - [Discord Channel](http://eos.social/)
 
 ## EOS Telegram Channels
