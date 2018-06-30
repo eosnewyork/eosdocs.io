@@ -114,7 +114,89 @@ diff /home/deck/git/mainnet-1.0.6/eos/contracts/eosio.system/delegate_bandwidth.
 
 #### Build abi_from_hex
 
-1. TODO
+Create the file `abi_from_hex.cpp`
+```
+/**
+ *  @file
+ *  @copyright defined in eos/LICENSE.txt
+ */
+
+#include <eosio/chain/asset.hpp>
+#include <eosio/chain/block_log.hpp>
+#include <eosio/chain/transaction.hpp>
+#include <eosio/chain/block_header_state.hpp>
+#include <eosio/chain/abi_serializer.hpp>
+#include <eosio/chain/authority.hpp>
+#include <fc/io/raw.hpp>
+#include <fc/io/json.hpp>
+#include <fc/crypto/hex.hpp>
+#include <fc/optional.hpp>
+#include <fc/reflect/reflect.hpp>
+#include <fc/filesystem.hpp>
+
+using namespace eosio;
+using namespace eosio::chain;
+using namespace chainbase;
+using namespace fc;
+using namespace std;
+
+#include <boost/program_options.hpp>
+
+namespace po = boost::program_options;
+
+int main(int argc, const char **argv) {
+
+   try {
+
+   std::istream *in;
+   std::ifstream ifn;
+
+   if ( argc == 1 ) {
+      in=&cin;
+   } else {
+      ifn.open(argv[1]);
+      in=&ifn;
+   }
+
+   std::stringstream buffer;
+   buffer << in->rdbuf();
+
+   auto str_hex_abi = buffer.str();
+   bytes bin_abi(str_hex_abi.size()/2);
+   
+   from_hex(buffer.str(), bin_abi.data(), bin_abi.size());
+   auto abi = fc::raw::unpack<abi_def>(bin_abi.data(), bin_abi.size());
+   
+   cout << fc::json::to_string(abi) << std::endl;
+
+   return 0;
+
+   } FC_CAPTURE_AND_LOG(());
+   return 1;
+}
+```
+
+##### Adding `abi_from_hex` patch
+
+https://gist.github.com/elmato/4fce5bd325ca56bf037f4f906d0a67ae
+
+1. Download patch
+```
+wget https://gist.githubusercontent.com/elmato/4fce5bd325ca56bf037f4f906d0a67ae/raw/ab6daf459d64d30cfde09f26120420cf722e7303/abi_from_hex.patch -O /tmp/abi_from_hex.patch
+```
+
+2. Apply patch
+```
+git apply < /tmp/abi_from_hex.patch
+```
+
+3. Build `abi_from_hex`
+```
+cd build
+cmake ..
+make abi_from_hex
+# location of abi_from hex: tools/abi_from_hex
+```
 
 #### `diff` of eosio.system ABI
 
