@@ -324,7 +324,7 @@ Official Telegram - https://t.me/eospace
 
 ### EOSVR
 
- * __Account Contract Address:__ eosvrairdrop
+ * __Account Contract Address:__ eosvrtokenss
  * __Symbol:__ EVR
  * __Ratio:__ 1 for 1 
  * __Airdrop Supply:__ 1, 1,000,000,000
