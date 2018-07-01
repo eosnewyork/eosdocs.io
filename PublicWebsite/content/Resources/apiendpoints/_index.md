@@ -65,4 +65,4 @@ To check if the endpoint you've selected will work for voting, run:
 If you get back a list of producers then you should be ok. 
 ### Testnet API Endpoints
 
-Coming Soon
+* `https://jungle.eosio.cr:443`
