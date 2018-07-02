@@ -202,7 +202,7 @@ make abi_from_hex
 
 1. Extract current abi
 ```
-cleos get code -a /tmp/current.abi && cat /tmp/tmpabi | jq '' > /tmp/current.eosio.system.json
+cleos get code -a /tmp/current.abi && cat /tmp/current.abi | jq '' > /tmp/current.eosio.system.json
 ```
 
 2. Extract proposed ABI
