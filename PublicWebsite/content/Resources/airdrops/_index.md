@@ -449,13 +449,13 @@ decentralized medical data
 Official Telegram - https://t.me/IRYOnetwork
 
 ### Karma
- * __Account Contract Address:__ ??
+ * __Account Contract Address:__ therealkarma
  * __Symbol:__ KARMA
  * __Ratio:__ 6 for 1
  * __Airdrop Supply:__ 5,400,000,000
  * __Total Supply:__ 12,000,000,000
  * __Snapshot:__ July 2018	
- * __Airdrop Started:__ No
+ * __Airdrop Started:__ Yes
  * __Registration:__ No
  * __Website:__ https://www.karmaapp.io/
  
