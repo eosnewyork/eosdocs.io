@@ -1,4 +1,4 @@
-# EODDocs.io
+# EOSDocs.io
 
 This repository contains the code that powers the [EOSDocs.io](https://www.eosdocs.io/) website. 
 
