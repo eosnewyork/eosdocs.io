@@ -194,7 +194,7 @@ Official Telegram - https://t.me/deosgames
 BP Candidate
 Official Telegram - https://t.me/easyeos
  
-### eDNA
+### EDNA
 
  * __Account Contract Address:__ ednazztokens
  * __Symbol:__ EDNA
@@ -204,11 +204,10 @@ Official Telegram - https://t.me/easyeos
  * __Snapshot:__ June 2018
  * __Airdrop Started:__ Yes
  * __Registration:__ No
- * __Website:__ https://www.easyeos.org/
+ * __Website:__ https://edna.life/
  
 ##### Notes
-Genetic data security
-Official Telegram - https://t.me/easyeos
+Official Telegram - https://t.me/AGEINC 
  
 ### EON
 
