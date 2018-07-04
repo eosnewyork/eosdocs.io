@@ -5,6 +5,9 @@ draft: false
 weight: 2
 ---
 
+### WARNING! 
+### STAY VIGILANT! NEVER SHARE YOUR PRIVATE KEYS WITH ANYONE CLAIMING TO NEED IT FOR SENDING AIRDROPS. 
+
 ### Angel Wings
 
  * __Account Contract Address:__ ??
