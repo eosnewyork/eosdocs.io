@@ -6839,6 +6839,8 @@ function hasOwnProperty(obj, prop) {
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"./support/isBuffer":31,"_process":12,"inherits":30}],33:[function(require,module,exports){
+arguments[4][9][0].apply(exports,arguments)
+},{"dup":9}],34:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -6855,22 +6857,23 @@ var Long = ByteBuffer.Long;
 module.exports = {
     encrypt: encrypt,
     decrypt: decrypt
+};
 
-    /**
-        Spec: http://localhost:3002/steem/@dantheman/how-to-encrypt-a-memo-when-transferring-steem
-    
-        @throws {Error|TypeError} - "Invalid Key, ..."
-    
-        @arg {PrivateKey} private_key - required and used for decryption
-        @arg {PublicKey} public_key - required and used to calcualte the shared secret
-        @arg {string} [nonce = uniqueNonce()] - assigned a random unique uint64
-    
-        @return {object}
-        @property {string} nonce - random or unique uint64, provides entropy when re-using the same private/public keys.
-        @property {Buffer} message - Plain text message
-        @property {number} checksum - shared secret checksum
-    */
-};function encrypt(private_key, public_key, message) {
+/**
+    Spec: http://localhost:3002/steem/@dantheman/how-to-encrypt-a-memo-when-transferring-steem
+
+    @throws {Error|TypeError} - "Invalid Key, ..."
+
+    @arg {PrivateKey} private_key - required and used for decryption
+    @arg {PublicKey} public_key - required and used to calcualte the shared secret
+    @arg {string} [nonce = uniqueNonce()] - assigned a random unique uint64
+
+    @return {object}
+    @property {string} nonce - random or unique uint64, provides entropy when re-using the same private/public keys.
+    @property {Buffer} message - Plain text message
+    @property {number} checksum - shared secret checksum
+*/
+function encrypt(private_key, public_key, message) {
     var nonce = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : uniqueNonce();
 
     return crypt(private_key, public_key, nonce, message);
@@ -7008,7 +7011,7 @@ var toBinaryBuffer = function toBinaryBuffer(o) {
     return o ? Buffer.isBuffer(o) ? o : new Buffer(o, 'binary') : o;
 };
 }).call(this,require("buffer").Buffer)
-},{"./hash":39,"./key_private":41,"./key_public":42,"assert":1,"browserify-aes":53,"buffer":4,"bytebuffer":69,"randombytes":87}],34:[function(require,module,exports){
+},{"./hash":40,"./key_private":42,"./key_public":43,"assert":1,"browserify-aes":54,"buffer":4,"bytebuffer":70,"randombytes":88}],35:[function(require,module,exports){
 "use strict";
 
 var Aes = require("./aes");
@@ -7202,19 +7205,20 @@ var ecc = {
         return signature.recoverHash(dataSha256, encoding).toString();
     },
 
-    /** @arg {string|Buffer} data
-        @arg {string} [encoding = 'hex'] - 'hex', 'binary' or 'base64'
+    /** @arg {string|Buffer} data - always binary, you may need Buffer.from(data, 'hex')
+        @arg {string} [encoding = 'hex'] - result encoding 'hex', 'binary' or 'base64'
         @return {string|Buffer} - Buffer when encoding is null, or string
           @example ecc.sha256('hashme') === '02208b..'
+        @example ecc.sha256(Buffer.from('02208b', 'hex')) === '29a23..'
     */
     sha256: function sha256(data) {
-        var encoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'hex';
-        return hash.sha256(data, encoding);
+        var resultEncoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'hex';
+        return hash.sha256(data, resultEncoding);
     }
 };
 
 module.exports = ecc;
-},{"./aes":33,"./hash":39,"./key_private":41,"./key_public":42,"./key_utils":43,"./signature":45}],35:[function(require,module,exports){
+},{"./aes":34,"./hash":40,"./key_private":42,"./key_public":43,"./key_utils":44,"./signature":46}],36:[function(require,module,exports){
 "use strict";
 
 var Aes = require("./aes");
@@ -7227,7 +7231,7 @@ module.exports = {
     Aes: Aes, PrivateKey: PrivateKey, PublicKey: PublicKey,
     Signature: Signature, key_utils: key_utils
 };
-},{"./aes":33,"./key_private":41,"./key_public":42,"./key_utils":43,"./signature":45}],36:[function(require,module,exports){
+},{"./aes":34,"./key_private":42,"./key_public":43,"./key_utils":44,"./signature":46}],37:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7449,7 +7453,7 @@ module.exports = {
   verifyRaw: verifyRaw
 };
 }).call(this,require("buffer").Buffer)
-},{"./ecsignature":37,"./enforce_types":38,"./hash":39,"assert":1,"bigi":49,"buffer":4}],37:[function(require,module,exports){
+},{"./ecsignature":38,"./enforce_types":39,"./hash":40,"assert":1,"bigi":50,"buffer":4}],38:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7578,7 +7582,7 @@ ECSignature.parseScriptSignature = function (buffer) {
 
 module.exports = ECSignature;
 }).call(this,require("buffer").Buffer)
-},{"./enforce_types":38,"assert":1,"bigi":49,"buffer":4}],38:[function(require,module,exports){
+},{"./enforce_types":39,"assert":1,"bigi":50,"buffer":4}],39:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7629,8 +7633,8 @@ function getName(fn) {
   var match = fn.toString().match(/function (.*?)\(/);
   return match ? match[1] : null;
 }
-}).call(this,{"isBuffer":require("../../../../Users/WarrickF/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
-},{"../../../../Users/WarrickF/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":98}],39:[function(require,module,exports){
+}).call(this,{"isBuffer":require("../../../Users/WarrickF/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js")})
+},{"../../../Users/WarrickF/AppData/Roaming/npm/node_modules/browserify/node_modules/is-buffer/index.js":33}],40:[function(require,module,exports){
 'use strict';
 
 var createHash = require('create-hash');
@@ -7639,27 +7643,27 @@ var createHmac = require('create-hmac');
 /** @namespace hash */
 
 /** @arg {string|Buffer} data
-    @arg {string} [encoding = null] - 'hex', 'binary' or 'base64'
-    @return {string|Buffer} - Buffer when encoding is null, or string
+    @arg {string} [resultEncoding = null] - 'hex', 'binary' or 'base64'
+    @return {string|Buffer} - Buffer when resultEncoding is null, or string
 */
-function sha1(data, encoding) {
-    return createHash('sha1').update(data).digest(encoding);
+function sha1(data, resultEncoding) {
+    return createHash('sha1').update(data).digest(resultEncoding);
 }
 
 /** @arg {string|Buffer} data
-    @arg {string} [encoding = null] - 'hex', 'binary' or 'base64'
-    @return {string|Buffer} - Buffer when encoding is null, or string
+    @arg {string} [resultEncoding = null] - 'hex', 'binary' or 'base64'
+    @return {string|Buffer} - Buffer when resultEncoding is null, or string
 */
-function sha256(data, encoding) {
-    return createHash('sha256').update(data).digest(encoding);
+function sha256(data, resultEncoding) {
+    return createHash('sha256').update(data).digest(resultEncoding);
 }
 
 /** @arg {string|Buffer} data
-    @arg {string} [encoding = null] - 'hex', 'binary' or 'base64'
-    @return {string|Buffer} - Buffer when encoding is null, or string
+    @arg {string} [resultEncoding = null] - 'hex', 'binary' or 'base64'
+    @return {string|Buffer} - Buffer when resultEncoding is null, or string
 */
-function sha512(data, encoding) {
-    return createHash('sha512').update(data).digest(encoding);
+function sha512(data, resultEncoding) {
+    return createHash('sha512').update(data).digest(resultEncoding);
 }
 
 function HmacSHA256(buffer, secret) {
@@ -7693,7 +7697,7 @@ module.exports = {
     // hash256: hash256,
     // HmacSHA512: HmacSHA512
 };
-},{"create-hash":71,"create-hmac":74}],40:[function(require,module,exports){
+},{"create-hash":72,"create-hmac":75}],41:[function(require,module,exports){
 'use strict';
 
 var commonApi = require('./api_common');
@@ -7702,7 +7706,7 @@ var objectApi = require('./api_object');
 var ecc = Object.assign({}, commonApi, objectApi);
 
 module.exports = ecc;
-},{"./api_common":34,"./api_object":35}],41:[function(require,module,exports){
+},{"./api_common":35,"./api_object":36}],42:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7739,153 +7743,154 @@ module.exports = PrivateKey;
   @param {BigInteger} d
 */
 function PrivateKey(d) {
-    if (typeof d === 'string') {
-        return PrivateKey.fromString(d);
-    } else if (Buffer.isBuffer(d)) {
-        return PrivateKey.fromBuffer(d);
-    } else if ((typeof d === 'undefined' ? 'undefined' : _typeof(d)) === 'object' && BigInteger.isBigInteger(d.d)) {
-        return PrivateKey(d.d);
+  if (typeof d === 'string') {
+    return PrivateKey.fromString(d);
+  } else if (Buffer.isBuffer(d)) {
+    return PrivateKey.fromBuffer(d);
+  } else if ((typeof d === 'undefined' ? 'undefined' : _typeof(d)) === 'object' && BigInteger.isBigInteger(d.d)) {
+    return PrivateKey(d.d);
+  }
+
+  if (!BigInteger.isBigInteger(d)) {
+    throw new TypeError('Invalid private key');
+  }
+
+  /** @return {string} private key like PVT_K1_base58privatekey.. */
+  function toString() {
+    // todo, use PVT_K1_
+    // return 'PVT_K1_' + keyUtils.checkEncode(toBuffer(), 'K1')
+    return toWif();
+  }
+
+  /**
+      @return  {wif}
+  */
+  function toWif() {
+    var private_key = toBuffer();
+    // checksum includes the version
+    private_key = Buffer.concat([new Buffer([0x80]), private_key]);
+    return keyUtils.checkEncode(private_key, 'sha256x2');
+  }
+
+  var public_key = void 0;
+
+  /**
+      @return {Point}
+  */
+  function toPublic() {
+    if (public_key) {
+      // cache
+      // S L O W in the browser
+      return public_key;
     }
+    var Q = secp256k1.G.multiply(d);
+    return public_key = PublicKey.fromPoint(Q);
+  }
 
-    if (!BigInteger.isBigInteger(d)) {
-        throw new TypeError('Invalid private key');
-    }
+  function toBuffer() {
+    return d.toBuffer(32);
+  }
 
-    /** @return {string} private key like PVT_K1_base58privatekey.. */
-    function toString() {
-        // todo, use PVT_K1_
-        // return 'PVT_K1_' + keyUtils.checkEncode(toBuffer(), 'K1')
-        return toWif();
-    }
+  /**
+    ECIES
+    @arg {string|Object} pubkey wif, PublicKey object
+    @return {Buffer} 64 byte shared secret
+  */
+  function getSharedSecret(public_key) {
+    public_key = PublicKey(public_key);
+    var KB = public_key.toUncompressed().toBuffer();
+    var KBP = Point.fromAffine(secp256k1, BigInteger.fromBuffer(KB.slice(1, 33)), // x
+    BigInteger.fromBuffer(KB.slice(33, 65)) // y
+    );
+    var r = toBuffer();
+    var P = KBP.multiply(BigInteger.fromBuffer(r));
+    var S = P.affineX.toBuffer({ size: 32 });
+    // SHA512 used in ECIES
+    return hash.sha512(S);
+  }
 
-    /**
-        @return  {wif}
-    */
-    function toWif() {
-        var private_key = toBuffer();
-        // checksum includes the version
-        private_key = Buffer.concat([new Buffer([0x80]), private_key]);
-        return keyUtils.checkEncode(private_key, 'sha256x2');
-    }
+  // /** ECIES TODO unit test
+  //   @arg {string|Object} pubkey wif, PublicKey object
+  //   @return {Buffer} 64 byte shared secret
+  // */
+  // function getSharedSecret(public_key) {
+  //     public_key = PublicKey(public_key).toUncompressed()
+  //     var P = public_key.Q.multiply( d );
+  //     var S = P.affineX.toBuffer({size: 32});
+  //     // ECIES, adds an extra sha512
+  //     return hash.sha512(S);
+  // }
 
-    var public_key = void 0;
+  /**
+    @arg {string} name - child key name.
+    @return {PrivateKey}
+      @example activePrivate = masterPrivate.getChildKey('owner').getChildKey('active')
+    @example activePrivate.getChildKey('mycontract').getChildKey('myperm')
+  */
+  function getChildKey(name) {
+    // console.error('WARNING: getChildKey untested against eosd'); // no eosd impl yet
+    var index = createHash('sha256').update(toBuffer()).update(name).digest();
+    return PrivateKey(index);
+  }
 
-    /**
-        @return {Point}
-    */
-    function toPublic() {
-        if (public_key) {
-            // cache
-            // S L O W in the browser
-            return public_key;
-        }
-        var Q = secp256k1.G.multiply(d);
-        return public_key = PublicKey.fromPoint(Q);
-    }
+  function toHex() {
+    return toBuffer().toString('hex');
+  }
 
-    function toBuffer() {
-        return d.toBuffer(32);
-    }
-
-    /**
-      ECIES
-      @arg {string|Object} pubkey wif, PublicKey object
-      @return {Buffer} 64 byte shared secret
-    */
-    function getSharedSecret(public_key) {
-        public_key = PublicKey(public_key);
-        var KB = public_key.toUncompressed().toBuffer();
-        var KBP = Point.fromAffine(secp256k1, BigInteger.fromBuffer(KB.slice(1, 33)), // x
-        BigInteger.fromBuffer(KB.slice(33, 65)) // y
-        );
-        var r = toBuffer();
-        var P = KBP.multiply(BigInteger.fromBuffer(r));
-        var S = P.affineX.toBuffer({ size: 32 });
-        // SHA512 used in ECIES
-        return hash.sha512(S);
-    }
-
-    // /** ECIES TODO unit test
-    //   @arg {string|Object} pubkey wif, PublicKey object
-    //   @return {Buffer} 64 byte shared secret
-    // */
-    // function getSharedSecret(public_key) {
-    //     public_key = PublicKey(public_key).toUncompressed()
-    //     var P = public_key.Q.multiply( d );
-    //     var S = P.affineX.toBuffer({size: 32});
-    //     // ECIES, adds an extra sha512
-    //     return hash.sha512(S);
-    // }
-
-    /**
-      @arg {string} name - child key name.
-      @return {PrivateKey}
-        @example activePrivate = masterPrivate.getChildKey('owner').getChildKey('active')
-      @example activePrivate.getChildKey('mycontract').getChildKey('myperm')
-    */
-    function getChildKey(name) {
-        // console.error('WARNING: getChildKey untested against eosd'); // no eosd impl yet
-        var index = createHash('sha256').update(toBuffer()).update(name).digest();
-        return PrivateKey(index);
-    }
-
-    function toHex() {
-        return toBuffer().toString('hex');
-    }
-
-    return {
-        d: d,
-        toWif: toWif,
-        toString: toString,
-        toPublic: toPublic,
-        toBuffer: toBuffer,
-        getSharedSecret: getSharedSecret,
-        getChildKey: getChildKey
-    };
+  return {
+    d: d,
+    toWif: toWif,
+    toString: toString,
+    toPublic: toPublic,
+    toBuffer: toBuffer,
+    getSharedSecret: getSharedSecret,
+    getChildKey: getChildKey
+  };
 }
 
 /** @private */
 function parseKey(privateStr) {
-    assert(typeof privateStr === 'undefined' ? 'undefined' : _typeof(privateStr), 'string', 'privateStr');
-    var match = privateStr.match(/^PVT_([A-Za-z0-9]+)_([A-Za-z0-9]+)$/);
+  assert.equal(typeof privateStr === 'undefined' ? 'undefined' : _typeof(privateStr), 'string', 'privateStr');
+  var match = privateStr.match(/^PVT_([A-Za-z0-9]+)_([A-Za-z0-9]+)$/);
 
-    if (match === null) {
-        // legacy WIF - checksum includes the version
-        var versionKey = keyUtils.checkDecode(privateStr, 'sha256x2');
-        var version = versionKey.readUInt8(0);
-        assert.equal(0x80, version, 'Expected version ' + 0x80 + ', instead got ' + version);
-        var _privateKey = PrivateKey.fromBuffer(versionKey.slice(1));
-        var _keyType = 'K1';
-        var format = 'WIF';
-        return { privateKey: _privateKey, format: format, keyType: _keyType };
-    }
+  if (match === null) {
+    // legacy WIF - checksum includes the version
+    var versionKey = keyUtils.checkDecode(privateStr, 'sha256x2');
+    var version = versionKey.readUInt8(0);
+    assert.equal(0x80, version, 'Expected version ' + 0x80 + ', instead got ' + version);
+    var _privateKey = PrivateKey.fromBuffer(versionKey.slice(1));
+    var _keyType = 'K1';
+    var format = 'WIF';
+    return { privateKey: _privateKey, format: format, keyType: _keyType };
+  }
 
-    assert(match.length === 3, 'Expecting private key like: PVT_K1_base58privateKey..');
+  assert(match.length === 3, 'Expecting private key like: PVT_K1_base58privateKey..');
 
-    var _match = _slicedToArray(match, 3),
-        keyType = _match[1],
-        keyString = _match[2];
+  var _match = _slicedToArray(match, 3),
+      keyType = _match[1],
+      keyString = _match[2];
 
-    assert.equal(keyType, 'K1', 'K1 private key expected');
-    var privateKey = PrivateKey.fromBuffer(keyUtils.checkDecode(keyString, keyType));
-    return { privateKey: privateKey, format: 'PVT', keyType: keyType };
+  assert.equal(keyType, 'K1', 'K1 private key expected');
+  var privateKey = PrivateKey.fromBuffer(keyUtils.checkDecode(keyString, keyType));
+  return { privateKey: privateKey, format: 'PVT', keyType: keyType };
 }
 
 PrivateKey.fromHex = function (hex) {
-    return PrivateKey.fromBuffer(new Buffer(hex, 'hex'));
+  return PrivateKey.fromBuffer(new Buffer(hex, 'hex'));
 };
 
 PrivateKey.fromBuffer = function (buf) {
-    if (!Buffer.isBuffer(buf)) {
-        throw new Error("Expecting parameter to be a Buffer type");
-    }
-    if (32 !== buf.length) {
-        console.log('WARN: Expecting 32 bytes, instead got ' + buf.length + ', stack trace:', new Error().stack);
-    }
-    if (buf.length === 0) {
-        throw new Error("Empty buffer");
-    }
-    return PrivateKey(BigInteger.fromBuffer(buf));
+  if (!Buffer.isBuffer(buf)) {
+    throw new Error("Expecting parameter to be a Buffer type");
+  }
+  if (buf.length === 33 && buf[32] === 1) {
+    // remove compression flag
+    buf = buf.slice(0, -1);
+  }
+  if (32 !== buf.length) {
+    throw new Error('Expecting 32 bytes, instead got ' + buf.length);
+  }
+  return PrivateKey(BigInteger.fromBuffer(buf));
 };
 
 /**
@@ -7895,11 +7900,11 @@ PrivateKey.fromBuffer = function (buf) {
     @return {PrivateKey}
 */
 PrivateKey.fromSeed = function (seed) {
-    // generate_private_key
-    if (!(typeof seed === 'string')) {
-        throw new Error('seed must be of type string');
-    }
-    return PrivateKey.fromBuffer(hash.sha256(seed));
+  // generate_private_key
+  if (!(typeof seed === 'string')) {
+    throw new Error('seed must be of type string');
+  }
+  return PrivateKey.fromBuffer(hash.sha256(seed));
 };
 
 /**
@@ -7907,12 +7912,12 @@ PrivateKey.fromSeed = function (seed) {
   @return {boolean} true if key is in the Wallet Import Format
 */
 PrivateKey.isWif = function (text) {
-    try {
-        assert(parseKey(text).format === 'WIF');
-        return true;
-    } catch (e) {
-        return false;
-    }
+  try {
+    assert(parseKey(text).format === 'WIF');
+    return true;
+  } catch (e) {
+    return false;
+  }
 };
 
 /**
@@ -7920,18 +7925,18 @@ PrivateKey.isWif = function (text) {
   @return {boolean} true if key is convertable to a private key object.
 */
 PrivateKey.isValid = function (key) {
-    try {
-        PrivateKey(key);
-        return true;
-    } catch (e) {
-        return false;
-    }
+  try {
+    PrivateKey(key);
+    return true;
+  } catch (e) {
+    return false;
+  }
 };
 
 /** @deprecated */
 PrivateKey.fromWif = function (str) {
-    console.log('PrivateKey.fromWif is deprecated, please use PrivateKey.fromString');
-    return PrivateKey.fromString(str);
+  console.log('PrivateKey.fromWif is deprecated, please use PrivateKey.fromString');
+  return PrivateKey.fromString(str);
 };
 
 /**
@@ -7939,7 +7944,7 @@ PrivateKey.fromWif = function (str) {
     @arg {string} privateStr Eosio or Wallet Import Format (wif) -- a secret
 */
 PrivateKey.fromString = function (privateStr) {
-    return parseKey(privateStr).privateKey;
+  return parseKey(privateStr).privateKey;
 };
 
 /**
@@ -7954,18 +7959,18 @@ PrivateKey.fromString = function (privateStr) {
   @return {Promise<PrivateKey>} - random private key
 */
 PrivateKey.randomKey = function () {
-    var cpuEntropyBits = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+  var cpuEntropyBits = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 
-    return PrivateKey.initialize().then(function () {
-        return PrivateKey.fromBuffer(keyUtils.random32ByteBuffer({ cpuEntropyBits: cpuEntropyBits }));
-    });
+  return PrivateKey.initialize().then(function () {
+    return PrivateKey.fromBuffer(keyUtils.random32ByteBuffer({ cpuEntropyBits: cpuEntropyBits }));
+  });
 };
 
 /**
   @return {Promise<PrivateKey>} for testing, does not require initialize().
 */
 PrivateKey.unsafeRandomKey = function () {
-    return Promise.resolve(PrivateKey.fromBuffer(keyUtils.random32ByteBuffer({ safe: false })));
+  return Promise.resolve(PrivateKey.fromBuffer(keyUtils.random32ByteBuffer({ safe: false })));
 };
 
 var initialized = false,
@@ -7979,15 +7984,15 @@ var initialized = false,
   @return {Promise}
 */
 function initialize() {
-    if (initialized) {
-        return;
-    }
+  if (initialized) {
+    return;
+  }
 
-    unitTest();
-    keyUtils.addEntropy.apply(keyUtils, _toConsumableArray(keyUtils.cpuEntropy()));
-    assert(keyUtils.entropyCount() >= 128, 'insufficient entropy');
+  unitTest();
+  keyUtils.addEntropy.apply(keyUtils, _toConsumableArray(keyUtils.cpuEntropy()));
+  assert(keyUtils.entropyCount() >= 128, 'insufficient entropy');
 
-    initialized = true;
+  initialized = true;
 }
 
 PrivateKey.initialize = promiseAsync(initialize);
@@ -7998,44 +8003,44 @@ PrivateKey.initialize = promiseAsync(initialize);
   @throws {AssertError}
 */
 function unitTest() {
-    var pvt = PrivateKey(hash.sha256(''));
+  var pvt = PrivateKey(hash.sha256(''));
 
-    var pvtError = 'key comparison test failed on a known private key';
-    assert.equal(pvt.toWif(), '5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss', pvtError);
-    assert.equal(pvt.toString(), '5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss', pvtError);
-    // assert.equal(pvt.toString(), 'PVT_K1_2jH3nnhxhR3zPUcsKaWWZC9ZmZAnKm3GAnFD1xynGJE1Znuvjd', pvtError)
+  var pvtError = 'key comparison test failed on a known private key';
+  assert.equal(pvt.toWif(), '5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss', pvtError);
+  assert.equal(pvt.toString(), '5KYZdUEo39z3FPrtuX2QbbwGnNP5zTd7yyr2SC1j299sBCnWjss', pvtError);
+  // assert.equal(pvt.toString(), 'PVT_K1_2jH3nnhxhR3zPUcsKaWWZC9ZmZAnKm3GAnFD1xynGJE1Znuvjd', pvtError)
 
-    var pub = pvt.toPublic();
-    var pubError = 'pubkey string comparison test failed on a known public key';
-    assert.equal(pub.toString(), 'EOS859gxfnXyUriMgUeThh1fWv3oqcpLFyHa3TfFYC4PK2HqhToVM', pubError);
-    // assert.equal(pub.toString(), 'PUB_K1_859gxfnXyUriMgUeThh1fWv3oqcpLFyHa3TfFYC4PK2Ht7beeX', pubError)
-    // assert.equal(pub.toStringLegacy(), 'EOS859gxfnXyUriMgUeThh1fWv3oqcpLFyHa3TfFYC4PK2HqhToVM', pubError)
+  var pub = pvt.toPublic();
+  var pubError = 'pubkey string comparison test failed on a known public key';
+  assert.equal(pub.toString(), 'EOS859gxfnXyUriMgUeThh1fWv3oqcpLFyHa3TfFYC4PK2HqhToVM', pubError);
+  // assert.equal(pub.toString(), 'PUB_K1_859gxfnXyUriMgUeThh1fWv3oqcpLFyHa3TfFYC4PK2Ht7beeX', pubError)
+  // assert.equal(pub.toStringLegacy(), 'EOS859gxfnXyUriMgUeThh1fWv3oqcpLFyHa3TfFYC4PK2HqhToVM', pubError)
 
-    doesNotThrow(function () {
-        return PrivateKey.fromString(pvt.toWif());
-    }, 'converting known wif from string');
-    doesNotThrow(function () {
-        return PrivateKey.fromString(pvt.toString());
-    }, 'converting known pvt from string');
-    doesNotThrow(function () {
-        return PublicKey.fromString(pub.toString());
-    }, 'converting known public key from string');
-    // doesNotThrow(() => PublicKey.fromString(pub.toStringLegacy()), 'converting known public key from string')
+  doesNotThrow(function () {
+    return PrivateKey.fromString(pvt.toWif());
+  }, 'converting known wif from string');
+  doesNotThrow(function () {
+    return PrivateKey.fromString(pvt.toString());
+  }, 'converting known pvt from string');
+  doesNotThrow(function () {
+    return PublicKey.fromString(pub.toString());
+  }, 'converting known public key from string');
+  // doesNotThrow(() => PublicKey.fromString(pub.toStringLegacy()), 'converting known public key from string')
 
-    unitTested = true;
+  unitTested = true;
 }
 
 /** @private */
 var doesNotThrow = function doesNotThrow(cb, msg) {
-    try {
-        cb();
-    } catch (error) {
-        error.message = msg + ' ==> ' + error.message;
-        throw error;
-    }
+  try {
+    cb();
+  } catch (error) {
+    error.message = msg + ' ==> ' + error.message;
+    throw error;
+  }
 };
 }).call(this,require("buffer").Buffer)
-},{"./hash":39,"./key_public":42,"./key_utils":43,"./promise-async":44,"assert":1,"bigi":49,"buffer":4,"create-hash":71,"ecurve":78}],42:[function(require,module,exports){
+},{"./hash":40,"./key_public":43,"./key_utils":44,"./promise-async":45,"assert":1,"bigi":50,"buffer":4,"create-hash":72,"ecurve":79}],43:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -8178,7 +8183,7 @@ PublicKey.fromString = function (public_key) {
     @return PublicKey
 */
 PublicKey.fromStringOrThrow = function (public_key) {
-    assert(typeof public_key === 'undefined' ? 'undefined' : _typeof(public_key), 'string', 'public_key');
+    assert.equal(typeof public_key === 'undefined' ? 'undefined' : _typeof(public_key), 'string', 'public_key');
     var match = public_key.match(/^PUB_([A-Za-z0-9]+)_([A-Za-z0-9]+)$/);
     if (match === null) {
         // legacy
@@ -8205,7 +8210,7 @@ PublicKey.fromStringHex = function (hex) {
     return PublicKey.fromString(new Buffer(hex, 'hex'));
 };
 }).call(this,require("buffer").Buffer)
-},{"./hash":39,"./key_utils":43,"assert":1,"bigi":49,"buffer":4,"ecurve":78}],43:[function(require,module,exports){
+},{"./hash":40,"./key_utils":44,"assert":1,"bigi":50,"buffer":4,"ecurve":79}],44:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -8251,8 +8256,8 @@ function random32ByteBuffer() {
         _ref$safe = _ref.safe,
         safe = _ref$safe === undefined ? true : _ref$safe;
 
-    assert(typeof cpuEntropyBits === 'undefined' ? 'undefined' : _typeof(cpuEntropyBits), 'number', 'cpuEntropyBits');
-    assert(typeof safe === 'undefined' ? 'undefined' : _typeof(safe), 'boolean', 'boolean');
+    assert.equal(typeof cpuEntropyBits === 'undefined' ? 'undefined' : _typeof(cpuEntropyBits), 'number', 'cpuEntropyBits');
+    assert.equal(typeof safe === 'undefined' ? 'undefined' : _typeof(safe), 'boolean', 'boolean');
 
     if (safe) {
         assert(_entropyCount >= 128, 'Call initialize() to add entropy');
@@ -8475,7 +8480,7 @@ function checkDecode(keyString) {
     return key;
 }
 }).call(this,require("buffer").Buffer)
-},{"./hash":39,"assert":1,"bs58":67,"buffer":4,"randombytes":87}],44:[function(require,module,exports){
+},{"./hash":40,"assert":1,"bs58":68,"buffer":4,"randombytes":88}],45:[function(require,module,exports){
 "use strict";
 
 /**
@@ -8504,7 +8509,7 @@ module.exports = function (func) {
     });
   };
 };
-},{}],45:[function(require,module,exports){
+},{}],46:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -8768,7 +8773,7 @@ Signature.fromString = function (signature) {
     @return {Signature}
 */
 Signature.fromStringOrThrow = function (signature) {
-    assert(typeof signature === 'undefined' ? 'undefined' : _typeof(signature), 'string', 'signature');
+    assert.equal(typeof signature === 'undefined' ? 'undefined' : _typeof(signature), 'string', 'signature');
     var match = signature.match(/^SIG_([A-Za-z0-9]+)_([A-Za-z0-9]+)$/);
     assert(match != null && match.length === 3, 'Expecting signature like: SIG_K1_base58signature..');
 
@@ -8793,7 +8798,7 @@ Signature.from = function (o) {
     return signature;
 };
 }).call(this,require("buffer").Buffer)
-},{"./ecdsa":36,"./hash":39,"./key_private":41,"./key_public":42,"./key_utils":43,"assert":1,"bigi":49,"buffer":4,"ecurve":78}],46:[function(require,module,exports){
+},{"./ecdsa":37,"./hash":40,"./key_private":42,"./key_public":43,"./key_utils":44,"assert":1,"bigi":50,"buffer":4,"ecurve":79}],47:[function(require,module,exports){
 // base-x encoding
 // Forked from https://github.com/cryptocoinjs/bs58
 // Originally written by Mike Hearn for BitcoinJ
@@ -8886,7 +8891,7 @@ module.exports = function base (ALPHABET) {
   }
 }
 
-},{"safe-buffer":89}],47:[function(require,module,exports){
+},{"safe-buffer":90}],48:[function(require,module,exports){
 // (public) Constructor
 function BigInteger(a, b, c) {
   if (!(this instanceof BigInteger))
@@ -10397,7 +10402,7 @@ BigInteger.valueOf = nbv
 
 module.exports = BigInteger
 
-},{"../package.json":50}],48:[function(require,module,exports){
+},{"../package.json":51}],49:[function(require,module,exports){
 (function (Buffer){
 // FIXME: Kind of a weird way to throw exceptions, consider removing
 var assert = require('assert')
@@ -10492,19 +10497,19 @@ BigInteger.prototype.toHex = function(size) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./bigi":47,"assert":1,"buffer":4}],49:[function(require,module,exports){
+},{"./bigi":48,"assert":1,"buffer":4}],50:[function(require,module,exports){
 var BigInteger = require('./bigi')
 
 //addons
 require('./convert')
 
 module.exports = BigInteger
-},{"./bigi":47,"./convert":48}],50:[function(require,module,exports){
+},{"./bigi":48,"./convert":49}],51:[function(require,module,exports){
 module.exports={
   "_args": [
     [
       "bigi@1.4.2",
-      "c:\\Dev\\blockchain\\eosjs-ecc"
+      "c:\\temp\\eosjs-ecc"
     ]
   ],
   "_from": "bigi@1.4.2",
@@ -10529,7 +10534,7 @@ module.exports={
   ],
   "_resolved": "https://registry.npmjs.org/bigi/-/bigi-1.4.2.tgz",
   "_spec": "1.4.2",
-  "_where": "c:\\Dev\\blockchain\\eosjs-ecc",
+  "_where": "c:\\temp\\eosjs-ecc",
   "bugs": {
     "url": "https://github.com/cryptocoinjs/bigi/issues"
   },
@@ -10589,7 +10594,7 @@ module.exports={
   "version": "1.4.2"
 }
 
-},{}],51:[function(require,module,exports){
+},{}],52:[function(require,module,exports){
 // based on the aes implimentation in triple sec
 // https://github.com/keybase/triplesec
 // which is in turn based on the one from crypto-js
@@ -10819,7 +10824,7 @@ AES.prototype.scrub = function () {
 
 module.exports.AES = AES
 
-},{"safe-buffer":89}],52:[function(require,module,exports){
+},{"safe-buffer":90}],53:[function(require,module,exports){
 var aes = require('./aes')
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('cipher-base')
@@ -10913,7 +10918,7 @@ StreamCipher.prototype.setAAD = function setAAD (buf) {
 
 module.exports = StreamCipher
 
-},{"./aes":51,"./ghash":56,"buffer-xor":68,"cipher-base":70,"inherits":83,"safe-buffer":89}],53:[function(require,module,exports){
+},{"./aes":52,"./ghash":57,"buffer-xor":69,"cipher-base":71,"inherits":84,"safe-buffer":90}],54:[function(require,module,exports){
 var ciphers = require('./encrypter')
 var deciphers = require('./decrypter')
 var modes = require('./modes/list.json')
@@ -10928,7 +10933,7 @@ exports.createDecipher = exports.Decipher = deciphers.createDecipher
 exports.createDecipheriv = exports.Decipheriv = deciphers.createDecipheriv
 exports.listCiphers = exports.getCiphers = getCiphers
 
-},{"./decrypter":54,"./encrypter":55,"./modes/list.json":64}],54:[function(require,module,exports){
+},{"./decrypter":55,"./encrypter":56,"./modes/list.json":65}],55:[function(require,module,exports){
 var AuthCipher = require('./authCipher')
 var Buffer = require('safe-buffer').Buffer
 var MODES = require('./modes')
@@ -11051,7 +11056,7 @@ function createDecipher (suite, password) {
 exports.createDecipher = createDecipher
 exports.createDecipheriv = createDecipheriv
 
-},{"./aes":51,"./authCipher":52,"./modes":63,"./streamCipher":66,"cipher-base":70,"evp_bytestokey":81,"inherits":83,"safe-buffer":89}],55:[function(require,module,exports){
+},{"./aes":52,"./authCipher":53,"./modes":64,"./streamCipher":67,"cipher-base":71,"evp_bytestokey":82,"inherits":84,"safe-buffer":90}],56:[function(require,module,exports){
 var MODES = require('./modes')
 var AuthCipher = require('./authCipher')
 var Buffer = require('safe-buffer').Buffer
@@ -11167,7 +11172,7 @@ function createCipher (suite, password) {
 exports.createCipheriv = createCipheriv
 exports.createCipher = createCipher
 
-},{"./aes":51,"./authCipher":52,"./modes":63,"./streamCipher":66,"cipher-base":70,"evp_bytestokey":81,"inherits":83,"safe-buffer":89}],56:[function(require,module,exports){
+},{"./aes":52,"./authCipher":53,"./modes":64,"./streamCipher":67,"cipher-base":71,"evp_bytestokey":82,"inherits":84,"safe-buffer":90}],57:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var ZEROES = Buffer.alloc(16, 0)
 
@@ -11258,7 +11263,7 @@ GHASH.prototype.final = function (abl, bl) {
 
 module.exports = GHASH
 
-},{"safe-buffer":89}],57:[function(require,module,exports){
+},{"safe-buffer":90}],58:[function(require,module,exports){
 var xor = require('buffer-xor')
 
 exports.encrypt = function (self, block) {
@@ -11277,7 +11282,7 @@ exports.decrypt = function (self, block) {
   return xor(out, pad)
 }
 
-},{"buffer-xor":68}],58:[function(require,module,exports){
+},{"buffer-xor":69}],59:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var xor = require('buffer-xor')
 
@@ -11312,7 +11317,7 @@ exports.encrypt = function (self, data, decrypt) {
   return out
 }
 
-},{"buffer-xor":68,"safe-buffer":89}],59:[function(require,module,exports){
+},{"buffer-xor":69,"safe-buffer":90}],60:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 
 function encryptByte (self, byteParam, decrypt) {
@@ -11356,7 +11361,7 @@ exports.encrypt = function (self, chunk, decrypt) {
   return out
 }
 
-},{"safe-buffer":89}],60:[function(require,module,exports){
+},{"safe-buffer":90}],61:[function(require,module,exports){
 (function (Buffer){
 function encryptByte (self, byteParam, decrypt) {
   var pad = self._cipher.encryptBlock(self._prev)
@@ -11383,7 +11388,7 @@ exports.encrypt = function (self, chunk, decrypt) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4}],61:[function(require,module,exports){
+},{"buffer":4}],62:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -11430,7 +11435,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4,"buffer-xor":68}],62:[function(require,module,exports){
+},{"buffer":4,"buffer-xor":69}],63:[function(require,module,exports){
 exports.encrypt = function (self, block) {
   return self._cipher.encryptBlock(block)
 }
@@ -11439,7 +11444,7 @@ exports.decrypt = function (self, block) {
   return self._cipher.decryptBlock(block)
 }
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 var modeModules = {
   ECB: require('./ecb'),
   CBC: require('./cbc'),
@@ -11459,7 +11464,7 @@ for (var key in modes) {
 
 module.exports = modes
 
-},{"./cbc":57,"./cfb":58,"./cfb1":59,"./cfb8":60,"./ctr":61,"./ecb":62,"./list.json":64,"./ofb":65}],64:[function(require,module,exports){
+},{"./cbc":58,"./cfb":59,"./cfb1":60,"./cfb8":61,"./ctr":62,"./ecb":63,"./list.json":65,"./ofb":66}],65:[function(require,module,exports){
 module.exports={
   "aes-128-ecb": {
     "cipher": "AES",
@@ -11652,7 +11657,7 @@ module.exports={
   }
 }
 
-},{}],65:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 (function (Buffer){
 var xor = require('buffer-xor')
 
@@ -11672,7 +11677,7 @@ exports.encrypt = function (self, chunk) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4,"buffer-xor":68}],66:[function(require,module,exports){
+},{"buffer":4,"buffer-xor":69}],67:[function(require,module,exports){
 var aes = require('./aes')
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('cipher-base')
@@ -11701,13 +11706,13 @@ StreamCipher.prototype._final = function () {
 
 module.exports = StreamCipher
 
-},{"./aes":51,"cipher-base":70,"inherits":83,"safe-buffer":89}],67:[function(require,module,exports){
+},{"./aes":52,"cipher-base":71,"inherits":84,"safe-buffer":90}],68:[function(require,module,exports){
 var basex = require('base-x')
 var ALPHABET = '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
 
 module.exports = basex(ALPHABET)
 
-},{"base-x":46}],68:[function(require,module,exports){
+},{"base-x":47}],69:[function(require,module,exports){
 (function (Buffer){
 module.exports = function xor (a, b) {
   var length = Math.min(a.length, b.length)
@@ -11721,7 +11726,7 @@ module.exports = function xor (a, b) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4}],69:[function(require,module,exports){
+},{"buffer":4}],70:[function(require,module,exports){
 /*
  Copyright 2013-2014 Daniel Wirtz <dcode@dcode.io>
 
@@ -15469,7 +15474,7 @@ module.exports = function xor (a, b) {
     return ByteBuffer;
 });
 
-},{"long":84}],70:[function(require,module,exports){
+},{"long":85}],71:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
 var StringDecoder = require('string_decoder').StringDecoder
@@ -15570,7 +15575,7 @@ CipherBase.prototype._toString = function (value, enc, fin) {
 
 module.exports = CipherBase
 
-},{"inherits":83,"safe-buffer":89,"stream":27,"string_decoder":28}],71:[function(require,module,exports){
+},{"inherits":84,"safe-buffer":90,"stream":27,"string_decoder":28}],72:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -15626,7 +15631,7 @@ module.exports = function createHash (alg) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"./md5":73,"buffer":4,"cipher-base":70,"inherits":83,"ripemd160":88,"sha.js":91}],72:[function(require,module,exports){
+},{"./md5":74,"buffer":4,"cipher-base":71,"inherits":84,"ripemd160":89,"sha.js":92}],73:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var intSize = 4
@@ -15660,7 +15665,7 @@ module.exports = function hash (buf, fn) {
 }
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4}],73:[function(require,module,exports){
+},{"buffer":4}],74:[function(require,module,exports){
 'use strict'
 /*
  * A JavaScript implementation of the RSA Data Security, Inc. MD5 Message
@@ -15813,7 +15818,7 @@ module.exports = function md5 (buf) {
   return makeHash(buf, core_md5)
 }
 
-},{"./make-hash":72}],74:[function(require,module,exports){
+},{"./make-hash":73}],75:[function(require,module,exports){
 'use strict'
 var inherits = require('inherits')
 var Legacy = require('./legacy')
@@ -15877,7 +15882,7 @@ module.exports = function createHmac (alg, key) {
   return new Hmac(alg, key)
 }
 
-},{"./legacy":75,"cipher-base":70,"create-hash/md5":73,"inherits":83,"ripemd160":88,"safe-buffer":89,"sha.js":91}],75:[function(require,module,exports){
+},{"./legacy":76,"cipher-base":71,"create-hash/md5":74,"inherits":84,"ripemd160":89,"safe-buffer":90,"sha.js":92}],76:[function(require,module,exports){
 'use strict'
 var inherits = require('inherits')
 var Buffer = require('safe-buffer').Buffer
@@ -15925,7 +15930,7 @@ Hmac.prototype._final = function () {
 }
 module.exports = Hmac
 
-},{"cipher-base":70,"inherits":83,"safe-buffer":89}],76:[function(require,module,exports){
+},{"cipher-base":71,"inherits":84,"safe-buffer":90}],77:[function(require,module,exports){
 var assert = require('assert')
 var BigInteger = require('bigi')
 
@@ -16004,7 +16009,7 @@ Curve.prototype.validate = function (Q) {
 
 module.exports = Curve
 
-},{"./point":80,"assert":1,"bigi":49}],77:[function(require,module,exports){
+},{"./point":81,"assert":1,"bigi":50}],78:[function(require,module,exports){
 module.exports={
   "secp128r1": {
     "p": "fffffffdffffffffffffffffffffffff",
@@ -16071,7 +16076,7 @@ module.exports={
   }
 }
 
-},{}],78:[function(require,module,exports){
+},{}],79:[function(require,module,exports){
 var Point = require('./point')
 var Curve = require('./curve')
 
@@ -16083,7 +16088,7 @@ module.exports = {
   getCurveByName: getCurveByName
 }
 
-},{"./curve":76,"./names":79,"./point":80}],79:[function(require,module,exports){
+},{"./curve":77,"./names":80,"./point":81}],80:[function(require,module,exports){
 var BigInteger = require('bigi')
 
 var curves = require('./curves.json')
@@ -16106,7 +16111,7 @@ function getCurveByName (name) {
 
 module.exports = getCurveByName
 
-},{"./curve":76,"./curves.json":77,"bigi":49}],80:[function(require,module,exports){
+},{"./curve":77,"./curves.json":78,"bigi":50}],81:[function(require,module,exports){
 (function (Buffer){
 var assert = require('assert')
 var BigInteger = require('bigi')
@@ -16353,7 +16358,7 @@ Point.prototype.toString = function () {
 module.exports = Point
 
 }).call(this,require("buffer").Buffer)
-},{"assert":1,"bigi":49,"buffer":4}],81:[function(require,module,exports){
+},{"assert":1,"bigi":50,"buffer":4}],82:[function(require,module,exports){
 var Buffer = require('safe-buffer').Buffer
 var MD5 = require('md5.js')
 
@@ -16400,7 +16405,7 @@ function EVP_BytesToKey (password, salt, keyBits, ivLen) {
 
 module.exports = EVP_BytesToKey
 
-},{"md5.js":85,"safe-buffer":89}],82:[function(require,module,exports){
+},{"md5.js":86,"safe-buffer":90}],83:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var Transform = require('stream').Transform
@@ -16487,9 +16492,9 @@ HashBase.prototype._digest = function () {
 module.exports = HashBase
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4,"inherits":83,"stream":27}],83:[function(require,module,exports){
+},{"buffer":4,"inherits":84,"stream":27}],84:[function(require,module,exports){
 arguments[4][8][0].apply(exports,arguments)
-},{"dup":8}],84:[function(require,module,exports){
+},{"dup":8}],85:[function(require,module,exports){
 /*
  Copyright 2013 Daniel Wirtz <dcode@dcode.io>
  Copyright 2009 The Closure Library Authors. All Rights Reserved.
@@ -17700,7 +17705,7 @@ arguments[4][8][0].apply(exports,arguments)
     return Long;
 });
 
-},{}],85:[function(require,module,exports){
+},{}],86:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -17849,7 +17854,7 @@ function fnI (a, b, c, d, m, k, s) {
 module.exports = MD5
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4,"hash-base":86,"inherits":83}],86:[function(require,module,exports){
+},{"buffer":4,"hash-base":87,"inherits":84}],87:[function(require,module,exports){
 'use strict'
 var Buffer = require('safe-buffer').Buffer
 var Transform = require('stream').Transform
@@ -17946,7 +17951,7 @@ HashBase.prototype._digest = function () {
 
 module.exports = HashBase
 
-},{"inherits":83,"safe-buffer":89,"stream":27}],87:[function(require,module,exports){
+},{"inherits":84,"safe-buffer":90,"stream":27}],88:[function(require,module,exports){
 (function (process,global){
 'use strict'
 
@@ -17988,7 +17993,7 @@ function randomBytes (size, cb) {
 }
 
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":12,"safe-buffer":89}],88:[function(require,module,exports){
+},{"_process":12,"safe-buffer":90}],89:[function(require,module,exports){
 (function (Buffer){
 'use strict'
 var inherits = require('inherits')
@@ -18283,9 +18288,9 @@ function fn5 (a, b, c, d, e, m, k, s) {
 module.exports = RIPEMD160
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4,"hash-base":82,"inherits":83}],89:[function(require,module,exports){
+},{"buffer":4,"hash-base":83,"inherits":84}],90:[function(require,module,exports){
 arguments[4][26][0].apply(exports,arguments)
-},{"buffer":4,"dup":26}],90:[function(require,module,exports){
+},{"buffer":4,"dup":26}],91:[function(require,module,exports){
 (function (Buffer){
 // prototype class for hash functions
 function Hash (blockSize, finalSize) {
@@ -18358,7 +18363,7 @@ Hash.prototype._update = function () {
 module.exports = Hash
 
 }).call(this,require("buffer").Buffer)
-},{"buffer":4}],91:[function(require,module,exports){
+},{"buffer":4}],92:[function(require,module,exports){
 var exports = module.exports = function SHA (algorithm) {
   algorithm = algorithm.toLowerCase()
 
@@ -18375,7 +18380,7 @@ exports.sha256 = require('./sha256')
 exports.sha384 = require('./sha384')
 exports.sha512 = require('./sha512')
 
-},{"./sha":92,"./sha1":93,"./sha224":94,"./sha256":95,"./sha384":96,"./sha512":97}],92:[function(require,module,exports){
+},{"./sha":93,"./sha1":94,"./sha224":95,"./sha256":96,"./sha384":97,"./sha512":98}],93:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-0, as defined
@@ -18472,7 +18477,7 @@ Sha.prototype._hash = function () {
 module.exports = Sha
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":90,"buffer":4,"inherits":83}],93:[function(require,module,exports){
+},{"./hash":91,"buffer":4,"inherits":84}],94:[function(require,module,exports){
 (function (Buffer){
 /*
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-1, as defined
@@ -18574,7 +18579,7 @@ Sha1.prototype._hash = function () {
 module.exports = Sha1
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":90,"buffer":4,"inherits":83}],94:[function(require,module,exports){
+},{"./hash":91,"buffer":4,"inherits":84}],95:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -18630,7 +18635,7 @@ Sha224.prototype._hash = function () {
 module.exports = Sha224
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":90,"./sha256":95,"buffer":4,"inherits":83}],95:[function(require,module,exports){
+},{"./hash":91,"./sha256":96,"buffer":4,"inherits":84}],96:[function(require,module,exports){
 (function (Buffer){
 /**
  * A JavaScript implementation of the Secure Hash Algorithm, SHA-256, as defined
@@ -18768,7 +18773,7 @@ Sha256.prototype._hash = function () {
 module.exports = Sha256
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":90,"buffer":4,"inherits":83}],96:[function(require,module,exports){
+},{"./hash":91,"buffer":4,"inherits":84}],97:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var SHA512 = require('./sha512')
@@ -18828,7 +18833,7 @@ Sha384.prototype._hash = function () {
 module.exports = Sha384
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":90,"./sha512":97,"buffer":4,"inherits":83}],97:[function(require,module,exports){
+},{"./hash":91,"./sha512":98,"buffer":4,"inherits":84}],98:[function(require,module,exports){
 (function (Buffer){
 var inherits = require('inherits')
 var Hash = require('./hash')
@@ -19091,7 +19096,5 @@ Sha512.prototype._hash = function () {
 module.exports = Sha512
 
 }).call(this,require("buffer").Buffer)
-},{"./hash":90,"buffer":4,"inherits":83}],98:[function(require,module,exports){
-arguments[4][9][0].apply(exports,arguments)
-},{"dup":9}]},{},[40])(40)
+},{"./hash":91,"buffer":4,"inherits":84}]},{},[41])(41)
 });
