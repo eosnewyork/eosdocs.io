@@ -11,7 +11,7 @@ draft: false
 
 If you're not sure about an edit and want to talk about the change before implementing it, please visit our Telegram channel: [EOSDocs.io Telegram Channel](https://t.me/eosdocs) 
 
-### Find something wrong, update it!
+### Have you found something that needs to be updated? Edit it and create a pull request!
 
 https://github.com/BinaryFocus/eosdocs.io
 
