@@ -9,7 +9,7 @@ draft: false
 
 ### Telegram
 
-If you're not sure about an edit and want to talk about the change 1st : [EOSDocs.io Telegram Channel](https://t.me/eosdocs) 
+If you're not sure about an edit and want to talk about the change before implementing it, please visit our Telegram channel: [EOSDocs.io Telegram Channel](https://t.me/eosdocs) 
 
 ### Find something wrong, update it!
 
