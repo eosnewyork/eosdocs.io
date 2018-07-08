@@ -6,6 +6,17 @@ draft: false
 weight: 2
 ---
 
+### In the event of a problem - fastest method to having a backup BP take over
+
+In the event that a BP in the top 21 experiences a failure, the way to allow a backup BP to take over is to simply to call unregprod
+
+```
+cleos -u http://api.eosnewyork.io system unregprod {account}
+```
+
+Once the issue has been resolved, call regproducer again and things will resume as before. 
+
+
 ### Setting Up a Claim Rewards Permission
 
 {{% notice warning %}}
