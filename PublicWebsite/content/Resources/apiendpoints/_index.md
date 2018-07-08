@@ -38,7 +38,7 @@ That said below is a quick reference to some public API endpoints that can be us
 * `http://api.eosvibes.io:80`
 * `http://api.cypherglass.com:8888` and `https://api.cypherglass.com:443`
 * `http://bp.cryptolions.io:8888`
-* `http://dc1.eosemerge.io:8888` and `https://dc1.eosemerge.io:5443`
+* `http://dc1.eosemerge.io` and `https://dc1.eosemerge.io`
 * `https://api.eosio.cr:443`
 * `https://api.eosn.io`
 * `https://eu1.eosdac.io:443`
