@@ -3,7 +3,7 @@ title: "BP Tips"
 date: 2018-06-11T09:07:37-04:00
 pre: "<b>2. </b>"
 draft: false
-weight: 0
+weight: 2
 ---
 
 ### Setting Up a Claim Rewards Permission
