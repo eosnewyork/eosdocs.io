@@ -50,6 +50,7 @@ weight: 2
 ## Community Projects
 
 - [EOS Scholar Testnet](https://scholar.eosnation.io/)[ / Intro post](https://steemit.com/eos/@eosnation/eos-io-scholar-testnet)[ / GitHub](https://github.com/ScholarTestnet) / [Telegram](https://t.me/ScholarTestnet) - Educational material to Block Producers involved in the EOS Testnet
+- [EOS Arrowhead Testnet](http://arrowhead.eostribe.io/)[ / Intro post](https://steemit.com/cryptocurrency/@eostribe/announcing-arrowhead-and-eos-net-testnets) / [Telegram](https://t.me/joinchat/GjJY7BJrnbIW_S67Zchexg) - A security first testnet environment that was a precursor to the Ghostbusters testnet.
 - [EOS Index](https://eosindex.io) - Directory of Projects based around EOS
 - [EOS Countdown](https://eoscountdown.com/) - Until EOS.IO MainNet Launch (Created by Jason Hodges)
 - [EOS Drops](https://www.eosdrops.io/) - A Collection of EOS.IO Projects "Air Dropping" Tokens
@@ -59,8 +60,10 @@ weight: 2
 - [EOS Projects](https://eosprojects.org/)[ / Introduction post](https://steemit.com/eos/@tokenika/introducing-eos-projects-a-directory-of-apps-sites-and-tools-built-by-eos-community) - Directory of Projects based around EOS
 - [Scatter](http://scatter-eos.com/) - Wallet/Browser extension
 - [EOS Net](https://eosnet.io/) - Global research project of block producer candidates to simulate, test and document best practices
+- [EOS Network Monitor](http://eosnetworkmonitor.io/) - An EOS network monitor of all public nodes on the EOS Mainnet. 
 - [Eosio.SG Testnet](https://github.com/eosiosg/testnet_monitor) - Eosio.SG testnet monitor
 - [Chintai](https://www.chintai-eos.io/) - Token Leasing Delegation Marketplace for EOS.IO
+- [EOS Tutorials](https://eostutorials.com/) - A tutorial website created for all skill levels of EOS enthusiasts. 
 - [Go to table of content](#contents)
 
 ## Community Forums
@@ -91,6 +94,7 @@ weight: 2
   - [EOS Nairobi](https://t.me/eosnairobi)
   - [EOS Hong Kong](https://t.me/EOSHongKong)
   - [EOS Berlin](https://t.me/EOSBerlin)
+  - [EOS Dallas](https://t.me/eosdfw)
   - [EOS Detroit](https://t.me/eos_detroit)
     
 - **Developers**
@@ -129,6 +133,7 @@ weight: 2
     - [EOS Waterloo](https://www.meetup.com/EOS-Waterloo/)
   - United States
     - [EOS New York](https://www.meetup.com/EOS-New-York)
+    - [EOS Dallas](https://www.meetup.com/EOSDallas/)
     - [EOS Denver](https://www.meetup.com/EOSDenver/)
     - [EOS Detroit](https://www.meetup.com/Detroit-Blockchainers/)
 - Asia
@@ -147,6 +152,7 @@ weight: 2
  - [EOS Nation](https://www.youtube.com/channel/UCXgAY9DyooykrubRXw3xK1g)
  - [Dallas Rushing](https://www.youtube.com/channel/UCMiOtNUmlOO0V01wXK8p0Kg)
  - [Beyond Bitcoin](https://www.youtube.com/channel/UCBZ9iWWNViVCips2ACk_ckQ)
+ - [The State](https://www.youtube.com/channel/UCKXqMrAW78x1EmDoIVtD-ag)
  - [Clay Albright](https://www.youtube.com/channel/UCh-UuMD55GGfqN8flGYzGpg)
  - [The Awakenment](https://www.youtube.com/channel/UCphVYR2CHULYHf59ZSQMEag)
  - [EOS Educational](https://www.youtube.com/channel/UClgHiX4W1yxyohrif0gEllA)
