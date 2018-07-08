@@ -21,7 +21,8 @@ chain-state-db-size-mb = 65536
 
 This value should always be set to the max memory being advertised by the network. 
 
-This value can be checked by running the following and the performing the math below to convert to MB
+As a BP you should know what the expected Memory allocation is, but always confirm by querying the top top BP endpoints for the following information to confirm:
+
 
 ```
 
@@ -38,6 +39,8 @@ $cleos -u http://api.eosnewyork.io get table eosio eosio global
 
 ```
 #### Conversion math:
+
+Then perform the math below to convert to MB
 
 68719476736 / 1024 / 1024 = __65536__ 
 
