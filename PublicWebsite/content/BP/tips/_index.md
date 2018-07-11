@@ -246,7 +246,7 @@ cleos push action eosforumtest post '{"account":"eosnewyorkio", "post_uuid":"bp_
 ### BP Meeting Rollcall
 
 ```
-# cleos push action eosforumtest post '{"account":"<ACCOUNT>", "post_uudi":"<DATE>-bp_meeting", "title":"<DATE>-bp_meeting", "content":"present", "reply_to_account":"", "reply_to_post_uuid":"", "certify":false, "json_metadata":"" }' -p <ACCOUNT>@active
+# cleos push action eosforumtest post '{"account":"<ACCOUNT>", "post_uuid":"<DATE>-bp_meeting", "title":"<DATE>-bp_meeting", "content":"present", "reply_to_account":"", "reply_to_post_uuid":"", "certify":false, "json_metadata":"" }' -p <ACCOUNT>@active
 
-cleos push action eosforumtest post '{"account":"eosnewyorkio", "post_uudi":"20180712-bp_meeting", "title":"20180712-bp_meeting", "content":"present", "reply_to_account":"", "reply_to_post_uuid":"", "certify":false, "json_metadata":"" }' -p eosnewyorkio@active
+cleos push action eosforumtest post '{"account":"eosnewyorkio", "post_uuid":"20180712-bp_meeting", "title":"20180712-bp_meeting", "content":"present", "reply_to_account":"", "reply_to_post_uuid":"", "certify":false, "json_metadata":"" }' -p eosnewyorkio@active
 ```
