@@ -528,7 +528,7 @@ Social Media
 Official Telegram - https://t.me/ONOUS
 
 ### Prospectors
- * __Account Contract Address:__ ??
+ * __Account Contract Address:__ prospectorsg
  * __Symbol:__ PGL
  * __Ratio:__ ??
  * __Airdrop Supply:__ ??
