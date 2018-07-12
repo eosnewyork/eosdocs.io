@@ -34,8 +34,11 @@ cleos set account permission eosnewyorkio claim EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN
 cleos set action permission eosnewyorkio eosio claimrewards claim -p eosnewyorkio@active
 
 ---------- Claiming the rewards ----------
+# cleos push action eosio claimrewards '{"owner":"<ACCOUNT>"}' -p <ACCOUNT>@claim
+cleos push action eosio claimrewards '{"owner":"eosnewyorkio"}' -p eosnewyorkio@claim
+
 #cleos system claimrewards YOURACCOUNT -p YOURACCOUNT@claim
-cleos system claimrewards eosnewyorkio --permission eosnewyorkio@claim
+#cleos system claimrewards eosnewyorkio --permission eosnewyorkio@claim
 
 ---------- Removing the permission ----------
 # You must remove the action first before removing the permission
