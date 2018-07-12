@@ -377,7 +377,7 @@ Official Twitter - https://twitter.com/eoxcommerce
 
 ### Everipedia
 
- * __Account Contract Address:__ ??
+ * __Account Contract Address:__ everipediaiq
  * __Symbol:__ IQ
  * __Ratio:__ 5.1 for 1
  * __Airdrop Supply:__ TBD
