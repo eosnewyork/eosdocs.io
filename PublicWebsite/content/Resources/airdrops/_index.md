@@ -149,6 +149,22 @@ Official Twitter - https://twitter.com/cetos_io
 Exchange
 Official Telegram - https://t.me/chaince_foreign_group
 
+### Challenge Dapp
+
+ * __Account Contract Address:__ challengedac
+ * __Symbol:__ CHL
+ * __Ratio:__ 2 for 1
+ * __Airdrop Supply:__ 2,700,000,000
+ * __Total Supply:__ 2,000,000,000
+ * __Snapshot:__ June 2018	
+ * __Airdrop Started:__ Yes
+ * __Registration:__ No
+ * __Website:__ https://www.dropbox.com/s/jze2fusujxumkqa/CHALLENGE_DAPP%20Dropbox.docx?dl=0
+
+##### Notes
+Challenge DAPP
+Official Telegram - https://t.me/Challenge_DAC
+
 ### DAO.EOS
 
  * __Account Contract Address:__ ??
