@@ -50,6 +50,17 @@ weight: 4
 * [EOS Helm](https://github.com/activeeos/eos-helm) - Kubernetes Helm charts for EOS
 * [EOS Core](https://github.com/HKEOS/Ghostbusters-Testnet) - EOS Core: an EOS mainnet launch solution
 * [eos-ramcost](https://github.com/eoseoul/eos-ramcost) - Adjusting supply of a token and connector balance of bancor during final phase of boot
+* [Claim Bot](https://github.com/CryptoLions/EOS-Claim-Bot) - Claim rewards script
+* [BP Position Telegram Notifier](https://github.com/CryptoLions/BP-Position-Telegram-Notifier) - Notifies of BP position changes, and node up/down status.
+* [Node Management Scripts](https://github.com/CryptoLions/EOS-MainNet) - Scripts for network launch and BP Node management
+
+#### Block Explorers & Network Monitors
+* http://eosnetworkmonitor.io/
+* https://eospark.com/
+* https://eostracker.io/
+* https://eosflare.io/
+* https://eostoolkit.io/
+
 
 #### Developer Tools
 * https://tbfleming.github.io/cib/eos.html  - C++ -> WASM compiler
@@ -64,11 +75,12 @@ weight: 4
 
 #### Testnet
 * https://github.com/CryptoLions/EOS-Jungle-Testnet
-* http://jungle.cryptolions.io:9898/monitor/
+* http://jungle.cryptolions.io/
 
 #### Launch 
 * https://eoscountdown.com/ - Check that your ETH address is registered
 * [EOS Authority](https://eosauthority.com) - Another key registration checker
+
 
 #### Security
 * https://medium.com/@bytemaster/debunking-claimed-vulnerability-in-eosio-smart-contract-system-9fa1ca2a6428
