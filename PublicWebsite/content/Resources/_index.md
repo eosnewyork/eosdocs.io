@@ -60,6 +60,7 @@ weight: 4
 * https://eostracker.io/
 * https://eosflare.io/
 * https://eostoolkit.io/
+* https://bloks.io
 
 
 #### Developer Tools
