@@ -112,7 +112,7 @@ actor-blacklist = potus1111111
 To confirm that you have not made any typo's run the following command and share the output in the #arbitration channel. 
 
 ```
-$grep actor-black  config.ini  | sort | tr -d " " | sha256sum
+$grep actor-black config.ini | grep -v "#" | sort | tr -d " " | sha256sum
 d2acb47d52615e316f89b04d397852daae4137bd0355768c8876783885d6cbd6
 ```
 
