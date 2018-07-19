@@ -233,20 +233,12 @@ diff /tmp/current.eosio.system.json /tmp/eosio-1.0.7-abi.json
 
 https://github.com/eoscanada/eosio.forum
 
-```
-cleos push action eosforumtest post '{"account":"eosnewyorkio", "post_uuid":"bp_ecaf_funding", "title"BP ECAF Funding" "content":"Should Block Producers fund ECAF in any way for any amount of time? Yes or No?", "reply_to_account": "", "reply_to_post_uuid": "","certify": false, "json_metadata": "{\"type\":\"chat\", \"qualified_voters\":\"Top 21 BPs at time of post\",\"expires\":\"72 hours after submission\"}"}' -p eosnewyorkio@active
-``` 
-
-#### Vote 
-
-```
-cleos push action eosforumtest post '{"account":"eosnewyorkio", "post_uuid":"bp_ecaf_funding", "title":"eosnewyorkio" "content":"no", "reply_to_account": "", "reply_to_post_uuid": "","certify": false, "json_metadata": ""}' -p eosnewyorkio@active
-```
+(see [referendum json proposal](https://github.com/eoscanada/eosio.forum#referendum-structure-proposals) for details)
 
 ### BP Meeting Rollcall
 
 ```
-# cleos push action eosforumtest post '{"account":"<ACCOUNT>", "post_uuid":"<DATE>-bp_meeting", "title":"<DATE>-bp_meeting", "content":"present", "reply_to_account":"", "reply_to_post_uuid":"", "certify":false, "json_metadata":"" }' -p <ACCOUNT>@active
-
-cleos push action eosforumtest post '{"account":"eosnewyorkio", "post_uuid":"20180712-bp_meeting", "title":"20180712-bp_meeting", "content":"present", "reply_to_account":"", "reply_to_post_uuid":"", "certify":false, "json_metadata":"" }' -p eosnewyorkio@active
+cleos push action eosforumtest post '{"poster":"YOURACCOUNT", "post_uuid":"<DATE>-bp_meeting", "content":"present", "reply_to_poster":"", "reply_to_post_uuid":"", "certify":false, "json_metadata":"" }' -p YOURACCOUNT@active
 ```
+
+DATE should be YYYYMMDD format.
