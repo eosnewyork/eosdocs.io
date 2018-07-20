@@ -323,7 +323,22 @@ Official Telegram - https://t.me/EOSSportsBets
 ##### Notes
 Gaming/Gambling
 Official Telegram - https://t.me/eosbetcasino
+
+### eosBLACK
+
+ * __Account Contract Address:__ eosblackteam
+ * __Symbol:__ BLACK
+ * __Ratio:__ 1 for 1
+ * __Airdrop Supply:__ 900,000,000
+ * __Total Supply:__ 3,000,000,000
+ * __Snapshot:__ June 2018
+ * __Airdrop Started:__ Yes
+ * __Registration:__ No
+ * __Website:__ https://eosblack.io/?ckattempt=1
  
+##### Notes
+Dapp Development 
+
 ### EOSDAC
 
  * __Account Contract Address:__ eosdactokens
