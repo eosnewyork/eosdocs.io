@@ -337,7 +337,8 @@ Official Telegram - https://t.me/eosbetcasino
  * __Website:__ https://eosblack.io/?ckattempt=1
  
 ##### Notes
-Dapp Development 
+Dapp Development
+Official Telegram - https://t.me/eosBLACK_English
 
 ### EOSDAC
 
