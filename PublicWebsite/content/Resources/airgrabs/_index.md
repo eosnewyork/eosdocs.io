@@ -10,22 +10,39 @@ STAY VIGILANT! NEVER SHARE YOUR PRIVATE KEYS WITH ANYONE CLAIMING TO NEED IT FOR
 {{% /notice %}}
 
 {{% notice note %}}
-Info about airrabs
+Info about airgrabs - 
+The community can opt-in or sign-up for the tokens using their own RAM which enables the token provider to significantly reduce their airdrop costs. 
 {{% /notice %}}
+
+### POORMAN 
+
+ * __Account Contract Address:__ poormantoken
+ * __Symbol:__ POOR
+ * __Airdrop Supply:__ ??
+ * __Total Supply:__ ??
+ * __Snapshot:__ July 11 2018
+ * __Airgrab Started:__ Yes
+ * __Registration:__ Yes
+ * __Website:__ https://github.com/generEOS/poorman.token
+ 
+##### Notes
+Airgrab Using Toolkit - https://eostoolkit.io/airgrab
 
 
 ### RIDL
 
- * __Account Contract Address:__ ??
- * __Symbol:__ ??
- * __Ratio:__ 5 for 1
- * __Airdrop Supply:__ 4,500,000,000
- * __Total Supply:__ 9,000,000,000
+ * __Account Contract Address:__ ridlridlcoin
+ * __Symbol:__ RIDL
+ * __Airdrop Supply:__ 650,000,000
+ * __Total Supply:__ 2,000,000,000
  * __Snapshot:__ Q3 2018
- * __Airdrop Started:__ Q4 2018
- * __Registration:__ No
- * __Website:__ https://github.com/angelwingsio/docs/wiki
+ * __Airgrab Started:__ Q4 2018
+ * __Registration:__ Yes
+ * __Website:__ https://ridl.get-scatter.com
  
 ##### Notes
-DAC 
+DAC - 
+Airgrab Tutorial Walkthrough - https://www.youtube.com/watch?v=-F__vEQKaK0
+
+
  
