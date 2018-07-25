@@ -70,6 +70,23 @@ DAC
 ##### Notes
 Gaming/Gambling
 Official Telegram - https://t.me/BillionaireToken
+
+### BOID
+
+ * __Account Contract Address:__ ??
+ * __Symbol:__ BOID
+ * __Ratio:__ 5 for 1
+ * __Airdrop Supply:__ 5,000,000,000
+ * __Total Supply:__ 25,000,000,000
+ * __Snapshot:__ June 2018
+ * __Airdrop Started:__ Aug 15 2018
+ * __Registration:__ no action for accounts <100k EOS (> 100k can whitelist at app.boid.com)
+ * __Website:__ https://boid.com
+ 
+##### Notes
+P2P Computational Resource Sharing -
+Official Discord - https://discord.gg/zRfxAU
+Official Twitter - https://twitter.com/@boidcom
  
 ### Cards & Tokens
 
