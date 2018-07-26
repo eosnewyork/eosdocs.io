@@ -14,15 +14,15 @@ Info about ICOs -
 The community can opt-in or sign-up for the tokens by contributing to the ICO period. 
 {{% /notice %}}
 
-### Angelwings
+### iRespo
 
- * __Account Contract Address:__ poormantoken
- * __Symbol:__ 
- * __ICO Supply:__ 
- * __Total Supply:__ 
- * __Registration:__ 
- * __Website:__ 
+ * __Account Contract Address:__ irespotokens  
+ * __Symbol:__ IRESPO  
+ * __ICO Supply:__  80,000,000  
+ * __Total Supply:__  120,000,000  
+ * __Website:__  www.irespo.com  
+ * __Telegram:__  https://t.me/irespocom  
  
 ##### Notes
-Official Telegram Channel - 
+
 
