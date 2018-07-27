@@ -222,7 +222,7 @@ As we stated above, it's important to keep track of which key your planning on u
     MyNewAccount owner Private Key: "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
 
     MyNewAccount active Public Key: "EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF",
-    MyNewAccount active Public Key: "5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf"
+    MyNewAccount active Private Key: "5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf"
 ```
 
 ### 6. Working with multiple wallets {#MultipleWallets}
