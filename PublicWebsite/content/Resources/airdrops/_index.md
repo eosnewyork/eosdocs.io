@@ -608,6 +608,21 @@ Official Telegram - https://t.me/ONOUS
 Game
 Official Telegram - https://t.me/prospectorsgame
 
+### QOQO
+ * __Account Contract Address:__ ??
+ * __Symbol:__ QOQO
+ * __Ratio:__ ??
+ * __Airdrop Supply:__ ??
+ * __Total Supply:__ ??
+ * __Snapshot:__ TBD
+ * __Airdrop Started:__ No
+ * __Registration:__ TBD
+ * __Website:__ https://qoqo.io/
+ 
+##### Notes
+Questions/Answers Dapp
+Official Telegram - https://t.me/QOQOcommunity
+
 ### Qubicle
  * __Account Contract Address:__ ??
  * __Symbol:__ QBE
@@ -652,6 +667,21 @@ Official Telegram - https://t.me/Scatter
 ##### Notes
 DEX
 Official Telegram - https://t.me/tokenaexchange
+
+### Traffic Exchange 
+ * __Account Contract Address:__ ??
+ * __Symbol:__ TXT
+ * __Ratio:__ <1 for 1
+ * __Airdrop Supply:__ 680,000,000
+ * __Total Supply:__ 2,000,000,000
+ * __Snapshot:__ ??
+ * __Airdrop Started:__ No
+ * __Registration:__ ??
+ * __Website:__ https://www.txtnet.io/
+ 
+##### Notes
+Decentralized Reward Advertising 
+
 
 ### Trybe
  * __Account Contract Address:__ ??
