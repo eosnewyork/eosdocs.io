@@ -60,7 +60,8 @@ weight: 4
 * https://eostracker.io/
 * https://eosflare.io/
 * https://eostoolkit.io/
-* https://bloks.io
+* https://bloks.io/
+* https://myeoskit.com/
 
 
 #### Developer Tools
@@ -77,6 +78,7 @@ weight: 4
 #### Testnet
 * https://github.com/CryptoLions/EOS-Jungle-Testnet
 * http://jungle.cryptolions.io/
+* https://www.cryptokylin.io/
 
 #### Launch 
 * https://eoscountdown.com/ - Check that your ETH address is registered
