@@ -18,6 +18,7 @@ Every block producer publishes a bp.json file which among other things lists the
 That said below is a quick reference to some public API endpoints that can be used to vote / interact with the production EOS blockchain. 
 
 * `https://api.eosnewyork.io:443`
+* `https://api.eosio.cr`
 * `https://api.eosdetroit.io:443`
 * `https://eos.greymass.com:443`
 * `https://api.eosmetal.io:18890`
