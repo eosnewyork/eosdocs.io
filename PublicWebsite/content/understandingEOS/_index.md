@@ -36,7 +36,7 @@ weight: 2
 - [EOS Storage Whitepaper](https://github.com/EOSIO/Documentation/blob/master/EOS.IO%20Storage.pdf)
 - [DPOS Whitepaper](https://steemit.com/dpos/@dantheman/dpos-consensus-algorithm-this-missing-white-paper) / [DPOS Security](https://steemit.com/steem/@dantheman/response-to-cosmos-white-paper-s-claims-on-dpos-security)
 - EOS Distribution tracking [EOS Scan](https://eosscan.io/) / [EOS Chart](http://eoschart.com/) / [EOS Price](https://eosprice.io/)
-- [Careers at Block One](http://careers.block.one/)
+- [Careers at Block One](http://block.one/careers)
 - [Register for Hackathon](https://eoshackathon.io/)
 
 ## Block One
