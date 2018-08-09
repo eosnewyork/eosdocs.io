@@ -593,6 +593,21 @@ Official Telegram - https://t.me/imeosmorewallet
 Social Media
 Official Telegram - https://t.me/ONOUS
 
+### Patreos
+ * __Account Contract Address:__ ??
+ * __Symbol:__ ??
+ * __Ratio:__ 10 for 1 (max 10,000 per account)
+ * __Airdrop Supply:__ ??
+ * __Total Supply:__ ??
+ * __Snapshot:__ ??
+ * __Airdrop Started:__ No
+ * __Registration:__ No
+ * __Website:__ https://www.patreos.com/#
+ 
+##### Notes
+Voter Cultivation -
+Official Telegram - https://t.me/patreos
+
 ### Prospectors
  * __Account Contract Address:__ prospectorsg
  * __Symbol:__ PGL
