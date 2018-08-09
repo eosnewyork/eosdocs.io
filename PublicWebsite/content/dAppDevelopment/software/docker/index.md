@@ -25,13 +25,13 @@ If you don't alredy have docker installed, you can download it here: https://www
 The below statement will download an Ubuntu image which contains the compiled software. 
 
 ```
-docker pull binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b
+docker pull eosio/eos
 ```
 
 As a quick test, run the image and gain access to a bash shell, do the following: 
 
 ```
-docker run --rm -it binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b bash
+docker run --rm -it eosio/eos bash
 ```
 
 If that works, you should get to a prompt that looks like the following, and typing "cleos" should return the help for the cleos tool:
@@ -82,19 +82,19 @@ docker network create eosnetwork
 To run the server software (on port 7777): 
 
 ```
-docker run --name server --network=eosnetwork --rm -p 7777:7777 -i binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b /bin/bash -c "nodeos -e -p eosio --plugin eosio::producer_plugin --plugin eosio::chain_api_plugin --plugin eosio::http_plugin -d /mnt/dev/data --http-server-address=0.0.0.0:7777 --access-control-allow-origin=*"
+docker run --name server --network=eosnetwork --rm -p 7777:7777 -i eosio/eos /bin/bash -c "nodeos -e -p eosio --plugin eosio::producer_plugin --plugin eosio::chain_api_plugin --plugin eosio::http_plugin -d /mnt/dev/data --http-server-address=0.0.0.0:7777 --access-control-allow-origin=*"
 ```
 
 To run the wallet software (on port 5555): 
 
 ```
-docker run --name wallet --network=eosnetwork --rm -p 5555:5555 -i binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b /bin/bash -c "keosd --http-server-address=0.0.0.0:5555"
+docker run --name wallet --network=eosnetwork --rm -p 5555:5555 -i eosio/eos /bin/bash -c "keosd --http-server-address=0.0.0.0:5555"
 ```
 
 Let's open a bash shell so that we can test some of the tools
 
 ```
-docker run --name tools --network=eosnetwork --rm -it binaryfocus/dawn4-749a6759b98a9f7995f541ac0a4ed0615b96583b /bin/bash 
+docker run --name tools --network=eosnetwork --rm -it eosio/eos /bin/bash 
 ```
 
 #### 4. Testing to see if it's all working {#Testing}
