@@ -595,11 +595,11 @@ Official Telegram - https://t.me/ONOUS
 
 ### Patreos
  * __Account Contract Address:__ ??
- * __Symbol:__ ??
+ * __Symbol:__ PTR
  * __Ratio:__ 10 for 1 (max 10,000 per account)
- * __Airdrop Supply:__ ??
- * __Total Supply:__ ??
- * __Snapshot:__ ??
+ * __Airdrop Supply:__ 1,200,000,000
+ * __Total Supply:__ 2,000,000,000
+ * __Snapshot:__ Up To Date Snapshot
  * __Airdrop Started:__ No
  * __Registration:__ No
  * __Website:__ https://www.patreos.com/#
