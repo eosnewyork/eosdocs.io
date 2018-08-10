@@ -668,6 +668,21 @@ Official Telegram - https://t.me/podone
 Chrome Extension Tool
 Official Telegram - https://t.me/Scatter
 
+### Takafuly
+ * __Account Contract Address:__ ??
+ * __Symbol:__ TKLY
+ * __Ratio:__ 1 for 1
+ * __Airdrop Supply:__ 900,000,000
+ * __Total Supply:__ 1,500,000,000
+ * __Snapshot:__ Up to Date
+ * __Airdrop Started:__ Q4 2018
+ * __Registration:__ No
+ * __Website:__ https://www.takafuly.net/
+ 
+##### Notes
+Peer-to-peer service exchange -
+Official Twitter - https://twitter.com/Takafulyeos
+
 ### Tokena
  * __Account Contract Address:__ ??
  * __Symbol:__ KEN
