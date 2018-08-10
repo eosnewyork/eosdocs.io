@@ -67,3 +67,44 @@ If you get back a list of producers then you should be ok.
 ### Testnet API Endpoints
 
 * `https://jungle.eosio.cr:443`
+
+
+### Run your own endpoint 
+
+While this is more complex, running your own node give you full control. 
+
+On a fresh Ubuntu 16 server (use your server of choice of course, but these instructions were executed on that OS) - Note that you need at least 16GB or ram and at minimum 20GB of disk space before you can begin this process. Also not that this take a long time to run, expect 24 hours before your node is in a usable state. 
+
+Clone the repo and compile the software
+
+```
+git clone https://github.com/EOSIO/eos.git --recursive
+cd eos/
+./eosio_build.sh
+cd build/
+sudo make install
+```
+
+Get a copy of the blocks and prepare the env.
+
+A recent copy of the blockchain data can be found at https://eosnode.tools/blocks (Provided by Block Matrix - https://blockmatrix.network/)
+
+```
+sudo su 
+~~Not best practice but the following performed as root~~
+mkdir /eos
+md /eos
+mkdir data
+wget {Get URL to tar file from https://eosnode.tools/blocks}
+tar -zxvf blocks_2018-08-09-10-22.tar.gz
+mv mnt/blocks /eos/data
+```
+
+Add config.ini to the /eos folder. 
+
+{We plan to provide a suggested config file here in the future to help those not familiar with Node configureation, in the meantime please reach out to EOS New York if and request assistance}
+
+```
+/usr/local/eosio/bin/nodeos -d /eos/data --config-dir=/oes --hard-replay-blockchain
+.... wait ... then wait some more ... it can take many hours for the replay to finish at which point the node will being syning with the network. 
+```
