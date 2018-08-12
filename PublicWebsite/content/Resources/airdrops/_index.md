@@ -668,6 +668,22 @@ Official Telegram - https://t.me/podone
 Chrome Extension Tool
 Official Telegram - https://t.me/Scatter
 
+### Takafuly
+
+ * __Account Contract Address:__ ??
+ * __Symbol:__ ??
+ * __Ratio:__ 1 for 1
+ * __Airdrop Supply:__ 900,000,000
+ * __Total Supply:__ 1,500,000,000
+ * __Snapshot:__ Q4 2018
+ * __Airdrop Started:__ Q4 2018
+ * __Registration:__ No
+ * __Website:__ https://www.takafuly.net
+ 
+##### Notes
+Takafuly is a global service exchange marketplace with a mission of launching a decentralized gig economy platfrom that is completely owned by its community. 
+Official Telegram - https://t.me/takafulyeos
+
 ### Tokena
  * __Account Contract Address:__ ??
  * __Symbol:__ KEN
