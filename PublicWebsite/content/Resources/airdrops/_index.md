@@ -563,6 +563,20 @@ Official Telegram - https://t.me/keos_official_en
 BP Candidate
 Official Telegram - https://t.me/MeetOneEnglish
 
+### Lumeos
+ * __Account Contract Address:__ ??
+ * __Symbol:__ LUME
+ * __Ratio:__ 1:50
+ * __Airdrop Supply:__ 100,000,000
+ * __Total Supply:__ 1,000,000,000
+ * __Snapshot:__ Q3 2018
+ * __Airdrop Started:__ Q3 2018
+ * __Registration:__ No, but we are offering a smart airdrop. Sign up for our beta and receive addtional LUME tokens.
+ * __Website:__ https://lumeos.io/
+ 
+##### Notes
+
+
 ### MORE.TOP
  * __Account Contract Address:__ ??
  * __Symbol:__ MORE
