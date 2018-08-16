@@ -73,7 +73,7 @@ Official Telegram - https://t.me/BillionaireToken
 
 ### BOID
 
- * __Account Contract Address:__ ??
+ * __Account Contract Address:__ boidcomtoken
  * __Symbol:__ BOID
  * __Ratio:__ 5 for 1
  * __Airdrop Supply:__ 5,000,000,000
