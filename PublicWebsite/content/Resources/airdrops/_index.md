@@ -294,6 +294,22 @@ Official Telegram - https://t.me/EON_EN
 ##### Notes
 BP Candidate - Poor Ratio
 Official Twitter - https://twitter.com/ADD49632620
+
+### EOS Button
+
+ * __Account Contract Address:__ ??
+ * __Symbol:__ EBT
+ * __Ratio:__ claimable amount varies per round
+ * __Airdrop Supply:__ TBD
+ * __Total Supply:__ TBD
+ * __Snapshot:__ N/A
+ * __Airdrop Started:__ Yes
+ * __Registration:__ Yes / 10 rounds of airdrop
+ * __Website:__ https://eosbutton.io/airdrop#!
+ 
+##### Notes
+Game - 
+Official Discord - https://discordapp.com/invite/ZhyK6xU
  
 ### EOS Media
 
