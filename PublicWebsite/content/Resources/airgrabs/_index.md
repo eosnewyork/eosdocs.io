@@ -44,5 +44,19 @@ Airgrab Using Toolkit - https://eostoolkit.io/airgrab
 DAC - 
 Airgrab Tutorial Walkthrough - https://www.youtube.com/watch?v=-F__vEQKaK0
 
+### WIZZ Network
+
+ * __Account Contract Address:__ ??
+ * __Symbol:__ WIZZ
+ * __Airdrop Supply:__ ??
+ * __Total Supply:__ ??
+ * __Snapshot:__ ??
+ * __Airgrab Started:__ Yes
+ * __Registration:__ Yes
+ * __Website:__ https://wizz.network/
+ 
+##### Notes
+Official Telegram - https://t.me/wizznetwork
+
 
  
