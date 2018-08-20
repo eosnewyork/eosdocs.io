@@ -7,7 +7,7 @@ draft: false
 
 #### Summary
 
-The EOS stoftware stack has a number of tools. Many of the tutorials we've seen explain how to run everything on a single machine. This can be confusing becasue the reader tends to lose sight of how it all fits together. 
+The EOS software stack has a number of tools. Many of the tutorials we've seen explain how to run everything on a single machine. This can be confusing becasue the reader tends to lose sight of how it all fits together. 
 
 The below image shows how these tools are normally distributed. The tools names are written in **BIG RED** letters in the images. Here's a quick summary:
 
