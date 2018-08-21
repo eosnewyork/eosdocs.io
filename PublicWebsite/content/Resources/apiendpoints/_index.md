@@ -44,6 +44,7 @@ That said below is a quick reference to some public API endpoints that can be us
 * `https://api.eosn.io`
 * `https://eu1.eosdac.io:443`
 * `https://api.main.alohaeos.com:443`
+* `https://rpc.eosys.io`
 
 #### Usage Note for cleos users
 
