@@ -345,7 +345,7 @@ Official Telegram - https://t.me/EOSSportsBets
  
 ### EOSBET
 
- * __Account Contract Address:__ ??
+ * __Account Contract Address:__ betdividends
  * __Symbol:__ EOSBET
  * __Ratio:__ 1 for 10
  * __Airdrop Supply:__ 100,000,000
