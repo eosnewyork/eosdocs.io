@@ -14,6 +14,22 @@ Info about airgrabs -
 The community can opt-in or sign-up for the tokens using their own RAM which enables the token provider to significantly reduce their airdrop costs. 
 {{% /notice %}}
 
+### DEOS Games
+
+ * __Account Contract Address:__ thedeosgames
+ * __Symbol:__ DEOS
+ * __Airdrop Supply:__ ??
+ * __Total Supply:__ ??
+ * __Snapshot:__ FRIDAY 25 May, at 9:00 AM EST
+ * __Airgrab Started:__ Yes
+ * __Registration:__ Yes
+ * __Website:__ https://app.deosgames.com/
+ * __Website:__ https://deosgames.com/
+ 
+##### Notes
+Official Telegram - https://t.me/deosgames
+
+
 ### POORMAN 
 
  * __Account Contract Address:__ poormantoken
