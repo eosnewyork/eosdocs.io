@@ -14,6 +14,8 @@ Info about airgrabs -
 The community can opt-in or sign-up for the tokens using their own RAM which enables the token provider to significantly reduce their airdrop costs. 
 {{% /notice %}}
 
+### A number of airgrabs can be accessed by using the great eostoolkit.io/airgrab from Genereos! Just link your scatter and hit the airgrab button next to each you wish to grab. 
+
 ### DEOS Games
 
  * __Account Contract Address:__ thedeosgames
@@ -28,6 +30,7 @@ The community can opt-in or sign-up for the tokens using their own RAM which ena
  
 ##### Notes
 Official Telegram - https://t.me/deosgames
+
 
 
 ### POORMAN 
