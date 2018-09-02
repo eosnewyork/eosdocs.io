@@ -47,7 +47,7 @@ make install
 
 ```
 cd build/programs/nodeos
-./nodeos -e -p eosio --plugin eosio::wallet_api_plugin --plugin eosio::chain_api_plugin --plugin eosio::history_api_plugin
+./nodeos -e -p eosio --plugin eosio::chain_api_plugin --plugin eosio::history_api_plugin
 ```
 
 In another terminal window check that you can get the server info
