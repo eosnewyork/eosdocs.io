@@ -188,11 +188,11 @@ Official Telegram - https://t.me/Challenge_DAC
 
  * __Account Contract Address:__ eoscafekorea
  * __Symbol:__ DAB
- * __Ratio:__ ??
- * __Airdrop Supply:__ ??
+ * __Ratio:__ 2000 DAB/Account
+ * __Airdrop Supply:__ 2000 DAB/Account
  * __Total Supply:__ ??
- * __Snapshot:__ ??
- * __Airdrop Started:__ Yes
+ * __Snapshot:__ 09/2018
+ * __Airdrop Started:__ 9/10/2018
  * __Registration:__ No
  * __Website:__ https://dabble.cafe/index.html
 
