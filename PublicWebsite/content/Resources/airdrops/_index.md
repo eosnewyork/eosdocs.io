@@ -646,7 +646,7 @@ Minerva is a DAC payment service provider with a merchant-friendly cryptocurrenc
  * Twitter - https://twitter.com/minervatoken
  * Facebook - https://facebook.com/minervatoken
  * Telegram - https://minerva.com/chat
- * Telegram - https://youtu.be/MhSTVKLdMic
+ * Presentation - https://youtu.be/MhSTVKLdMic
 
 ### ONO
  * __Account Contract Address:__ ??
