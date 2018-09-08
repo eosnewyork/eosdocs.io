@@ -608,7 +608,6 @@ Official Telegram - https://t.me/MeetOneEnglish
  
 ##### Notes
 
-
 ### MORE.TOP
  * __Account Contract Address:__ ??
  * __Symbol:__ MORE
@@ -624,6 +623,30 @@ Official Telegram - https://t.me/MeetOneEnglish
 Wallet App
 Official Telegram - https://t.me/imeosmorewallet
  
+ ### Minerva
+
+ * __Account Contract Address:__ ??
+ * __Symbol:__ Owl
+ * __Ratio:__ TBD
+ * __Airdrop Supply:__ TBD
+ * __Total Supply:__ 100,000,000
+ * __Snapshot:__ TBD
+ * __Airdrop Started:__ TBD
+ * __Registration:__ No, period #0 wallets only.
+ * __Website:__ https://minerva.com
+
+##### Notes
+Minerva is a DAC payment service provider with a merchant-friendly cryptocurrency utility token (Owl) that is migrating from Ethereum to EOS for better usability and compliance by ricardian contract. Minerva aims to accelerate the adoption of cryptocurrency and open it to the subscription economy.
+Whitepaper EN:__ https://minerva.com/whitepaper.pdf
+Whitepaper CN:__ https://minerva.com/whitepaper-cn.pdf
+Whitepaper RU:__ https://minerva.com/whitepaper-ru.pdf
+Whitepaper KO:__ https://minerva.com/whitepaper-kr.pdf
+Whitepaper JP:__ https://minerva.com/whitepaper-jp.pdf
+Twitter:__ https://twitter.com/minervatoken
+Facebook:__ https://facebook.com/minervatoken
+Telegram:__ https://minerva.com/chat
+Telegram:__: https://youtu.be/MhSTVKLdMic
+
 ### ONO
  * __Account Contract Address:__ ??
  * __Symbol:__ ONOT
@@ -758,7 +781,6 @@ Official Telegram - https://t.me/tokenaexchange
  
 ##### Notes
 Decentralized Reward Advertising 
-
 
 ### Trybe
  * __Account Contract Address:__ ??
