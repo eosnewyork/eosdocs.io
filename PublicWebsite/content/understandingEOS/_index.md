@@ -134,6 +134,8 @@ weight: 2
     - [EOS Dallas](https://www.meetup.com/EOSDallas/)
     - [EOS Denver](https://www.meetup.com/EOSDenver/)
     - [EOS Detroit](https://www.meetup.com/Detroit-Blockchainers/)
+- South America
+    - [EOS Costa Rica](https://www.meetup.com/EOS-Costa-Rica/)
 - Asia
   - South Korea
     - [EOS Seoul](https://www.meetup.com/EOS-Seoul)
