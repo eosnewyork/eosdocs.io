@@ -74,7 +74,7 @@ If you get back a list of producers then you should be ok.
 
 While this is more complex, running your own node give you full control. 
 
-On a fresh Ubuntu 16 server (use your server of choice of course, but these instructions were executed on that OS) - Note that you need at least 16GB or ram and at minimum 20GB of disk space before you can begin this process. Also not that this take a long time to run, expect 24 hours before your node is in a usable state. 
+On a fresh Ubuntu 16 server (use your server of choice of course, but these instructions were executed on that OS) - Note that you need at least 16GB or ram and at minimum 20GB of disk space before you can begin this process. Also note that this take a long time to run, expect 24 hours before your node is in a usable state. 
 
 Clone the repo and compile the software
 
@@ -103,7 +103,7 @@ mv mnt/blocks /eos/data
 
 Add config.ini to the /eos folder. 
 
-{We plan to provide a suggested config file here in the future to help those not familiar with Node configureation, in the meantime please reach out to EOS New York if and request assistance}
+{We plan to provide a suggested config file here in the future to help those not familiar with Node configuration, in the meantime please reach out to EOS New York and request assistance}
 
 ```
 /usr/local/eosio/bin/nodeos -d /eos/data --config-dir=/oes --hard-replay-blockchain
