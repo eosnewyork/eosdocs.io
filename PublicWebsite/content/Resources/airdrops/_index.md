@@ -106,18 +106,18 @@ Gaming
  
 ### CADEOS
 
- * __Account Contract Address:__ ??
- * __Symbol:__ ??
+ * __Account Contract Address:__ buildertoken
+ * __Symbol:__ ADE
  * __Ratio:__ 1 for 5
  * __Airdrop Supply:__ 200,000,000
  * __Total Supply:__ 1,000,000,000
- * __Snapshot:__ December 2018
- * __Airdrop Started:__ December 2018
+ * __Snapshot:__ December 1th 2018
+ * __Airdrop Started:__ December 20th 2018
  * __Registration:__ No
  * __Website:__ https://cadeos.io/
  
 ##### Notes
-CAD tokenization platform
+Decentralized CAD.files & Project Management Platform
 Official Twitter - https://twitter.com/CadeosI
 
 ### CARMEL
