@@ -58,7 +58,7 @@ If you are running the server for the 1st time, you need to auto generate an INI
 Let's create a default wallet: 
 
 ```
-$cleos --wallet-url http://wallet:5555 wallet create
+$cleos --wallet-url http://wallet:5555 wallet create --to-console
 
 Creating wallet: default
 Save password to use in the future to unlock this wallet.
