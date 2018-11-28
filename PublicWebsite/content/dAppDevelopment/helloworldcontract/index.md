@@ -7,7 +7,7 @@ draft: false
 
 ### 1. Creating your 1st contract
 
-https://github.com/EOSIO/eos/wiki/Tutorial-Getting-Started-With-Contracts
+https://developers.eos.io/eosio-cpp/docs/introduction-to-smart-contracts
 
 -p eosio tells cleos to sign this action with the **active** authority of the eosio account, i.e., to sign the action using the private key for the eosio account that we imported earlier.
 
