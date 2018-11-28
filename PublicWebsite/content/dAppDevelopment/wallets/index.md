@@ -157,12 +157,12 @@ So in most cases you'll want to create two keys so that you can associate one ke
 The "create key" command below just prints a key pair to screen. It's not stored, so you'll need to import these keys into a wallet.
 
 ```
-$cleos create key
+$cleos --wallet-url http://wallet:5555 create key --to-console
 Private key: 5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf
 Public key: EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF
 
 
-$cleos create key
+$cleos --wallet-url http://wallet:5555 create key --to-console
 Private key: 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ
 Public key: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 ```
