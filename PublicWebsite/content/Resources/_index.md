@@ -63,7 +63,7 @@ weight: 4
 * https://eosflare.io/
 * https://eostoolkit.io/
 * https://bloks.io/
-* https://myeoskit.com/
+* https://www.eosx.io
 
 
 #### Developer Tools
