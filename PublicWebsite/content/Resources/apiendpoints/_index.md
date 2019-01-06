@@ -94,7 +94,7 @@ A recent copy of the blockchain data can be found at https://eosnode.tools/block
 sudo su 
 ~~Not best practice but the following performed as root~~
 mkdir /eos
-md /eos
+cd /eos
 mkdir data
 wget $(wget --quiet "https://eosnode.tools/api/blocks?limit=1" -O- | jq -r '.data[0].s3') -O blocks_backup.tar.gz
 tar xvzf blocks_backup.tar.gz
@@ -106,6 +106,6 @@ Add config.ini to the /eos folder.
 {We plan to provide a suggested config file here in the future to help those not familiar with Node configuration, in the meantime please reach out to EOS New York and request assistance}
 
 ```
-/usr/local/eosio/bin/nodeos -d /eos/data --config-dir=/oes --hard-replay --wasm-runtime wabt
+/usr/local/eosio/bin/nodeos -d /eos/data --config-dir=/eos --hard-replay --wasm-runtime wabt
 .... wait ... then wait some more ... it can take many hours for the replay to finish at which point the node will being syning with the network. 
 ```
