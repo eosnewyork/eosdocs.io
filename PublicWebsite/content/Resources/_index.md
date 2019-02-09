@@ -70,6 +70,7 @@ weight: 4
 * https://tbfleming.github.io/cib/eos.html  - C++ -> WASM compiler
 * [EOS Dev Helper](https://github.com/OracleChain/EOSDevHelper) - Conveniently test EOS interfaces using a desktop wallet tool. (Windows and Mac)
 * [EOS Factory](http://eosfactory.io/) - EOSFactory is a Python-based smart-contract development & testing framework (Win, Mac, Linux)
+* [EOSLime](https://github.com/LimeChain/eoslime/) - EOSLime is a JavaScript-based smart contract development, deployment and testing framework aiming to become Truffle for EOSIO
 
 #### Alternate languages
 * [Writing Smart Contracts in Typescript](https://steemit.com/eosio/@eosargentina/developing-typescript-javascript-on-eos) 
