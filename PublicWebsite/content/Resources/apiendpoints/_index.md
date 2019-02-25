@@ -67,7 +67,20 @@ To check if the endpoint you've selected will work for voting, run:
 If you get back a list of producers then you should be ok. 
 ### Testnet API Endpoints
 
-* `https://jungle.eosio.cr:443`
+* `https://api.jungle.alohaeos.com`
+* `http://jungle2.cryptolions.io:80`
+* `https://jungle2.cryptolions.io:443`
+* `http://145.239.133.201:8888`
+* `https://eos-jungle.eosblocksmith.io:443`
+* `http://jungle.eosbcn.com:8080`
+* `http://18.223.252.15:8888`
+* `http://jungle.eosmetal.io:18888`
+* `http://88.99.193.44:8888`
+* `https://jungle.eosphere.io:443`
+* `http://jungle2.cryptolions.io:8888`
+* `http://88.99.193.44:8888`
+* `http://88.99.193.44:8888`
+* `http://88.99.193.44:8888`
 
 
 ### Run your own endpoint 
