@@ -48,10 +48,10 @@ cd eos/build/programs/keosd/
 ```
 
 {{% notice warning %}}
-By default keosd runs on port 8888. This is the same port the nodeos application uses by default, so if you're running this on the same machine you'll need to supply the something like this to run on port 8899  "./keosd --http-server-address=localhost:8899"
+By default keosd runs on port 8888. This is the same port the nodeos application uses by default, so if you're running this on the same machine you'll need to supply the something like this to run on port 8899 "./keosd --http-server-address=localhost:8899"
 {{% /notice %}}
 
-If you are running the server for the 1st time, you need to auto generate an INI file in the default "config" folder  ~/eosio-wallet/config.ini
+If you are running the server for the 1st time, you need to auto generate an INI file in the default "config" folder "~/eosio-wallet/config.ini".
 
 ### 2. Create a wallet {#create}
 
@@ -72,24 +72,14 @@ Save this password somewhere safe and label it as: DEFAULT WALLET PASSWORD
 
 By default wallets are stored in ~/eosio-wallet/default.wallet. If you're following the docker instructions and you'd like to SSH into your wallet docker container to explore the file system and see this file, you can run the following from a new command prompt: "docker exec -it wallet bash"
 
-{{% notice note %}}
-Note that the EOS master key has been added to this wallet for you. Don't be confused by this, all you have done to this point is create a wallet - and you now have a password to unlock that wallet. 
-{{% /notice %}}
-
 Let's take a look at what's in the wallet.
 
 ```
 $cleos --wallet-url http://wallet:5555 wallet keys
-[[
-    "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
-    "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
-  ]
-]
+[]
 ```
 
-As you can see, there is one key pair in your newly created wallet. This is the master keypair for the sole initial account, **eosio**
-
-**Don't confuse the above master key with keys that you'll be adding in future**
+As you can see, when you create your wallet, you don't have any master key.
 
 ### 3. Wallets need to be opened {#open}
 
@@ -150,6 +140,22 @@ Note that when you created your wallet using the "./cleos wallet create" in step
 
 ### 5. Adding keys {#AddingKeys}
 
+By default, your wallet is empty. You'll want to add EOS Master key.
+
+{{% notice note %}}
+Note that the EOS master key is the following one (just for testing purposes):
+eosio Public Key: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+eosio Private Key: 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+{{% /notice %}}
+
+Simply you will need to store EOS Master key in your wallet.
+```
+$cleos --wallet-url http://wallet:5555 wallet import --private-key 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+imported private key for: EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV
+```
+
+This EOS Master key pair will be known as **eosio**.
+
 As detailed in the [Accounts](../accounts/] section, each account has two permissions the **owner** and the **active** permission.
 
 So in most cases you'll want to create two keys so that you can associate one key with each permission (more on this later).
@@ -170,18 +176,18 @@ Public key: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 Now let's import the keys into our wallet.
 
 ```
-$cleos --wallet-url http://wallet:5555 wallet import 5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf
+$cleos --wallet-url http://wallet:5555 wallet import --private-key 5JKrSzsuztAPvTzghi9VU4522sT49SeE3XVHbB8HsfC3ikifJRf
 imported private key for: EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF
 
 
-$cleos --wallet-url http://wallet:5555 wallet import 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ
+$cleos --wallet-url http://wallet:5555 wallet import --private-key 5KgcXVKU7Lfs2iFpAP1Aqiz3SEZcmbLuh6y9Lvsi4bYcFwDUVBQ
 imported private key for: EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN
 ```
 
 If we look at our wallet now, we can see 3 public keys. The single master key that was added when we created the wallet and the two keys that we just imported. 
 
 ```
-./cleos --wallet-url http://wallet:5555 wallet keys
+$cleos --wallet-url http://wallet:5555 wallet keys
 [
     "EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN",
     "EOS6MRyAjQq8ud7hVNYcfnVPJqcVpscN5So8BhtHuGYqET5GDW5CV",
@@ -192,7 +198,7 @@ If we look at our wallet now, we can see 3 public keys. The single master key th
 We can query for the key pairs as well, this request will ask for the wallet password.
 
 ```
-./cleos --wallet-url http://wallet:5555 wallet private_keys
+$cleos --wallet-url http://wallet:5555 wallet private_keys
 password:
 [[
     "EOS5tJQSKKeiTUZEutPo9SWUoCeovV43kWxGuW21K663frcHw7GnN",

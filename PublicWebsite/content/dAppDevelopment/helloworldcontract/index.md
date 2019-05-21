@@ -12,15 +12,14 @@ https://developers.eos.io/eosio-cpp/docs/introduction-to-smart-contracts
 -p eosio tells cleos to sign this action with the **active** authority of the eosio account, i.e., to sign the action using the private key for the eosio account that we imported earlier.
 
 ```
-# If you're using he docker image this is where you'll find the source code for the example contracts. We're going to add another here. 
-$cd /eos/contracts/hello
-
+# If you're using the docker image this is where you'll find the source code for the example contracts. We're going to add another here. 
+$cd /contracts/hello
 ```
 
-In the hello directory create a new file "hello.cpp" with the following contents
+In the hello directory create a new file "hello.cpp" with the following contents:
 
 ```
-$vi hello/hello.cpp
+$vi hello.cpp
 ```
 
 ```
@@ -42,7 +41,7 @@ EOSIO_ABI( hello, (hi) )
 
 ```
 
-Now let's compile the C++ into web assembly (.wast file)
+Now let's compile the C++ into web assembly (.wast file).
 
 ```
 $eosiocpp -o /eos/contracts/hello/hello.wast /eos/contracts/hello/hello.cpp
@@ -62,7 +61,7 @@ In file included from /usr/local/include/eosiolib/datastream.hpp:9:
 
 ```
 
-Generate an abi file
+Generate an Application Binary Interface (ABI) with extension .abi file:
 
 ```
 eosiocpp -g /eos/contracts/hello/hello.abi /eos/contracts/hello/hello.cpp
