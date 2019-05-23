@@ -68,7 +68,7 @@ $cleos -u http://server:7777 get account mynewaccount -j
 Or get all accounts linked to a given public key
 
 ```
-$cleos  -u http://server:7777 get accounts EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF
+$cleos -u http://server:7777 get accounts EOS7EzCEh94uN2k59wznzsZDcFVnpZ3wuiYvPSbb8bXDS6U7twKQF
 
 {
   "account_names": [
