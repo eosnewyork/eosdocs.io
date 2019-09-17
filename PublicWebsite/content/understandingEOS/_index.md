@@ -25,7 +25,6 @@ weight: 2
 
 - [The 3rd Industrial Revolution - A Radical New Sharing Economy](https://www.youtube.com/watch?v=QX3M8Ka9vUA)
 - [Why Blockchain?](https://www.youtube.com/watch?v=8dbdS87RI3E&t=17s)
-- [Why EOS?](https://www.youtube.com/watch?v=3kqkTYqTvDA)
 - [EOS For Business](https://www.youtube.com/watch?v=4giyoZnuKPU&t=1s)
 
 ## Official
