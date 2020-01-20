@@ -33,7 +33,6 @@ That said below is a quick reference to some public API endpoints that can be us
 * `https://eos-api.worbli.io:443`
 * `http://mainnet.eoscalgary.io:80`
 * `https://user-api.eoseoul.io:443` and `http://user-api.eoseoul.io:80` with CORS supported
-* `https://node2.liquideos.com:8883` and `http://node2.liquideos.com:8888`
 * `https://api.eosuk.io:443`
 * `http://api1.eosdublin.io:80`
 * `http://api.eosvibes.io:80`
